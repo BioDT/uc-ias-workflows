@@ -1,0 +1,6 @@
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2013_V.2.1.tif 
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2014_V.2.1.tif 
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2015_V.2.1.tif 
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2016_V.2.1.tif 
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2017_V.2.1.tif 
+https://os.zhdk.cloud.switch.ch/envicloud/chelsa/chelsa_V2/GLOBAL/annual/swb/CHELSA_swb_2018_V.2.1.tif 
