@@ -5,12 +5,6 @@ from pathlib import Path
 import urllib.request
 
 
-""" @click.command()
-@click.argument('input_filepath', type=click.Path(exists=True))
-@click.argument('output_filepath', type=click.Path()) """
-
-
-
 
 def download_data(path_to_download_list, path_to_download_to):
     """Downloads the CHELSA data from the C3S FTP server.
