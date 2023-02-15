@@ -8,4 +8,9 @@ sphinx-rtd-theme
 coverage
 awscli
 flake8
+doit
+numpy
+pandas
+matplotlib
+h5py
 python-dotenv>=0.5.1
