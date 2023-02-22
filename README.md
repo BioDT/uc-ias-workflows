@@ -2,6 +2,8 @@
 
 Data workflows for the IAS-DT, as part of BioDT.
 
+![overview](assets/IASDT-Data Streams Overview.png)
+
 ## Project Organization
 
 
