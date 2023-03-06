@@ -7,6 +7,9 @@ import wget
 def download_data(path_to_download_list, path_to_download_to):
     """Downloads the CHELSA yearly data from the C3S FTP server.
 
+    :param path_to_download_list: The path for the txt file with CHELSA data url list.
+    :param: path_to_download_to: The path where data files are downloaded to.
+    
     Returns:
         None
     """

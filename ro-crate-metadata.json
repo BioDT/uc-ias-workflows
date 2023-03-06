@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.0/context",
+    {
+      "@vocab": "https://schema.org/"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "identifier": "ro-crate-metadata.json",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.0"
+      },
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "description": "Made with Describo: https://uts-eresearch.github.io/describo/"
+    },
+    {
+      "@type": "Dataset",
+      "name": "IAS-DT engine",
+      "description": "Data engine for the Invasive Alien Species Digital Twin.",
+      "author": [
+        {
+          "@id": "#f119267e-590d-479b-9731-817d285281d0"
+        },
+        {
+          "@id": "https://ror.org/000h6jb29"
+        }
+      ],
+      "contactPoint": {
+        "@id": "#74780d1b-d0e9-4bd5-a182-97de2140c343"
+      },
+      "hasPart": [
+        {
+          "@id": "#a5deb755-b9d1-4c52-8f6f-7a00a5d668d9"
+        }
+      ],
+      "@id": "./"
+    },
+    {
+      "@type": "Person",
+      "name": "Taimur KHan",
+      "email": "taimur.khan@ufz.de",
+      "@reverse": {
+        "author": [
+          {
+            "@id": "./"
+          }
+        ]
+      },
+      "affiliation": [
+        {
+          "@id": "#9c58001d-9e5b-4a57-aaf9-46c66d7ff172"
+        }
+      ],
+      "@id": "#f119267e-590d-479b-9731-817d285281d0"
+    },
+    {
+      "@type": "Organization",
+      "name": "Helmholtz-UFZ",
+      "@reverse": {
+        "affiliation": [
+          {
+            "@id": "#f119267e-590d-479b-9731-817d285281d0"
+          }
+        ]
+      },
+      "@id": "#9c58001d-9e5b-4a57-aaf9-46c66d7ff172"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ror.org/000h6jb29",
+      "name": "Helmholtz Centre for Environmental Research",
+      "@reverse": {
+        "author": [
+          {
+            "@id": "./"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "name": "Taimur Khan",
+      "email": "taimur.khan@ufz.de",
+      "@reverse": {
+        "contactPoint": [
+          {
+            "@id": "./"
+          }
+        ]
+      },
+      "@id": "#74780d1b-d0e9-4bd5-a182-97de2140c343"
+    },
+    {
+      "@type": "Workflow",
+      "name": "workflow",
+      "description": "Workflows for getting data from sources, updating datasets, and servicing the datasets.",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ]
+      },
+      "@id": "#a5deb755-b9d1-4c52-8f6f-7a00a5d668d9"
+    }
+  ]
+}
