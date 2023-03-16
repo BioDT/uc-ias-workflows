@@ -255,7 +255,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="nT562FDKqiTtjidiKffC" name="chelsa">
-        <mxGraphModel dx="907" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="536" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -325,7 +325,7 @@
                 <mxCell id="D3Var2XMzwEu2ozzhvI4-7" value="Data available on OPeNDAP" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="100" y="1100" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;ol&gt;&lt;li&gt;Feedback loop:&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
+                <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;span style=&quot;background-color: initial;&quot;&gt;1. Feedback loop: &lt;/span&gt;&lt;br style=&quot;background-color: initial;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;the S3 bucket&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="240" y="80" width="560" height="1070" as="geometry"/>
                 </mxCell>
             </root>
