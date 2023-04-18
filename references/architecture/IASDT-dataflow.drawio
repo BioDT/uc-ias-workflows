@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="ZRk138DtxssasRneosYn" name="elter">
-        <mxGraphModel dx="907" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="751" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -59,7 +59,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="NFiQeFSLWexwuLTVgIHQ" name="Page-2">
-        <mxGraphModel dx="1026" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1053" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -130,7 +130,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="-64qw8W7oxHSas3Y6whm" name="Data Streams Overview">
-        <mxGraphModel dx="1026" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1102" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -158,7 +158,7 @@
                 <mxCell id="aoHnm26b1dISCsLJjkUD-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-3" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-3" value="&lt;b&gt;DISSco Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-3" value="&lt;b&gt;EASIN Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
                     <mxGeometry x="270" y="160" width="62" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="YYpvEfWEScxJ-JET8BAD-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="YYpvEfWEScxJ-JET8BAD-16" edge="1">
@@ -167,7 +167,7 @@
                 <mxCell id="aoHnm26b1dISCsLJjkUD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-4" value="&lt;b&gt;Copernicus Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-4" value="&lt;b&gt;Copernicus (Corine) Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
                     <mxGeometry x="270" y="400" width="62" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="YYpvEfWEScxJ-JET8BAD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-5" target="YYpvEfWEScxJ-JET8BAD-15" edge="1">
@@ -179,31 +179,31 @@
                 <mxCell id="JGelbmfjzmVQC1DLI2pZ-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-12" target="JGelbmfjzmVQC1DLI2pZ-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-12" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-12" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="380" y="40" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="JGelbmfjzmVQC1DLI2pZ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-14" target="JGelbmfjzmVQC1DLI2pZ-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-14" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-14" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="380" y="160" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="JGelbmfjzmVQC1DLI2pZ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-15" target="JGelbmfjzmVQC1DLI2pZ-4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-15" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-15" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="380" y="280" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="JGelbmfjzmVQC1DLI2pZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-16" target="JGelbmfjzmVQC1DLI2pZ-5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-16" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-16" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="380" y="400" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="JGelbmfjzmVQC1DLI2pZ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-17" target="JGelbmfjzmVQC1DLI2pZ-6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-17" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                <mxCell id="YYpvEfWEScxJ-JET8BAD-17" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="380" y="520" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="U_e6ALhiY10lTNGlEqco-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-1" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
@@ -239,23 +239,23 @@
                 <mxCell id="U_e6ALhiY10lTNGlEqco-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;startArrow=classic;startFill=1;" parent="1" source="U_e6ALhiY10lTNGlEqco-1" target="U_e6ALhiY10lTNGlEqco-8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-1" value="OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                <mxCell id="U_e6ALhiY10lTNGlEqco-1" value="OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#080808;" parent="1" vertex="1">
                     <mxGeometry x="710" y="290" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-8" value="Invasive Alien Species DT" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                <mxCell id="U_e6ALhiY10lTNGlEqco-8" value="Invasive Alien Species DT" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#0f0f0f;" parent="1" vertex="1">
                     <mxGeometry x="870" y="290" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="aoHnm26b1dISCsLJjkUD-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="aoHnm26b1dISCsLJjkUD-1" target="YYpvEfWEScxJ-JET8BAD-5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-1" value="Real-world natural and physical systems (ie., environment, species etc.)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                <mxCell id="aoHnm26b1dISCsLJjkUD-1" value="Real-world natural and physical systems (ie., environment, species etc.)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#030303;" parent="1" vertex="1">
                     <mxGeometry x="40" y="285" width="130" height="70" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="nT562FDKqiTtjidiKffC" name="chelsa">
-        <mxGraphModel dx="536" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1102" dy="914" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -325,7 +325,7 @@
                 <mxCell id="D3Var2XMzwEu2ozzhvI4-7" value="Data available on OPeNDAP" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="100" y="1100" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;span style=&quot;background-color: initial;&quot;&gt;1. Feedback loop: &lt;/span&gt;&lt;br style=&quot;background-color: initial;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;the S3 bucket&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
+                <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;span style=&quot;background-color: initial;&quot;&gt;1. Feedback loop: &lt;/span&gt;&lt;br style=&quot;background-color: initial;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the S3 bucket does not offer an API so &quot;listening&quot; to changes need to happen manually.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: I suggest a webscrapper as a basic solution.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: The scrapper can run periodically to check for new datasets.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Process:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the datasets are in geotif format for the entire world in a specific projection.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: slice dataset for europe based on shape file, reproject to ESPG:3530 equal area projection, convert to HDF5 file.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;3. Assign metadata:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: use HDF5 &quot;attributes&quot; to deine metadata,&lt;/li&gt;&lt;li&gt;TK: have to use FAIR stadnards from WP5.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;4. Assimilate:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: The new dataset needs to be assimilated into the PyDAP structure and versioned.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;5. Service:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: Docker image needs to be rebuilt with the new datasets for the pydap server needs to service the data.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="240" y="80" width="560" height="1070" as="geometry"/>
                 </mxCell>
             </root>
