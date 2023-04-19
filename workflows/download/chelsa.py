@@ -8,8 +8,8 @@ import rasterio
 import pyproj
 import xarray as xr
 from osgeo import osr
+from osgeo import gdal
 import netCDF4
-import gdal
 import os
 
 
