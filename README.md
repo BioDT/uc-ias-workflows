@@ -5,7 +5,11 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 ![overview](assets/IASDT-Data Streams Overview.png)
 
+![sample](assets/CHELSA-studyarea.jpeg)
+
 ## Folder Descriptions
+- assets/ --> static assets (images, videos, etc.)
+- datasets/ --> datasets divided into `raw`, `interim`, and `processed` sub-folders 
 - docs/ --> software documentation
 - logs/ --> logs for workflow runs
 - models/ --> modeling code
