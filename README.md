@@ -16,9 +16,13 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 - notebooks/ --> jupyter notebooks as playground and testing environment
 - references/ --> reference files
 - workflows/ --> Pydoit workflows
+
             | assimilation --> data assimilation tasks
+
             | download --> data download tasks
+
             | feedbackloop --> feedback loop tasks for "listening" to data changes
+            
             | service --> downstream data servicing task 
 - 
 
