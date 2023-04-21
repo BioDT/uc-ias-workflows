@@ -1,6 +1,7 @@
 # IASDT-workflows
 
 Data workflows for the IAS-DT, as part of BioDT.
+A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
 ![overview](assets/IASDT-Data Streams Overview.png)
 
