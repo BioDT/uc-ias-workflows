@@ -1,2 +1,5 @@
 .DS_Store
 datasets/raw
+datasets/raw/chelsa
+datasets/processed/chelsa
+.vscode
