@@ -21,3 +21,16 @@ def task_process_chelsa():
     return{
         "action":[geotiff_to_netcdf("../datasets/raw/chelsa/", "../datasets/processed/chelsa/2-resmpled_CHELSA_bio1-19.nc")]
     }
+
+
+def task_service_chelsa():
+    "Service data to the OPEnDAP server"
+    return{
+
+    }
+
+def task_execute_lexis():
+    "Communicate to LEXIS that new datasets are available on the server and model execution should happen"
+    return{
+        
+    }
