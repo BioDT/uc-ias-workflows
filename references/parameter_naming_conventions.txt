@@ -1,0 +1,18 @@
+# WORKFLOW PARAMETER NAME CONVENTION
+
+# Workflow layers
+FL=Feedback loop
+DP=Data Processing
+DA=Data Assimilation
+SM=State Management
+MM=Metadata Management
+DS=Data Servicing
+MC=Model Communication
+
+# Programming languages and tools
+R=R Lang
+Py=Python Lang
+Do=Docker
+
+# Example 
+DP_R_CHELSA_Gridsize=10
