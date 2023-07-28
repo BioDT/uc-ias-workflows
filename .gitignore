@@ -1,5 +1,4 @@
 .DS_Store
-datasets/raw
 datasets/raw/chelsa/*.tif
 datasets/processed/chelsa/*.tif
 .vscode
