@@ -16,3 +16,8 @@ h5py
 python-dotenv>=0.5.1
 selenium
 geopandas
+s3fs
+rasterio
+xarray
+h5py
+netcdf

@@ -16,63 +16,29 @@ import hashlib
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import s3fs
+
+
+def vSensor(path_list, metadata, output_dir):
+    """Senses new CHELSA data from their S3 server.
+
+    :param path_list: The path for the txt file with CHELSA data url list.
+    :param: metadata: The path where previous metadata file is stored.
+    :param: output_dir: The path where metadata file is updated/created.
+
+    Returns:
+        None
+    """
+    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
+    ls_bio = s3.ls(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/")
+    
+    for i in ls_bio:
+        checksum = s3.metadata(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_cmi_mean_1981-2010_V.2.1.tif", refresh=False)
+        info = s3.info(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_cmi_mean_1981-2010_V.2.1.tif")
+        new_md = checksum.update(info)
 
 
 
-def feedback():
-    # Helper tool to print linted json objects
-    def print_json(json_obj: str):
-        json_formatted_str = json.dumps(json_obj, indent=2)
-        print(json_formatted_str)
-    # Configure Selenium
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.headless = True
-
-    # Load Selenium Chromium driver
-    wd = webdriver.Chrome('chromedriver',options=chrome_options)
-
-    # Hook to Chelsa S3 bucket /GLOBAL/
-    # wd.get("https://envicloud.wsl.ch/#/?prefix=chelsa%2Fchelsa_V2%2FGLOBAL%2F")
-
-    # Hook to Chelsa S3 bucket /GLOBAL/climatologies/1981-2010/bio/
-    wd.get("https://envicloud.wsl.ch/#/?bucket=https%3A%2F%2Fos.zhdk.cloud.switch.ch%2Fenvicloud%2F&prefix=chelsa%2Fchelsa_V2%2FGLOBAL%2Fclimatologies%2F1981-2010%2Fbio%2F")
-    wd.title
-    # Identify element
-    l = wd.find_element("xpath", "/html/body/div/div/main/div/div/div/div[1]/div/div[2]/div/div/div/button[1]")
-
-    # Perform click
-    l.click()
-    # Get innerHTML for ../bio/ elements
-    data = wd.find_element("xpath", "/html/body/div/div/main/div/div/div/div[1]/div/div[2]/div/div/div[2]")
-    print(data.get_attribute('innerHTML'))
-
-    # from selenium.webdriver.common.by import By
-
-    web_data = wd.find_element(By.CSS_SELECTOR, "#app > div.v-application--wrap > main > div > div > div > div.col-sm-9.col-12 > div > div.v-card__text > div > div > div.v-treeview-node__children")
-    metadata = web_data.text.split("\n")
-
-    # Split metadata into groups
-    groups = [metadata[i:i+3] for i in range(0, len(metadata), 3)]
-
-    # Create a dataframe from the scraped metadata sorted by datetime
-    df = pd.DataFrame(groups, columns=['name', 'size', 'date'])
-    df['date'] = pd.to_datetime(df['date'])
-    df = df.sort_values("date", ascending=False)
-
-    # Generate MD5 hash for each row of a dataframe
-    def hash_row(row):
-
-        row_str = ''.join([str(val) for val in row])
-        row_hash = hashlib.md5(row_str.encode()).hexdigest()
-
-        return row_hash
-
-    df['hash'] = df.apply(hash_row, axis=1)
-    #TODO: Add date/time to the JSON filename
-    df.to_json("logs/feedbackloops/chelsa_logs.json")
-     
 
 def download_data(path_to_download_list, output_dir):
     """Downloads the CHELSA yearly data from the C3S FTP server.
@@ -140,3 +106,59 @@ def geotiff_to_netcdf(directory_path, output_file_path):
                 format="NETCDF4"
             )
             print(f"{filename} processed and saved to {output_file_path} as {output[0]}")
+
+            """ 
+def feedback():
+    # Helper tool to print linted json objects
+    def print_json(json_obj: str):
+        json_formatted_str = json.dumps(json_obj, indent=2)
+        print(json_formatted_str)
+    # Configure Selenium
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.headless = True
+
+    # Load Selenium Chromium driver
+    wd = webdriver.Chrome('chromedriver',options=chrome_options)
+
+    # Hook to Chelsa S3 bucket /GLOBAL/
+    # wd.get("https://envicloud.wsl.ch/#/?prefix=chelsa%2Fchelsa_V2%2FGLOBAL%2F")
+
+    # Hook to Chelsa S3 bucket /GLOBAL/climatologies/1981-2010/bio/
+    wd.get("https://envicloud.wsl.ch/#/?bucket=https%3A%2F%2Fos.zhdk.cloud.switch.ch%2Fenvicloud%2F&prefix=chelsa%2Fchelsa_V2%2FGLOBAL%2Fclimatologies%2F1981-2010%2Fbio%2F")
+    wd.title
+    # Identify element
+    l = wd.find_element("xpath", "/html/body/div/div/main/div/div/div/div[1]/div/div[2]/div/div/div/button[1]")
+
+    # Perform click
+    l.click()
+    # Get innerHTML for ../bio/ elements
+    data = wd.find_element("xpath", "/html/body/div/div/main/div/div/div/div[1]/div/div[2]/div/div/div[2]")
+    print(data.get_attribute('innerHTML'))
+
+    # from selenium.webdriver.common.by import By
+
+    web_data = wd.find_element(By.CSS_SELECTOR, "#app > div.v-application--wrap > main > div > div > div > div.col-sm-9.col-12 > div > div.v-card__text > div > div > div.v-treeview-node__children")
+    metadata = web_data.text.split("\n")
+
+    # Split metadata into groups
+    groups = [metadata[i:i+3] for i in range(0, len(metadata), 3)]
+
+    # Create a dataframe from the scraped metadata sorted by datetime
+    df = pd.DataFrame(groups, columns=['name', 'size', 'date'])
+    df['date'] = pd.to_datetime(df['date'])
+    df = df.sort_values("date", ascending=False)
+
+    # Generate MD5 hash for each row of a dataframe
+    def hash_row(row):
+
+        row_str = ''.join([str(val) for val in row])
+        row_hash = hashlib.md5(row_str.encode()).hexdigest()
+
+        return row_hash
+
+    df['hash'] = df.apply(hash_row, axis=1)
+    #TODO: Add date/time to the JSON filename
+    df.to_json("logs/feedbackloops/chelsa_logs.json")
+      """
