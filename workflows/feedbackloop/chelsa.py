@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+import sys
 from pathlib import Path
 import wget
 import glob
@@ -19,7 +20,7 @@ from selenium.webdriver.common.by import By
 import s3fs
 
 
-def vSensor(path_list, metadata, output_dir):
+def vSensor(input_path, logfile, output_dir):
     """Senses new CHELSA data from their S3 server.
 
     :param path_list: The path for the txt file with CHELSA data url list.
@@ -29,15 +30,21 @@ def vSensor(path_list, metadata, output_dir):
     Returns:
         None
     """
-    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
-    ls_bio = s3.ls(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/")
-    
-    for i in ls_bio:
-        checksum = s3.metadata(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_cmi_mean_1981-2010_V.2.1.tif", refresh=False)
-        info = s3.info(path="envicloud/chelsa/chelsa_V2/GLOBAL/climatologies/1981-2010/bio/CHELSA_cmi_mean_1981-2010_V.2.1.tif")
-        new_md = checksum.update(info)
+    try:
+        s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
+        file_list = s3.ls(path=f"{input_path}")
+        
+        for i in file_list:
+            checksum = s3.metadata(path=f"{i}", refresh=False)
+            info = s3.info(path=f"{i}")
+            new_md = checksum.update(info)
+            #append new metadata to the metadata file
+    except:
+        print("Error:", sys.exc_info()[0])
 
-
+    if logfile:
+        with open(logfile, "r") as f:
+            logs = json.load(f)
 
 
 def download_data(path_to_download_list, output_dir):
