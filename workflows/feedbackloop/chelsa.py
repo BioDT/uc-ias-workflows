@@ -18,9 +18,10 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import s3fs
+import deepdiff
 
 
-def vSensor(input_path, logfile, output_dir):
+def vSensor(input_path, logfile):
     """Senses new CHELSA data from their S3 server.
 
     :param path_list: The path for the txt file with CHELSA data url list.
@@ -28,24 +29,38 @@ def vSensor(input_path, logfile, output_dir):
     :param: output_dir: The path where metadata file is updated/created.
 
     Returns:
-        None
+        diff:Dictionary Difference between the previous and new metadata.
     """
+    logger = logging.getLogger(__name__)
+    logger.info("checking CHELSA metadata...")
     try:
         s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
         file_list = s3.ls(path=f"{input_path}")
-        
+        new_log=[]
+        logger.info("comparing CHELSA metadata...")
         for i in file_list:
             checksum = s3.metadata(path=f"{i}", refresh=False)
+            #print(checksum)
             info = s3.info(path=f"{i}")
-            new_md = checksum.update(info)
+            checksum.update(info)
+            checksum["LastModified"]=checksum["LastModified"].strftime("%Y-%m-%d %H:%M:%S")
             #append new metadata to the metadata file
+            new_log.append(checksum)
     except:
         print("Error:", sys.exc_info()[0])
 
     if logfile:
-        with open(logfile, "r") as f:
-            logs = json.load(f)
-
+        try:
+            with open(logfile, "w") as f:
+                #logs = json.load(f)
+                #TODO: Validate the difference between the previous and new metadata
+                diff = deepdiff.DeepDiff(f, new_log)
+                return diff
+                 #json.dump(new_log, f)
+        except:
+            print("Error:", sys.exc_info()[0])
+    else:
+        print("No logfile provided, please provide a logfile path.")
 
 def download_data(path_to_download_list, output_dir):
     """Downloads the CHELSA yearly data from the C3S FTP server.
