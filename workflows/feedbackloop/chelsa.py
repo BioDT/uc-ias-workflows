@@ -1,19 +1,14 @@
 # -*- coding: utf-8 -*-
-import logging
-import sys
+import logging, sys, glob, os, json, hashlib, time
 from pathlib import Path
 import wget
-import glob
 import numpy as np
 import pyproj
 import netCDF4
-import os
 import xarray as xr
 import rioxarray as rxr
 import rasterio
 from rasterio.enums import Resampling
-import json
-import hashlib
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -21,49 +16,55 @@ import s3fs
 import deepdiff
 
 
-def vSensor(input_path, logfile):
+
+def vSensor(input_paths):
     """Senses new CHELSA data from their S3 server.
 
-    :param path_list: The path for the txt file with CHELSA data url list.
-    :param: metadata: The path where previous metadata file is stored.
-    :param: output_dir: The path where metadata file is updated/created.
+    :param input_path: The path for S3 CHELSA data directory where to check new data.
 
     Returns:
-        diff:Dictionary Difference between the previous and new metadata.
+        diff_json:JSON Difference between the previous and new metadata.
     """
     logger = logging.getLogger(__name__)
     logger.info("checking CHELSA metadata...")
-    try:
+    try: 
+        #TODO: Change URL string to environment variable
         s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
-        file_list = s3.ls(path=f"{input_path}")
-        new_log=[]
-        logger.info("comparing CHELSA metadata...")
-        for i in file_list:
-            checksum = s3.metadata(path=f"{i}", refresh=False)
-            #print(checksum)
-            info = s3.info(path=f"{i}")
-            checksum.update(info)
-            checksum["LastModified"]=checksum["LastModified"].strftime("%Y-%m-%d %H:%M:%S")
-            #append new metadata to the metadata file
-            new_log.append(checksum)
+        for x in input_paths:
+            file_list = s3.ls(path=f"{input_path}")
+            new_log=[]
+            logger.info("comparing CHELSA metadata...")
+            for i in file_list:
+                checksum = s3.metadata(path=f"{i}", refresh=False)
+                #print(checksum)
+                info = s3.info(path=f"{i}")
+                checksum.update(info)
+                checksum["LastModified"]=checksum["LastModified"].strftime("%Y-%m-%d %H:%M:%S")
+                #append new metadata to the metadata file
+                new_log.append(checksum)
+        list_of_files = glob.glob('logs/feedback/chelsa/*.json') # * means all if need specific format then *.csv
+        latest_file = max(list_of_files, key=os.path.getctime)
+        with open(f"logs/feedback/chelsa/{time.time()}.json", "w") as f:
+            json.dump(new_log, f)
+        print(f"new CHELSA log saved to {f.name}")
     except:
         print("Error:", sys.exc_info()[0])
 
-    if logfile:
-        try:
-            with open(logfile, "w") as f:
-                #logs = json.load(f)
-                #TODO: Validate the difference between the previous and new metadata
-                diff = deepdiff.DeepDiff(f, new_log)
-                return diff
-                 #json.dump(new_log, f)
-        except:
-            print("Error:", sys.exc_info()[0])
-    else:
-        print("No logfile provided, please provide a logfile path.")
-
-def download_data(path_to_download_list, output_dir):
-    """Downloads the CHELSA yearly data from the C3S FTP server.
+    try:
+        with open(f"logs/feedback/chelsa/{latest_file}", "w") as f:
+            #logs = json.load(f)
+            #TODO: Validate the difference between the previous and new metadata
+            diff = deepdiff.DeepDiff(f, new_log, view='tree')
+            diff_json = json.dumps(diff.to_json(), indent=2)
+            with open(f"logs/diff/chelsa/{time.time()}.json", "w") as d:
+                json.dump(json.loads(diff_json), d)
+                print(f"new CHELSA diff saved to {d.name}")
+            return diff_json
+    except:
+        print("Error:", sys.exc_info()[0])
+   
+def intaker(path_to_download_list, output_dir):
+    """Downloads the CHELSA yearly data from the C3S S3 server.
 
     :param path_to_download_list: The path for the txt file with CHELSA data url list.
     :param: output_dir: The path where data files are downloaded to.
@@ -73,7 +74,7 @@ def download_data(path_to_download_list, output_dir):
     """
     logger = logging.getLogger(__name__)
     logger.info("downloading CHELSA data...")
-    # Download the CHELSA data from the C3S FTP server
+    # Download the CHELSA data from the C3S S3 server
     with open(path_to_download_list) as url_list:
         for line in url_list:
             response = wget.download(line, out=output_dir)
