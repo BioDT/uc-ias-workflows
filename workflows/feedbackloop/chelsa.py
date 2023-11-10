@@ -31,7 +31,7 @@ def vSensor(input_paths):
         #TODO: Change URL string to environment variable
         s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
         for x in input_paths:
-            file_list = s3.ls(path=f"{input_path}")
+            file_list = s3.ls(path=f"{x}")
             new_log=[]
             logger.info("comparing CHELSA metadata...")
             for i in file_list:
