@@ -1,36 +1,36 @@
-from feedbackloop.chelsa import download_data, geotiff_to_netcdf, feedback
+from feedbackloop.chelsa import vSensor, intaker
+from feedbackloop.corine import get_token, vSensor, intaker
 
 
-def task_feedback():
-    """Feedbackloop CHELSA """
+def task_chelsa():
+    """CHELSA Workflow"""
     return {
-        "actions": [feedback()]
+        "actions": [
+            vSensor("../references/chelsa/test.txt"),
+            intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa"),
+        ],
     }
 
-def task_download_chelsa():
-    """Download CHELSA data"""
+
+# TODO: Add access token to the intaker action
+def task_corine():
+    """CLMS CORINE Workflow"""
     return {
-        "actions": [download_data("../references/chelsa/test.txt", "../datasets/raw/chelsa")]
+        "actions": [
+            get_token("../corine/clc.json"),
+            vSensor(""),
+            intaker("aaccessToken", "../logs/feedback/corine/*.json","../datasets/raw/corine"),
+        ],
     }
 
 
-#TODO: Compare the raw datasets to the previos dataset to check for WHAT has changed
-
-def task_process_chelsa():
-    """Process CHELSA .tif files to NetCDF4"""
-    return{
-        "actions":[geotiff_to_netcdf("../datasets/raw/chelsa/", "../datasets/processed/chelsa/2-resmpled_CHELSA_bio1-19.nc")]
-    }
-
-
-def task_service_chelsa():
-    "Service data to the OPEnDAP server"
-    return{
-
-    }
-
-def task_execute_lexis():
-    "Communicate to LEXIS that new datasets are available on the server and model execution should happen"
-    return{
-        
+def task_gbif():
+    """GBIF Workflow"""
+    return {
+        "actions": [
+            geotiff_to_netcdf(
+                "../datasets/raw/chelsa/",
+                "../datasets/processed/chelsa/2-resmpled_CHELSA_bio1-19.nc",
+            )
+        ]
     }

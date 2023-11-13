@@ -68,7 +68,7 @@ def get_token(credentials):
 def vSensor(logs_folder):
     """Senses new CORINE data from the CLMS API.
 
-    :param logs_folder: The path for the folder with CLMS logs.
+    :param logs_folder: The path for the folder with CLMS logs, defaults to "../logs/feedback/corine/*.json".
 
     Returns:
         True if new data is available, False if not.
@@ -128,8 +128,8 @@ def intaker(access_token, logs_folder, output_dir):
     """Downloads the CORINE 6-yearly data from the CLMS server.
 
     :param access_token: The access token for the CLMS API.
-    :param logs_folder: The path for the folder with CLMS logs.
-    :param: output_dir: The path where data files are downloaded to.
+    :param logs_folder: The path for the folder with CLMS logs, defaults to "../logs/feedback/corine/*.json".
+    :param: output_dir: The path where data files are downloaded to, defaults to "../datasets/raw/corine".
 
     Returns:
         None
