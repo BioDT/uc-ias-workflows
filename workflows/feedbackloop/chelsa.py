@@ -23,7 +23,7 @@ def vSensor(input_paths):
     :param input_path: The path for S3 CHELSA data directory where to check new data.
 
     Returns:
-        diff_json:JSON Difference between the previous and new metadata.
+        
     """
     logger = logging.getLogger(__name__)
     logger.info("checking CHELSA metadata...")
