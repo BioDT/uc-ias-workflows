@@ -27,6 +27,7 @@ def vSensor(input_paths):
     """
     logger = logging.getLogger(__name__)
     logger.info("checking CHELSA metadata...")
+    # Check for new CHELSA data
     try: 
         #TODO: Change URL string to environment variable
         s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
@@ -49,7 +50,9 @@ def vSensor(input_paths):
         print(f"new CHELSA log saved to {f.name}")
     except:
         print("Error:", sys.exc_info()[0])
+        return False
 
+    # Compare the new metadata with the previous metadata using DIFF
     try:
         with open(f"logs/feedback/chelsa/{latest_file}", "w") as f:
             #logs = json.load(f)
@@ -62,7 +65,8 @@ def vSensor(input_paths):
             return diff_json
     except:
         print("Error:", sys.exc_info()[0])
-   
+        return False
+    
 def intaker(path_to_download_list, output_dir):
     """Downloads the CHELSA yearly data from the C3S S3 server.
 

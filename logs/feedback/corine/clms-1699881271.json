@@ -1,0 +1,131 @@
+[
+  {
+    "title": "CORINE Land Cover 2018 (vector/raster 100 m), Europe, 6-yearly",
+    "dataset_full_format": null,
+    "dataset_download_information": {
+      "items": [
+        {
+          "@id": "1bda2fbd-3230-42ba-98cf-69c96ac063bc",
+          "full_format": "GDB",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2018\\CLC2018_Version_20\\Data\\data-master\\U2018_CLC2018_V2020_20u1_vector\\U2018_CLC2018_V2020_20u1.gdb",
+          "full_source": "EEA",
+          "name": "VECTOR"
+        },
+        {
+          "@id": "7bcdf9d1-6ba0-4d4e-afa8-01451c7316cb",
+          "collection": "100 m",
+          "full_format": "Geotiff",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2018\\CLC2018_Version_20\\Data\\data-master\\U2018_CLC2018_V2020_20u1_raster100m_tiled",
+          "full_source": "EEA",
+          "name": "RASTER"
+        }
+      ]
+    },
+    "UID": "0407d497d3c44bcd93ce8fd5bf78596a",
+    "@id": "https://land.copernicus.eu/api/en/products/corine-land-cover/clc2018"
+  },
+  {
+    "title": "CORINE Land Cover 2012 (vector/raster 100 m), Europe, 6-yearly",
+    "dataset_full_format": "GDB",
+    "dataset_download_information": {
+      "items": [
+        {
+          "@id": "cff14ee5-bafb-46f4-a1b2-2cd6f4049514",
+          "full_format": { "title": "GDB", "token": "GDB" },
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2012\\CLC2012_Version_20\\Data\\data-master\\U2018_CLC2012_V2020_20u1_vector\\U2018_CLC2012_V2020_20u1.gdb",
+          "full_source": "EEA",
+          "name": "VECTOR",
+          "wekeo_choices": ""
+        },
+        {
+          "@id": "b1027c88-6256-435b-98a3-62f019cbb381",
+          "collection": "100 m",
+          "full_format": "Geotiff",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2012\\CLC2012_Version_20\\Data\\data-master\\U2018_CLC2012_V2020_20u1_raster100m_tiled",
+          "full_source": "EEA",
+          "name": "RASTER"
+        }
+      ]
+    },
+    "UID": "a5ee71470be04d66bcff498f94ceb5dc",
+    "@id": "https://land.copernicus.eu/api/en/products/corine-land-cover/clc-2012"
+  },
+  {
+    "title": "CORINE Land Cover 2006 (vector/raster 100 m), Europe, 6-yearly",
+    "dataset_full_format": "GDB",
+    "dataset_download_information": {
+      "items": [
+        {
+          "@id": "3936f6a5-9157-4e76-9fc7-4e14668c81ef",
+          "full_format": { "title": "GDB", "token": "GDB" },
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2006\\CLC2006_Version_20\\Data\\data-master\\U2012_CLC2006_V2020_20u1_vector\\U2012_CLC2006_V2020_20u1.gdb",
+          "full_source": "EEA",
+          "name": "VECTOR",
+          "wekeo_choices": ""
+        },
+        {
+          "@id": "4841f8cb-6e7c-4227-bb35-cd787609c546",
+          "collection": "100 m",
+          "full_format": "Geotiff",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2006\\CLC2006_Version_20\\Data\\data-master\\U2012_CLC2006_V2020_20u1_raster100m_tiled",
+          "full_source": "EEA",
+          "name": "RASTER"
+        }
+      ]
+    },
+    "UID": "d443c86fec2f49e08ff12c7decdbf2af",
+    "@id": "https://land.copernicus.eu/api/en/products/corine-land-cover/clc-2006"
+  },
+  {
+    "title": "CORINE Land Cover 2000 (vector/raster 100 m), Europe, 6-yearly",
+    "dataset_full_format": "GDB",
+    "dataset_download_information": {
+      "items": [
+        {
+          "@id": "1009310e-2cd8-481c-b15b-aee3f0406098",
+          "full_format": { "title": "GDB", "token": "GDB" },
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2000\\CLC2000_Version_20\\Data\\data-master\\U2006_CLC2000_V2020_20u1_vector\\U2006_CLC2000_V2020_20u1.gdb",
+          "full_source": "EEA",
+          "name": "VECTOR",
+          "wekeo_choices": ""
+        },
+        {
+          "@id": "19d7fbd8-53ee-4d09-89b6-fe5231247763",
+          "collection": "100 m",
+          "full_format": "Geotiff",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_2000\\CLC2000_Version_20\\Data\\data-master\\U2006_CLC2000_V2020_20u1_raster100m_tiled",
+          "full_source": "EEA",
+          "name": "RASTER"
+        }
+      ]
+    },
+    "UID": "6704f90ca82e4f228a46111519f8978e",
+    "@id": "https://land.copernicus.eu/api/en/products/corine-land-cover/clc-2000"
+  },
+  {
+    "title": "CORINE Land Cover 1990 (vector/raster 100 m), Europe, 6-yearly",
+    "dataset_full_format": "GDB",
+    "dataset_download_information": {
+      "items": [
+        {
+          "@id": "fd1c53e8-d710-46a6-8363-2febf699c7be",
+          "full_format": { "title": "GDB", "token": "GDB" },
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_1990\\CLC1990_Version_20\\Data\\data-master\\U2000_CLC1990_V2020_20u_vector\\U2000_CLC1990_V2020_20u1.gdb",
+          "full_source": "EEA",
+          "name": "VECTOR",
+          "wekeo_choices": ""
+        },
+        {
+          "@id": "fecff4c7-a5e5-428d-817d-a8ee5f23d99d",
+          "collection": "100 m",
+          "full_format": "Geotiff",
+          "full_path": "H:\\Corine_Land_Cover\\Corine_Land_Cover\\Corine_Land_Cover(CLC)_1990\\CLC1990_Version_20\\Data\\data-master\\U2000_CL1990_V2020_20u_raster100m_tiled",
+          "full_source": "EEA",
+          "name": "RASTER"
+        }
+      ]
+    },
+    "UID": "8b393c8e474642d5acb4ed70fc2dc024",
+    "@id": "https://land.copernicus.eu/api/en/products/corine-land-cover/clc-1990"
+  }
+]
