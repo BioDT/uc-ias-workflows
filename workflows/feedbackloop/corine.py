@@ -1,3 +1,4 @@
+# CLMS DOCUMENTATION:https://eea.github.io/clms-api-docs/download.html#request-the-download
 import requests
 import json
 import time
@@ -25,6 +26,22 @@ def get_token():
     grant = jwt.encode(claim_set, private_key, algorithm='RS256')
     req1= requests.post(f'{API}@@oauth2-token', headers={'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'}, data='grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=REDACTED')
     req1.raise_for_status()
+    result = requests.post(
+        service_key["token_uri"],
+        headers={
+            "Accept": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data={
+            "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            "assertion": grant,
+        },
+)
+
+    access_token_info_json = result.json()
+    access_token = access_token_info_json.get('access_token')
+    print(access_token)
+
     return True
 
 def vSensor():
@@ -60,5 +77,20 @@ def vSensor():
                 with open(f'../logs/feedback/corine/clms-{round(time.time())}.json', 'w') as f:
                     json.dump(new, f)
     return True
-        
+    
+def intaker():
+     for i in current:
+    DatasetID = i['UID']
+    DatasetDownloadInformationID = ''
 
+    for x in i['dataset_download_information']['items']:
+        if x['full_format'] == 'Geotiff':
+            DatasetDownloadInformationID = x['@id']
+    print(DatasetID)
+    print(DatasetDownloadInformationID)           
+    task=requests.post(f'{API}@datarequest_post', headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': f'Bearer {access_token}'}, json={'Datasets': [{'DatasetID': DatasetID, 'DatasetDownloadInformationID': DatasetDownloadInformationID, 'OutputFormat': 'Geotiff', 'OutputGCS': 'EPSG:4326'}]})
+    print(task.json())
+    status=requests.get(f'{API}@datarequest_search', headers={'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': f'Bearer {access_token}'})
+    print(status.json())
+    with open('../references/corine/status-sample.json', 'w') as f:
+    json.dump(status.json(), f)
