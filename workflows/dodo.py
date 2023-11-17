@@ -2,6 +2,17 @@ from feedbackloop.chelsa import vSensor, intaker
 from feedbackloop.corine import get_token, vSensor, intaker
 
 
+""" 
+def task_setup():
+    #Setup Workflow Environment    
+    return {
+        "actions": [
+            "python -m pip install -r ../requirements.txt",
+            "python -m pip install -e .",
+
+        ],
+    }
+"""
 def task_chelsa():
     """CHELSA Workflow"""
     return {

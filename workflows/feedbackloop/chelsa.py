@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import logging, sys, glob, os, json, hashlib, time
+import sys, glob, os, json, hashlib, time
 from pathlib import Path
 import wget
 import numpy as np
@@ -14,6 +14,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import s3fs
 import deepdiff
+from logger_base import logger
 
 
 
@@ -25,7 +26,6 @@ def vSensor(input_paths):
     Returns:
         
     """
-    logger = logging.getLogger(__name__)
     logger.info("checking CHELSA metadata...")
     # Check for new CHELSA data
     try: 
@@ -48,8 +48,9 @@ def vSensor(input_paths):
         with open(f"logs/feedback/chelsa/{time.time()}.json", "w") as f:
             json.dump(new_log, f)
         print(f"new CHELSA log saved to {f.name}")
+        return True
     except:
-        print("Error:", sys.exc_info()[0])
+        logger.error("Error: {}".format(sys.exc_info()[0]))
         return False
 
     # Compare the new metadata with the previous metadata using DIFF
@@ -64,7 +65,7 @@ def vSensor(input_paths):
                 print(f"new CHELSA diff saved to {d.name}")
             return diff_json
     except:
-        print("Error:", sys.exc_info()[0])
+        logger.error("Error:", sys.exc_info()[0])
         return False
     
 def intaker(path_to_download_list, output_dir):
@@ -76,7 +77,7 @@ def intaker(path_to_download_list, output_dir):
     Returns:
         None
     """
-    logger = logging.getLogger(__name__)
+    logger = logger.getLogger(__name__)
     logger.info("downloading CHELSA data...")
     # Download the CHELSA data from the C3S S3 server
     with open(path_to_download_list) as url_list:

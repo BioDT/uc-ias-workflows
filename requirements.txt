@@ -6,7 +6,6 @@ click
 Sphinx
 sphinx-rtd-theme
 coverage
-awscli
 flake8
 doit
 numpy
@@ -22,3 +21,4 @@ xarray
 h5py
 netcdf
 deepdiff
+clusterjob
