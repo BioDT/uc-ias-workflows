@@ -17,57 +17,57 @@ import deepdiff
 from logger_base import logger
 
 
-
-def vSensor(input_paths):
+def vSensor(input_paths, logs_feedback, logs_diff):
     """Senses new CHELSA data from their S3 server.
 
     :param input_path: The path for S3 CHELSA data directory where to check new data.
 
     Returns:
-        
+
     """
     logger.info("checking CHELSA metadata...")
     # Check for new CHELSA data
-    try: 
-        #TODO: Change URL string to environment variable
-        s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
+    try:
+        # TODO: Change URL string to environment variable
+        s3 = s3fs.S3FileSystem(
+            anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/"
+        )
         for x in input_paths:
             file_list = s3.ls(path=f"{x}")
-            new_log=[]
+            new_log = []
             logger.info("comparing CHELSA metadata...")
             for i in file_list:
                 checksum = s3.metadata(path=f"{i}", refresh=False)
-                #print(checksum)
                 info = s3.info(path=f"{i}")
                 checksum.update(info)
-                checksum["LastModified"]=checksum["LastModified"].strftime("%Y-%m-%d %H:%M:%S")
-                #append new metadata to the metadata file
+                checksum["LastModified"] = checksum["LastModified"].strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                )
+                # append new metadata to the metadata file
                 new_log.append(checksum)
-        list_of_files = glob.glob('logs/feedback/chelsa/*.json') # * means all if need specific format then *.csv
+        list_of_files = glob.glob(
+            f"{logs_feedback}*.json"
+        )  # * means all if need specific format then *.csv
         latest_file = max(list_of_files, key=os.path.getctime)
-        with open(f"logs/feedback/chelsa/{time.time()}.json", "w") as f:
+        with open(f"{logs_feedback}{time.time()}.json", "w") as f:
             json.dump(new_log, f)
-        print(f"new CHELSA log saved to {f.name}")
+        logger.info(f"new CHELSA log saved to {f.name}")
+
+        # Compare the new metadata with the previous metadata using DIFF
+        with open(f"{logs_feedback}{latest_file}", "w") as f:
+            # logs = json.load(f)
+            # TODO: Validate the difference between the previous and new metadata
+            diff = deepdiff.DeepDiff(f, new_log, view="tree")
+            diff_json = json.dumps(diff.to_json(), indent=2)
+            with open(f"{logs_diff}{time.time()}.json", "w") as d:
+                json.dump(json.loads(diff_json), d)
+                logger.info(f"new CHELSA diff saved to {d.name}")
         return True
     except:
         logger.error("Error: {}".format(sys.exc_info()[0]))
         return False
 
-    # Compare the new metadata with the previous metadata using DIFF
-    try:
-        with open(f"logs/feedback/chelsa/{latest_file}", "w") as f:
-            #logs = json.load(f)
-            #TODO: Validate the difference between the previous and new metadata
-            diff = deepdiff.DeepDiff(f, new_log, view='tree')
-            diff_json = json.dumps(diff.to_json(), indent=2)
-            with open(f"logs/diff/chelsa/{time.time()}.json", "w") as d:
-                json.dump(json.loads(diff_json), d)
-                print(f"new CHELSA diff saved to {d.name}")
-            return diff_json
-    except:
-        logger.error("Error:", sys.exc_info()[0])
-        return False
-    
+
 def intaker(path_to_download_list, output_dir):
     """Downloads the CHELSA yearly data from the C3S S3 server.
 
@@ -83,17 +83,21 @@ def intaker(path_to_download_list, output_dir):
     with open(path_to_download_list) as url_list:
         for line in url_list:
             response = wget.download(line, out=output_dir)
-            logger.info("downlaoded CHELSA data from {}".format(response))
+            logger.info(
+                "downlaoded CHELSA data from {path_to_download_list}".format(response)
+            )
+
+    return True
+
 
 def geotiff_to_netcdf(directory_path, output_file_path):
-    
     # Define the bounding box for Europe
     europe_bounds = [-25, 35, 45, 75]
 
     # Iterate over all files in the directory
     for filename in os.listdir(directory_path):
         print("---------------------------------------------")
-        output=filename.rsplit("_V")
+        output = filename.rsplit("_V")
         # Check if the file is a GeoTIFF
         if filename.endswith(".tif"):
             print(f"Reading {filename}...")
@@ -101,7 +105,7 @@ def geotiff_to_netcdf(directory_path, output_file_path):
             # Open the GeoTIFF using rioxarray
             data = rxr.open_rasterio(os.path.join(directory_path, filename))
             print(f"Processing {filename} as xarray...")
-           
+
             # Slice the data for Europe
             data_europe = data.rio.clip_box(*europe_bounds)
             print(f"Clipping {filename} for Europe...")
@@ -109,31 +113,29 @@ def geotiff_to_netcdf(directory_path, output_file_path):
             # Reproject the data to ESPG-3530
             data_europe = data_europe.rio.reproject("EPSG:3035")
             print(f"Reprojecting {filename} as ESPG:3035...")
-            
+
             # Resample data to 10x10 KM grids based on https://corteva.github.io/rioxarray/stable/examples/resampling.html
-            downscale_factor = 1/10
+            downscale_factor = 1 / 10
             new_width = data_europe.rio.width * downscale_factor
             new_height = data_europe.rio.height * downscale_factor
-            data_resampled= data_europe.rio.reproject(
+            data_resampled = data_europe.rio.reproject(
                 data_europe.rio.crs,
                 shape=(new_height, new_width),
-                resampling=Resampling.average,)
+                resampling=Resampling.average,
+            )
             print(f"Resamplimg {filename} using average algorithm...")
 
             # Convert to xarray DataArray to xrray Dataset
-            dsout=data_resampled.to_dataset(name=f"{output[0]}")
+            dsout = data_resampled.to_dataset(name=f"{output[0]}")
 
             print(f"Final dataset for {output[0]}: ")
             print(dsout)
 
             # Convert the data to a netCDF4 file using xarray
-            dsout.to_netcdf(
-                output_file_path, 
-                mode="a",
-                group="/",
-                format="NETCDF4"
+            dsout.to_netcdf(output_file_path, mode="a", group="/", format="NETCDF4")
+            print(
+                f"{filename} processed and saved to {output_file_path} as {output[0]}"
             )
-            print(f"{filename} processed and saved to {output_file_path} as {output[0]}")
 
             """ 
 def feedback():

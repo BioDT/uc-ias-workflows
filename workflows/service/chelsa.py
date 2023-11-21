@@ -1,4 +1,5 @@
 from clusterjob import JobScript
+
 from feedbackloop.chelsa import vSensor, intaker
 
 
@@ -6,6 +7,7 @@ def job_vSensor(input_paths):
     """Executes the workflow."""
     vSensor = f"python3 -c 'from feedbackloop.chelsa import vSensor; vSensor(input_paths={input_paths})'"
     jobscript = JobScript(
+        
         shebang="#!/bin/bash",
         preamble=[
             "module load Python/3.8.2-GCCcore-9.3.0",
@@ -38,3 +40,4 @@ def job_intaker(download_list, output_dir):
         threads=4,
         mem=16000,
     )
+

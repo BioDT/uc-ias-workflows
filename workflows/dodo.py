@@ -34,14 +34,3 @@ def task_corine():
         ],
     }
 
-
-def task_gbif():
-    """GBIF Workflow"""
-    return {
-        "actions": [
-            geotiff_to_netcdf(
-                "../datasets/raw/chelsa/",
-                "../datasets/processed/chelsa/2-resmpled_CHELSA_bio1-19.nc",
-            )
-        ]
-    }
