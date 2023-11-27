@@ -80,13 +80,13 @@ def intaker(path_to_download_list, output_dir):
     logger = logger.getLogger(__name__)
     logger.info("downloading CHELSA data...")
     # Download the CHELSA data from the C3S S3 server
+    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
     with open(path_to_download_list) as url_list:
         for line in url_list:
-            response = wget.download(line, out=output_dir)
-            logger.info(
-                "downlaoded CHELSA data from {path_to_download_list}".format(response)
-            )
-
+            print(line.strip())
+            head, tail = os.path.split(line)
+            tail = tail.strip()
+            s3.get(line.strip(), output_dir)
     return True
 
 

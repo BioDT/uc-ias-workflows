@@ -1,5 +1,6 @@
-from feedbackloop.chelsa import vSensor, intaker
-from feedbackloop.corine import get_token, vSensor, intaker
+from feedbackloop.chelsa import vSensor, intaker as chelsa_vSensor, chelsa_intaker
+
+from feedbackloop.corine import get_token, vSensor, intaker as get_token, corine_vSensor, corine_intaker
 
 
 """ 
@@ -17,8 +18,8 @@ def task_chelsa():
     """CHELSA Workflow"""
     return {
         "actions": [
-            vSensor("../references/chelsa/test.txt"),
-            intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa"),
+            chelsa_vSensor("../references/chelsa/test.txt"),
+            chelsa_intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa"),
         ],
     }
 
@@ -29,8 +30,8 @@ def task_corine():
     return {
         "actions": [
             get_token("../corine/clc.json"),
-            vSensor(""),
-            intaker("aaccessToken", "../logs/feedback/corine/*.json","../datasets/raw/corine"),
+            corine_vSensor(""),
+            corine_intaker("aaccessToken", "../logs/feedback/corine/*.json","../datasets/raw/corine"),
         ],
     }
 
