@@ -3,15 +3,14 @@
 Data workflows for the IAS-DT, as part of BioDT.
 A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
-![overview](assets/IASDT-Data Streams Overview.png)
-<center>
-<figure>
-<img src="assets/IASDT-Data Streams Overview.png" alt="Overview" style="width:50%",
-<figcaption>Fig: Windward and Leeward. [Source: Britannica.precipitation].</figcaption>
-</figure>
-</center>
+**Architectural overview:**
 
-![sample](assets/CHELSA-studyarea.jpeg)
+<img src="assets/IASDT-Data Streams Overview.png"  width="50%"/>
+
+**Study area & geospatial projection:**
+
+<img src="assets/CHELSA-studyarea.jpeg" width="50%"/>
+
 
 ## Folder Descriptions
 
@@ -49,3 +48,11 @@ make html
 
 ## Logging
 
+IASDT Workflows use Unix styled logging with the following logging levels:
+
+- Info: Informational logs
+- Debug:
+- Error: 
+- Critical:
+
+## `evironment` variables
