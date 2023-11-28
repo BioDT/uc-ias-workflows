@@ -7,6 +7,9 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 <img src="assets/IASDT-Data Streams Overview.png"  width="50%"/>
 
+<br/>
+<br/>
+
 **Study area & geospatial projection:**
 
 <img src="assets/CHELSA-studyarea.jpeg" width="50%"/>
