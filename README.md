@@ -4,6 +4,12 @@ Data workflows for the IAS-DT, as part of BioDT.
 A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
 ![overview](assets/IASDT-Data Streams Overview.png)
+<center>
+<figure>
+<img src="assets/IASDT-Data Streams Overview.png" alt="Overview" style="width:50%",
+<figcaption>Fig: Windward and Leeward. [Source: Britannica.precipitation].</figcaption>
+</figure>
+</center>
 
 ![sample](assets/CHELSA-studyarea.jpeg)
 
@@ -40,3 +46,6 @@ Run the following code to create Sphinx documentation.
 cd docs
 make html
 ```
+
+## Logging
+
