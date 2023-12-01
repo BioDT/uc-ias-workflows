@@ -5,7 +5,7 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 **Architectural overview:**
 
-<img src="assets/IASDT-Data Streams Overview.png"  width="50%"/>
+`<img src="assets/IASDT-Data Streams Overview.png"  width="50%"/>`
 
 <br/>
 <br/>
@@ -13,7 +13,6 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 **Study area & geospatial projection:**
 
 <img src="assets/CHELSA-studyarea.jpeg" width="50%"/>
-
 
 ## Folder Descriptions
 
@@ -25,20 +24,20 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 - notebooks/ --> jupyter notebooks as playground and testing environment
 - references/ --> reference files
 - workflows/ --> Pydoit workflows
-    - feedbackloop --> feedback loop tasks for "listening" to data changes and downloading datasets 
-    - process --> data processing tasks
-    - state --> state management tasks
-    - service --> downstream data servicing and HPC management tasks
+  - feedbackloop --> feedback loop tasks for "listening" to data changes and downloading datasets
+  - process --> data processing tasks
+  - state --> state management tasks
+  - service --> downstream data servicing and HPC management tasks
 
 ## Usage
 
-- Clone the GitLab repository to your local or cloud development environment. 
-- Create and configure the .env file with the necessary credentials and settings. 
-- Install all dependencies from requirements.txt and renv.lock files. 
-- Use the workflow directory as the current working directory. 
-- Run the following command in the CLI for listing available tasks: pydoit list 
-- Run all tasks and actions with pydoit command or individual - tasks using pydoit <task-name> command. 
-- Parallel task execution can be enabled by running the command doit -n 4 (n defines the number of cores to attach to pydoit runtime).   
+- Clone the GitLab repository to your local or cloud development environment.
+- Create and configure the .env file with the necessary credentials and settings.
+- Install all dependencies from requirements.txt and renv.lock files.
+- Use the workflow directory as the current working directory.
+- Run the following command in the CLI for listing available tasks: pydoit list
+- Run all tasks and actions with pydoit command or individual - tasks using pydoit `<task-name>` command.
+- Parallel task execution can be enabled by running the command doit -n 4 (n defines the number of cores to attach to pydoit runtime).
 
 ## Create Documentation
 
@@ -51,11 +50,13 @@ make html
 
 ## Logging
 
+> LUMI timestamps are in Finnish time
+
 IASDT Workflows use Unix styled logging with the following logging levels:
 
 - Info: Informational logs
 - Debug:
-- Error: 
+- Error:
 - Critical:
 
 ## `evironment` variables

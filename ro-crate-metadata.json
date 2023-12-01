@@ -75,7 +75,6 @@
     },
     {
       "@type": "Organization",
-      "@id": "https://ror.org/000h6jb29",
       "name": "Helmholtz Centre for Environmental Research",
       "@reverse": {
         "author": [
@@ -83,7 +82,8 @@
             "@id": "./"
           }
         ]
-      }
+      },
+      "@id": "https://ror.org/000h6jb29"
     },
     {
       "@type": "ContactPoint",
