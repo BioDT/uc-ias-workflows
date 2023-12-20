@@ -130,8 +130,8 @@ LUMI-O gives a public web interface for each individual file in their “buckets
 
 However the problem is that the entire files need to be downloaded to work within third-party systems. The OPenDAP server will clone some defined data from LUMI-O (and MinIO at UFZ for internal usage) into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://134.94.199.14/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)).
 
-**Example installation:** http://134.94.199.14/
-**Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
-**Template (under development):** https://git.ufz.de/khant/opendap
+- **Example installation:** http://134.94.199.14/
+- **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
+- **Template (under development):** https://git.ufz.de/khant/opendap
 
 The IASDT will mainly work with CSV, HDF5, RData, JSON, and NetCDF file formats for data storage and availability.
