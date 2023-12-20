@@ -90,7 +90,9 @@ IASDT Workflows use Unix styled logging with the following logging levels:
 
 Logging is mostly done using the `logging` module in Python. However, some tasks use the `logging` module in R. The logging module in R is a wrapper for the Python logging module. The logging module in R is used in the following tasks:
 
-- `process/chels.py`
+- `process/chelsa.R`
+- `process/corine.R`
+- `process/gbif.R`
 
 ## `environment` variables: workflow parameter naming convention
 
