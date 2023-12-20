@@ -1,7 +1,6 @@
-
  <div align="center" style="text-align:center"><img width="30%" src="assets/biodt.png" /></div>
 
-# IASDT-Workflows
+#
 
 Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Horizon Europe project tiled [Biodiversity Digital Twin](https://biodt.eu).
 
@@ -9,19 +8,19 @@ Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Ho
 
 ## Table of Contents
 
-- [IASDT-workflows](#iasdt-workflows)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Architectural overview](#architectural-overview)
-    - [Study area & geospatial projection](#study-area--geospatial-projection)
-  - [Folder Descriptions](#folder-descriptions)
-  - [Usage](#usage)
-  - [Create Documentation](#create-documentation)
-  - [Logging](#logging)
-  - [`environment` variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
-  - [Data Storage and Availability](#data-storage-and-availability)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+  - [Architectural overview](#architectural-overview)
+  - [Study area & geospatial projection](#study-area--geospatial-projection)
+- [Folder Descriptions](#folder-descriptions)
+- [Usage](#usage)
+- [Create Documentation](#create-documentation)
+- [Logging](#logging)
+- [`environment` variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
+- [Data Storage and Availability](#data-storage-and-availability)
 
 ## Overview
+
 A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
 ### Architectural overview
@@ -40,7 +39,6 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 <br/>
 
 **Figure 2:** Study area is defined as the area of the [EEA Reference Grid](https://www.eea.europa.eu/en/datahub/datahubitem-view/3c362237-daa4-45e2-8c16-aaadfb1a003b). The study area is divided into 10x10 km grid cells. The grid cells are projected in the [ETRS89-LAEA projection](https://epsg.io/3035) (EPSG:3035).
-
 
 ## Folder Descriptions
 
@@ -92,10 +90,10 @@ Logging is mostly done using the `logging` module in Python. However, some tasks
 
 - `process/chels.py`
 
-
-## `environment` variables: workflow parameter naming convention 
+## `environment` variables: workflow parameter naming convention
 
 **Workflow layers**
+
 - FL=Feedback loop
 - DP=Data Processing
 - DA=Data Assimilation
@@ -115,14 +113,13 @@ Logging is mostly done using the `logging` module in Python. However, some tasks
 
 `<layer>_<programming tools>_<data source>_<parameter name>=<parameter value>`
 
-**Example** 
+**Example**
 
 DP_R_CHELSA_Gridsize=10
 
 # Data Storage and Availability
 
 IASDT will be using LUMI’s Object Storage ([LUMI-O](https://docs.lumi-supercomputer.eu/storage/lumio/)) for model input/output data at each workflow run in this pDT because it offers “permanent” storage. A clone of select data will be available via a data server built using the [OPeNDAP Catalog](https://git.ufz.de/khant/pydap_template) software.
-
 
 LUMI-O gives a public web interface for each individual file in their “buckets”. You can find some sample data files for certain file formats below.
 
@@ -131,10 +128,10 @@ LUMI-O gives a public web interface for each individual file in their “buckets
 - RData: https://465000357.lumidata.eu/iasdt-pub/Grid_10_Raster.RData
 - NetCDF4: https://465000357.lumidata.eu/iasdt-pub/coads_climatology.nc
 
-However the problem is that the entire files need to be downloaded to work within third-party systems. The OPenDAP server will clone some defined data from LUMI-O (and MinIO at UFZ for internal usage) into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://134.94.199.14/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)). 
+However the problem is that the entire files need to be downloaded to work within third-party systems. The OPenDAP server will clone some defined data from LUMI-O (and MinIO at UFZ for internal usage) into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://134.94.199.14/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)).
 
 **Example installation:** http://134.94.199.14/
 **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
 **Template (under development):** https://git.ufz.de/khant/opendap
 
-The IASDT will mainly work with CSV, HDF5, RData, JSON, and NetCDF file formats for data storage and availability. 
+The IASDT will mainly work with CSV, HDF5, RData, JSON, and NetCDF file formats for data storage and availability.
