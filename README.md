@@ -94,7 +94,7 @@ Logging is mostly done using the `logging` module in Python. However, some tasks
 - `process/corine.R`
 - `process/gbif.R`
 
-## `environment` variables: workflow parameter naming convention
+## Environment Variables: workflow parameter naming convention
 
 **Workflow layers**
 
