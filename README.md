@@ -1,10 +1,12 @@
- <div align="center" style="text-align:center"><img width="30%" src="assets/biodt.png" /></div>
-
-#
-
-Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Horizon Europe project tiled [Biodiversity Digital Twin](https://biodt.eu).
+ <div align="center" style="text-align:center">
+  <img width="30%" src="assets/biodt.png" />
+  <br/>
+  <b>Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Horizon Europe project tiled <a href="https://biodt.eu">Biodiversity Digital Twin</a>.</b>  
+</div>
 
 > This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and model communication.
+
+#
 
 ## Table of Contents
 
