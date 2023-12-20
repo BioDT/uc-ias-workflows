@@ -96,6 +96,8 @@ Logging is mostly done using the `logging` module in Python. However, some tasks
 
 ## Environment Variables: workflow parameter naming convention
 
+The IASDT workflows use environment variables to pass parameters to the workflows. This convention is defined in the `references/parameter_naming_conventions.txt`file. The naming convention for the environment variables is as follows:
+
 **Workflow layers**
 
 - FL=Feedback loop
