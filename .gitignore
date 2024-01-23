@@ -3,3 +3,4 @@ datasets/raw/chelsa/*.tif
 datasets/processed/chelsa/*.tif
 .vscode
 notebooks/clc.json
+references/corine/clc.json
