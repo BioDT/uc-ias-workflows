@@ -1,3 +1,5 @@
+renv::restore(project="/users/khantaim/iasdt-workflows/iasdt-renv")
+
 # ****************************************************
 # ****************************************************
 
@@ -189,10 +191,10 @@ ProjectChelsa <- function(
 # ****************************************************
 
 ProjectChelsa(
-  InputPath = "/Users/khant/Documents/UFZ/Git/iasdt-palyground/workflow-test-1/data/InputFiles/", 
-  OutPath = "/Users/khant/Documents/UFZ/Git/iasdt-palyground/workflow-test-1/data/output/",
+  InputPath = "/users/khantaim/iasdt-workflows/datasets/raw/chelsa/", 
+  OutPath = "/users/khantaim/iasdt-workflows/datasets/interim/chelsa/",
   NCores = NULL, 
-  GridFile = "/Users/khant/Documents/UFZ/Git/iasdt-palyground/workflow-test-1/Grid_10_Raster.RData") %>% 
+  GridFile = "/users/khantaim/iasdt-workflows/references/Grid_10_Raster.RData") %>%
   invisible()
 
 catSep(Rep = 2, Extra1 = 0, Extra2 = 0)

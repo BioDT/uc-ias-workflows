@@ -19,6 +19,9 @@ s3fs
 rasterio
 xarray
 h5py
-netcdf
+netcdf4
 deepdiff
 clusterjob
+wget
+rioxarray
+jwt

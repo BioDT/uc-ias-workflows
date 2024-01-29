@@ -77,14 +77,14 @@ def intaker(path_to_download_list, output_dir):
     Returns:
         None
     """
-    logger = logger.getLogger(__name__)
+    #logger = logger.getLogger(__name__)
     logger.info("downloading CHELSA data...")
     # Download the CHELSA data from the C3S S3 server
     with open(path_to_download_list) as url_list:
         for line in url_list:
             response = wget.download(line, out=output_dir)
             logger.info(
-                "downlaoded CHELSA data from {path_to_download_list}".format(response)
+                f"downlaoded CHELSA data from {line}".format(response)
             )
 
     return True
