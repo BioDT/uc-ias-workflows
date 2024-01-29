@@ -26,30 +26,34 @@ def vSensor(input_paths, logs_feedback, logs_diff):
 
     """
     logger.info("checking CHELSA metadata...")
-
-    # Read each line of input path
+  
+    #Read each line of input path
     with open(path_file) as file:
         lines = [line.rstrip() for line in file]
 
-    # TODO: Change URL string to environment variable
+    #TODO: Change URL string to environment variable
     s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
+    new_log = []
     for i in lines:
-        # file_list = s3.ls(path=f"{i}")
-        new_log = []
-        print(f"{i}")
+        #file_list = s3.ls(path=f"{i}")
+        logger.info("comparing CHELSA metadata...")
         metadata = s3.metadata(path=f"{i}", refresh=False)
         info = s3.info(path=f"{i}")
         metadata.update(info)
         metadata["LastModified"] = metadata["LastModified"].strftime(
-            "%Y-%m-%d %H:%M:%S"
-        )
-        # append new metadata to the metadata file
+                "%Y-%m-%d %H:%M:%S"
+            )
+            # append new metadata to the metadata file
         new_log.append(metadata)
     with open(f"{logs_feedback}{round(time.time())}.json", "w+") as f:
         json.dump(new_log, f)
+    logger.info(f"new CHELSA log saved to {f.name}")
+
 
     # Compare the new metadata with the previous metadata using DIFF
-    list_of_log_files = glob.glob(f"{logs_feedback}*.json")
+    list_of_log_files = glob.glob(
+        f"{logs_feedback}*.json"
+    )
     list_of_log_files.sort(key=os.path.getmtime)
     # Get the second oldest file
     if len(list_of_log_files) > 1:
@@ -65,7 +69,9 @@ def vSensor(input_paths, logs_feedback, logs_diff):
         diff_json = json.dumps(diff.to_json(), indent=2)
         with open(f"{logs_diff}{round(time.time())}.json", "w+") as d:
             json.dump(json.loads(diff_json), d)
+            logger.info(f"new CHELSA diff saved to {d.name}")
     return True
+
 
 
 def intaker(path_to_download_list, output_dir):
