@@ -26,46 +26,46 @@ def vSensor(input_paths, logs_feedback, logs_diff):
 
     """
     logger.info("checking CHELSA metadata...")
-    # Check for new CHELSA data
-    try:
-        # TODO: Change URL string to environment variable
-        s3 = s3fs.S3FileSystem(
-            anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/"
-        )
-        for x in input_paths:
-            file_list = s3.ls(path=f"{x}")
-            new_log = []
-            logger.info("comparing CHELSA metadata...")
-            for i in file_list:
-                checksum = s3.metadata(path=f"{i}", refresh=False)
-                info = s3.info(path=f"{i}")
-                checksum.update(info)
-                checksum["LastModified"] = checksum["LastModified"].strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                )
-                # append new metadata to the metadata file
-                new_log.append(checksum)
-        list_of_files = glob.glob(
-            f"{logs_feedback}*.json"
-        )  # * means all if need specific format then *.csv
-        latest_file = max(list_of_files, key=os.path.getctime)
-        with open(f"{logs_feedback}{time.time()}.json", "w") as f:
-            json.dump(new_log, f)
-        logger.info(f"new CHELSA log saved to {f.name}")
 
-        # Compare the new metadata with the previous metadata using DIFF
-        with open(f"{logs_feedback}{latest_file}", "w") as f:
-            # logs = json.load(f)
-            # TODO: Validate the difference between the previous and new metadata
-            diff = deepdiff.DeepDiff(f, new_log, view="tree")
-            diff_json = json.dumps(diff.to_json(), indent=2)
-            with open(f"{logs_diff}{time.time()}.json", "w") as d:
-                json.dump(json.loads(diff_json), d)
-                logger.info(f"new CHELSA diff saved to {d.name}")
-        return True
-    except:
-        logger.error("Error: {}".format(sys.exc_info()[0]))
-        return False
+    # Read each line of input path
+    with open(path_file) as file:
+        lines = [line.rstrip() for line in file]
+
+    # TODO: Change URL string to environment variable
+    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
+    for i in lines:
+        # file_list = s3.ls(path=f"{i}")
+        new_log = []
+        print(f"{i}")
+        metadata = s3.metadata(path=f"{i}", refresh=False)
+        info = s3.info(path=f"{i}")
+        metadata.update(info)
+        metadata["LastModified"] = metadata["LastModified"].strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )
+        # append new metadata to the metadata file
+        new_log.append(metadata)
+    with open(f"{logs_feedback}{round(time.time())}.json", "w+") as f:
+        json.dump(new_log, f)
+
+    # Compare the new metadata with the previous metadata using DIFF
+    list_of_log_files = glob.glob(f"{logs_feedback}*.json")
+    list_of_log_files.sort(key=os.path.getmtime)
+    # Get the second oldest file
+    if len(list_of_log_files) > 1:
+        compare_file = list_of_log_files[1]
+    else:
+        compare_file = list_of_log_files[0]
+
+    with open(f"{compare_file}", "r") as f:
+        # TODO: Validate the difference between the previous and new metadata
+        data = json.load(f)
+        print(data)
+        diff = deepdiff.DeepDiff(data, new_log, view="tree")
+        diff_json = json.dumps(diff.to_json(), indent=2)
+        with open(f"{logs_diff}{round(time.time())}.json", "w+") as d:
+            json.dump(json.loads(diff_json), d)
+    return True
 
 
 def intaker(path_to_download_list, output_dir):
