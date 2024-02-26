@@ -71,6 +71,7 @@ def vSensor(input_paths, logs_feedback, logs_diff):
             json.dump(json.loads(diff_json), d)
             logger.info(f"new CHELSA diff saved to {d.name}")
     return True
+#logger.error("Error: {}".format(sys.exc_info()[0]))
 
 
 
