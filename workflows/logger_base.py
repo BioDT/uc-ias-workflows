@@ -6,4 +6,5 @@ logger.basicConfig(
     format="%(asctime)s - %(name)s - %(pathname)s - %(lineno)d -  %(message)s",
     filename="../logs/workflows.log",
     datefmt="%d-%b-%y %H:%M:%S",
+    level=logging.INFO,
 )

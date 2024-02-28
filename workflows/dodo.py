@@ -23,13 +23,14 @@ def task_chelsa():
     """CHELSA Task"""
     return {
         "actions": [
-            chelsa_vSensor(
-                "../references/chelsa/test.txt",
-                "../logs/feedback/chelsa/",
-                "../logs/diff/chelsa/",
-            ),
-            chelsa_intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa/"),
-            "RScript /users/khantaim/iasdt-workflows/workflows/process/chelsa.R",
+            (chelsa_vSensor, [], {
+                'path_file': '/users/khantaim/iasdt-workflows/references/chelsa/test.txt',
+                'logs_feedback': '/users/khantaim/iasdt-workflows/logs/feedback/chelsa/',
+                'logs_diff': '/users/khantaim/iasdt-workflows/logs/diff/chelsa/'}),
+            (chelsa_intaker, [], {
+                'path_to_download_list': '/users/khantaim/iasdt-workflows/references/chelsa/test.txt',
+                'output_dir': '/users/khantaim/iasdt-workflows/datasets/raw/chelsa/'}),
+            "Rscript /pfs/lustrep3/users/khantaim/iasdt-workflows/workflows/process/chelsa.R"
         ],
     }
 
