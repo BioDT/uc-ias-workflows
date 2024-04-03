@@ -23,3 +23,7 @@ netcdf
 deepdiff
 clusterjob
 python3-wget
+natsort
+pyproj
+xarray
+netCDF4

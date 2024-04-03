@@ -1,531 +1,712 @@
-<mxfile host="65bd71144e" pages="5">
-    <diagram id="ZRk138DtxssasRneosYn" name="elter">
-        <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-1" target="AUVJkaCTUDx-p7IheRtk-11" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-1" value="130&lt;br&gt;sites (CSV+Excel) for vegetation data" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="190" y="200" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=classic;startFill=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-3" target="AUVJkaCTUDx-p7IheRtk-4" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-3" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="90" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-4" target="AUVJkaCTUDx-p7IheRtk-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-4" value="Select sites with vegetation data" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="210" y="90" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-10" target="AUVJkaCTUDx-p7IheRtk-15" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-10" value="HDF5/netCDF" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="340" y="300" width="120" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-11" target="AUVJkaCTUDx-p7IheRtk-10" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-11" value="eLTER4DT workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="190" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-15" target="AUVJkaCTUDx-p7IheRtk-17" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-15" value="Data available via open data access protocol for remote consumption" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
-                    <mxGeometry x="500" y="300" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="AUVJkaCTUDx-p7IheRtk-17" target="AUVJkaCTUDx-p7IheRtk-22" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-17" value="PyDAP server" style="whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="480" y="420" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="AUVJkaCTUDx-p7IheRtk-22" target="AUVJkaCTUDx-p7IheRtk-26" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-22" value="Query data remotely" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="410" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="AUVJkaCTUDx-p7IheRtk-26" value="Models" style="whiteSpace=wrap;html=1;fontSize=10;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="610" y="525" width="120" height="60" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram id="NFiQeFSLWexwuLTVgIHQ" name="Page-2">
-        <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-2" target="KCTAjjHMykRZl4-xlWjI-10" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-2" value="130&lt;br&gt;sites (CSV+Excel) for vegetation data" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="190" y="200" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=classic;startFill=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-4" target="KCTAjjHMykRZl4-xlWjI-6" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-4" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="90" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-6" target="KCTAjjHMykRZl4-xlWjI-2" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-6" value="Select sites with vegetation data" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="210" y="90" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-8" target="KCTAjjHMykRZl4-xlWjI-12" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-8" value="HDF5/netCDF" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="340" y="300" width="120" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-10" target="KCTAjjHMykRZl4-xlWjI-8" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-10" value="eLTER4DT workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="190" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-12" target="KCTAjjHMykRZl4-xlWjI-14" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-12" value="Data available via open data access protocol for remote consumption" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
-                    <mxGeometry x="500" y="300" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="KCTAjjHMykRZl4-xlWjI-14" target="KCTAjjHMykRZl4-xlWjI-16" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-14" value="PyDAP server" style="whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="480" y="420" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="KCTAjjHMykRZl4-xlWjI-16" target="KCTAjjHMykRZl4-xlWjI-17" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-16" value="Query data remotely" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="410" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-17" value="Models" style="whiteSpace=wrap;html=1;fontSize=10;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="610" y="525" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-18" value="&lt;b&gt;GBIF Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="220" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-19" value="&lt;b&gt;DISSco Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="350" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-20" value="&lt;b&gt;Coppernicu Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="480" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="KCTAjjHMykRZl4-xlWjI-21" value="&lt;b&gt;Coppernicu Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="610" width="62" height="80" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram id="-64qw8W7oxHSas3Y6whm" name="Data Streams Overview">
-        <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-1" target="YYpvEfWEScxJ-JET8BAD-12" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-1" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-1" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="40" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-2" target="YYpvEfWEScxJ-JET8BAD-17" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-2" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-2" value="&lt;b&gt;GBIF Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="520" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-3" target="YYpvEfWEScxJ-JET8BAD-14" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-3" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-3" value="&lt;b&gt;DISSco Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="160" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="YYpvEfWEScxJ-JET8BAD-16" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-4" value="&lt;b&gt;Copernicus Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="400" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-5" target="YYpvEfWEScxJ-JET8BAD-15" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-5" value="&lt;b&gt;CHELSA Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="280" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-12" target="JGelbmfjzmVQC1DLI2pZ-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-12" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="40" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-14" target="JGelbmfjzmVQC1DLI2pZ-3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-14" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="160" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-15" target="JGelbmfjzmVQC1DLI2pZ-4" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-15" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="280" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-16" target="JGelbmfjzmVQC1DLI2pZ-5" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-16" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="400" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-17" target="JGelbmfjzmVQC1DLI2pZ-6" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="YYpvEfWEScxJ-JET8BAD-17" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="520" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-1" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-1" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="503.5" y="45" width="110" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-3" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-3" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="504" y="165" width="110" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-4" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-4" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="504" y="285" width="110" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-5" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-5" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="504" y="405" width="110" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.85;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-6" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="JGelbmfjzmVQC1DLI2pZ-6" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="504" y="525" width="110" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;startArrow=classic;startFill=1;" parent="1" source="U_e6ALhiY10lTNGlEqco-1" target="U_e6ALhiY10lTNGlEqco-8" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-1" value="OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-                    <mxGeometry x="710" y="290" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="U_e6ALhiY10lTNGlEqco-8" value="Invasive Alien Species DT" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-                    <mxGeometry x="870" y="290" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="aoHnm26b1dISCsLJjkUD-1" target="YYpvEfWEScxJ-JET8BAD-5" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aoHnm26b1dISCsLJjkUD-1" value="Real-world natural and physical systems (ie., environment, species etc.)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="285" width="130" height="70" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram id="nT562FDKqiTtjidiKffC" name="chelsa">
-        <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-1" value="&lt;h1&gt;CHELSA Workflow&lt;/h1&gt;&lt;div&gt;Climatological datasets for the IAS-DT.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="10" width="420" height="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-2" target="Hw1Zt5nPcTcI55b2fxoG-5" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-2" value="&lt;b&gt;S3 File Storage&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="90" width="120" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-3" target="Hw1Zt5nPcTcI55b2fxoG-8" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-3" value="Raw data file dump" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="300" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-5" target="Hw1Zt5nPcTcI55b2fxoG-3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-5" value="1. Feedbackloop" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="190" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-8" target="Hw1Zt5nPcTcI55b2fxoG-10" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-8" value="2. Process" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="390" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-10" target="Hw1Zt5nPcTcI55b2fxoG-12" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-10" value="Reprojected/Sliced H5 files. (versioned by file name)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="500" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-12" target="Hw1Zt5nPcTcI55b2fxoG-14" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-12" value="3. Assign metadata" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="590" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-14" target="D3Var2XMzwEu2ozzhvI4-1" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="Hw1Zt5nPcTcI55b2fxoG-14" value="H5 attributes" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="700" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-1" target="D3Var2XMzwEu2ozzhvI4-3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-1" value="4. Assimilate" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="790" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-3" target="D3Var2XMzwEu2ozzhvI4-5" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-3" value="Datasets moved to OPeNDAP server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="900" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-5" target="D3Var2XMzwEu2ozzhvI4-7" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-5" value="5. Service" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="120" y="990" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-7" value="Data available on OPeNDAP" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="100" y="1100" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;ol&gt;&lt;li&gt;Feedback loop:&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="80" width="560" height="1070" as="geometry"/>
-                </mxCell>
-                <mxCell id="Lu9JkOqnoJcFQjf2auof-1" value="&lt;span style=&quot;background-color: initial;&quot;&gt;1. Feedback loop: &lt;/span&gt;&lt;br style=&quot;background-color: initial;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the S3 bucket does not offer an API so &quot;listening&quot; to changes need to happen manually.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: I suggest a webscrapper as a basic solution.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: The scrapper can run periodically to check for new datasets.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Process:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the datasets are in geotif format for the entire world in a specific projection.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: slice dataset for europe based on shape file, reproject to ESPG:3530 equal area projection, convert to HDF5 file.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;3. Assign metadata:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: use HDF5 &quot;attributes&quot; to deine metadata,&lt;/li&gt;&lt;li&gt;TK: have to use FAIR stadnards from WP5.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;4. Assimilate:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: The new dataset needs to be assimilated into the PyDAP structure and versioned.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;5. Service:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: Docker image needs to be rebuilt with the new datasets for the pydap server needs to service the data.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="80" width="560" height="1070" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram id="FLv6wKtwTMC0zlGijUnV" name="components">
-        <mxGraphModel dx="1867" dy="1284" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Invasive Alien Species Digital Twin (IAS-DT)&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=center;fillColor=#414F2F;fontColor=#FFFFFF;" parent="1" vertex="1">
-                    <mxGeometry x="420" y="-10" width="640" height="699.75" as="geometry"/>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeColor=#FFFFFF;entryPerimeter=0;" parent="1" source="M4Ptm6btsPVG_hcBuYVW-7" target="M4Ptm6btsPVG_hcBuYVW-11" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1118" y="562.875" as="sourcePoint"/>
-                        <mxPoint x="1018" y="584.75" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-8" value="Interaction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontColor=#FFFFFF;fontStyle=1" parent="M4Ptm6btsPVG_hcBuYVW-6" vertex="1" connectable="0">
-                    <mxGeometry x="-0.3515" y="1" relative="1" as="geometry">
-                        <mxPoint x="41" y="21" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="gXTZv2P7BBiSV6SaVpun-3" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;Data sources and RIs&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=center;fillColor=none;fontColor=default;strokeColor=none;labelBackgroundColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="-20" y="-10" width="440" height="699.75" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-82" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#D4E1F5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
-                    <mxGeometry x="448" y="39.75" width="370" height="460" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" target="8oq5mgtUacItaRD282cU-76" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="296" y="79.75" as="sourcePoint"/>
-                        <mxPoint x="98.5" y="284.75" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-67" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" target="8oq5mgtUacItaRD282cU-41" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="372" y="305.45000000000005" as="targetPoint"/>
-                        <mxPoint x="340" y="108.02044025157238" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-3" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;eLTER&lt;/font&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="40" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" target="8oq5mgtUacItaRD282cU-76" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="296" y="559.75" as="sourcePoint"/>
-                        <mxPoint x="98.5" y="354.75" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-6" target="8oq5mgtUacItaRD282cU-41" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="430" y="400" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-6" value="&lt;b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;GBIF/EASIN&lt;/span&gt;&lt;br&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="520" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="296" y="439.75" as="sourcePoint"/>
-                        <mxPoint x="139" y="370" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-70" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="8oq5mgtUacItaRD282cU-41" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="358" y="389.75" as="targetPoint"/>
-                        <mxPoint x="340" y="406.6053459119496" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-12" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Habitat/land cover&lt;/b&gt;&lt;/span&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="400" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-14" target="8oq5mgtUacItaRD282cU-41" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="344" y="341.45000000000005" as="targetPoint"/>
-                        <mxPoint x="340" y="307.0770440251572" as="sourcePoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-14" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CHELSA&lt;/font&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="190" width="62" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;startArrow=none;startFill=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" parent="1" source="8oq5mgtUacItaRD282cU-36" target="8oq5mgtUacItaRD282cU-37" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="541" y="610"/>
-                            <mxPoint x="541" y="610"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-60" value="Inputs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="8oq5mgtUacItaRD282cU-35" vertex="1" connectable="0">
-                    <mxGeometry x="-0.1632" y="-1" relative="1" as="geometry">
-                        <mxPoint x="30" y="4" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=-0.008;entryY=0.589;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;strokeColor=#FFFFFF;" parent="1" source="8oq5mgtUacItaRD282cU-36" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="897.04" y="592.76" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-36" value="2) OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="449" y="519.75" width="370" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-59" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;exitX=0.75;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;strokeColor=#FFFFFF;" parent="1" source="8oq5mgtUacItaRD282cU-37" target="8oq5mgtUacItaRD282cU-36" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-61" value="Outputs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#FFFFFF;labelBackgroundColor=none;" parent="8oq5mgtUacItaRD282cU-59" vertex="1" connectable="0">
-                    <mxGeometry x="0.1526" y="1" relative="1" as="geometry">
-                        <mxPoint x="-36" y="5" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-37" value="3) Joint Species Distribution Model (LUMI HPC)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="449" y="619.75" width="369" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-76" target="8oq5mgtUacItaRD282cU-14" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="196" y="319.8166666666666" as="sourcePoint"/>
-                        <mxPoint x="300" y="329.75" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="139" y="230"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-49" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-41" target="8oq5mgtUacItaRD282cU-42" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="gXTZv2P7BBiSV6SaVpun-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Raw data&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBorderColor=none;spacing=2;fontStyle=1;labelBackgroundColor=none;" parent="8oq5mgtUacItaRD282cU-49" vertex="1" connectable="0">
-                    <mxGeometry x="-0.0191" relative="1" as="geometry">
-                        <mxPoint x="-49" y="4" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-41" value="1.a) Feedback loops" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="465" y="239.75" width="142" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-47" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-42" target="8oq5mgtUacItaRD282cU-43" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-42" value="1.b) Data processing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="620" y="54.75" width="148" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-48" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-43" target="8oq5mgtUacItaRD282cU-44" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-43" value="1.c) Data assimilation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="620" y="144.75" width="148" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-57" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-44" target="8oq5mgtUacItaRD282cU-56" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-44" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;1.d) State + FAIR metadata&amp;nbsp;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;management" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="620" y="239.75" width="148" height="90" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-56" target="8oq5mgtUacItaRD282cU-36" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="998" y="329.75" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-62" value="&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#000000&quot;&gt;&lt;b style=&quot;&quot;&gt;Data &lt;br&gt;+ log files&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontColor=#4124FF;labelBackgroundColor=none;labelBorderColor=none;" parent="8oq5mgtUacItaRD282cU-58" vertex="1" connectable="0">
-                    <mxGeometry x="0.1479" y="-1" relative="1" as="geometry">
-                        <mxPoint x="58" y="-17" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-56" value="1.e) Data servicing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="620" y="359.75" width="148" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-74" value="Interface to DT (inputs, outputs, logs, metadata and states)" style="whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;dashed=1;strokeColor=#FFFFFF;" parent="1" vertex="1">
-                    <mxGeometry x="1310" y="84.75" width="120" height="74.5" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-76" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Natural &lt;br&gt;systems &lt;br&gt;(biotic and abiotic)&lt;/b&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=-65;image=img/lib/active_directory/internet_globe.svg;fontSize=16;labelBackgroundColor=none;labelBorderColor=none;perimeterSpacing=0;imageBorder=none;spacingLeft=200;spacingBottom=0;" parent="1" vertex="1">
-                    <mxGeometry x="60" y="260" width="124.75" height="124.75" as="geometry"/>
-                </mxCell>
-                <mxCell id="8oq5mgtUacItaRD282cU-79" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;1) DDDAS Workflows&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
-                    <mxGeometry x="449" y="54.75" width="100" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="lByZxSQ0IdbYSB2oB91h-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontColor=#FFFFFF;strokeColor=#FFFFFF;labelBorderColor=none;labelBackgroundColor=#FFFFFF;" parent="1" source="M4Ptm6btsPVG_hcBuYVW-7" target="8oq5mgtUacItaRD282cU-36" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="880" y="440"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-7" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 16px;&quot;&gt;Users/stakeholders&lt;/b&gt;" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;fontColor=#FFFFFF;spacingTop=-130;" parent="1" vertex="1">
-                    <mxGeometry x="909" y="270" width="98" height="98" as="geometry"/>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-10" value="&lt;h1&gt;&lt;b&gt;Caption: &lt;/b&gt;&lt;/h1&gt;Figure x: An overview of all the individual components of the Invasive Alien Species Digital Twin (IAS-DT). &lt;b&gt;1) Dynamic Data-Driven Application Systems (DDAS) based workflows &lt;/b&gt;that listen for data changes in sources (1.a feedback loops), pull and process the required data into the required format/type (1.b. data processing), merge and reconcile the data with the previous data (1.c. data assimilation), version the datasets in a way that captures the state of the input data and also add metadata to the describe the datasets (&lt;font style=&quot;border-color: var(--border-color); text-align: center; font-size: 16px;&quot;&gt;1.d. State + FAIR metadata&lt;/font&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 14px; font-weight: 700; text-align: center;&quot;&gt;&amp;nbsp;&lt;/font&gt;management), transfer the updated datasets (1.f. data + log files) to the data server (1.e. data servicing). &lt;b&gt;2) OPeNDAP Cloud Server&lt;/b&gt; is where the data is serviced from previous component, the server is an interface to the twin data (input, output, metadata, and log files). The server will also serve as an interface for third-party applications to connect to the IAS-DT to request certain/all information encapsulated by the twin. &lt;b&gt;3) IAS Species Distribution Model&lt;/b&gt; is the model layer of the IASDT and will take the input data to create detailed model outputs (e.g. rasters and projections). &lt;b&gt;4) IAS-DT dashboard&lt;/b&gt; is the end result dashboard for the users and stakeholders of BioDT, where the aggregated results will be shown in an easy and useful manner.&amp;nbsp;&lt;br&gt;.&lt;br&gt;Marina:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Figure x: An overview of the Invasive Alien Species Digital Twin (IAS-DT) components.&amp;nbsp;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;1) Dynamic Data-Driven Application Systems (DDDAS) based workflows&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing).&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;2) OPeNDAP Cloud Server&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;services the datasets from the previous component and provides an interface to all IAS-DT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IAS-DT.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;3) IAS Joint Species Distribution Model&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;is the modelling block of IAS-DT that uses input data to estimate gridded IAS numbers per habitat type.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;4) IAS-DT dashboard&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;presents aggregated results of IAS-DT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="59" y="750" width="1030" height="710" as="geometry"/>
-                </mxCell>
-                <mxCell id="M4Ptm6btsPVG_hcBuYVW-11" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;4) IAS-DT dashboard &lt;br&gt;(web application)&lt;/b&gt;&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#BC6C22;shape=mxgraph.mscae.intune.dashboard;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="898" y="500" width="120" height="100" as="geometry"/>
-                </mxCell>
-                <mxCell id="lByZxSQ0IdbYSB2oB91h-3" value="Developer&lt;br&gt;access" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="1018" y="460" as="geometry">
-                        <mxPoint x="-117" y="7" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
+<mxfile host="Electron" modified="2024-03-27T13:59:48.191Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="uxeR8h9pV6RUyZD0P3Ei" version="24.1.0" type="device" pages="6">
+  <diagram id="FLv6wKtwTMC0zlGijUnV" name="components">
+    <mxGraphModel dx="1866" dy="1533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gXTZv2P7BBiSV6SaVpun-3" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;Data sources and Research Infrastructures (RIs)&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=left;fillColor=none;fontColor=default;strokeColor=none;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="-10" width="440" height="699.75" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Invasive Alien Species prototype Digital Twin (IAS pDT)&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=center;fillColor=#414F2F;fontColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="420" y="-10" width="640" height="699.75" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeColor=#000000;entryPerimeter=0;" parent="1" source="M4Ptm6btsPVG_hcBuYVW-7" target="M4Ptm6btsPVG_hcBuYVW-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1118" y="562.875" as="sourcePoint" />
+            <mxPoint x="1018" y="584.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-82" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#D4E1F5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="448" y="39.75" width="392" height="530.25" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" target="8oq5mgtUacItaRD282cU-76" edge="1" source="8oq5mgtUacItaRD282cU-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296" y="79.75" as="sourcePoint" />
+            <mxPoint x="98.5" y="284.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-3" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;eLTER&lt;/font&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="310" y="40" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" target="8oq5mgtUacItaRD282cU-76" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="591" as="sourcePoint" />
+            <mxPoint x="122" y="385" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="122" y="591" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-6" value="&lt;b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;GBIF/EASIN&lt;/span&gt;&lt;br&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="310" y="550" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="449" as="sourcePoint" />
+            <mxPoint x="139" y="389" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-70" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="8oq5mgtUacItaRD282cU-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="358" y="389.75" as="targetPoint" />
+            <mxPoint x="340" y="406.6053459119496" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-12" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CORINE Land Cover&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;&lt;/span&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="310" y="410" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-14" target="8oq5mgtUacItaRD282cU-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="344" y="341.45000000000005" as="targetPoint" />
+            <mxPoint x="340" y="307.0770440251572" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-14" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CHELSA&lt;/font&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="310" y="170" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="8oq5mgtUacItaRD282cU-36" target="M4Ptm6btsPVG_hcBuYVW-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="897.04" y="592.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-36" value="2) OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="860" y="359.75" width="169" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-59" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;exitX=1;exitY=0;exitDx=0;exitDy=0;strokeWidth=1;strokeColor=#000000;startArrow=block;startFill=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1" target="8oq5mgtUacItaRD282cU-36" source="8oq5mgtUacItaRD282cU-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="500" as="sourcePoint" />
+            <mxPoint x="900" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-61" value="&lt;div&gt;Inputs/&lt;/div&gt;Outputs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;labelBackgroundColor=none;" parent="8oq5mgtUacItaRD282cU-59" vertex="1" connectable="0">
+          <mxGeometry x="0.1526" y="1" relative="1" as="geometry">
+            <mxPoint x="-52" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-37" value="3) Joint Species Distribution Models (Singularity Containers)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="490" y="500" width="298" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-76" target="8oq5mgtUacItaRD282cU-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="196" y="319.8166666666666" as="sourcePoint" />
+            <mxPoint x="300" y="329.75" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="139" y="267" />
+              <mxPoint x="139" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-49" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-41" target="8oq5mgtUacItaRD282cU-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gXTZv2P7BBiSV6SaVpun-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Raw data&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBorderColor=none;spacing=2;fontStyle=1;labelBackgroundColor=none;" parent="8oq5mgtUacItaRD282cU-49" vertex="1" connectable="0">
+          <mxGeometry x="-0.0191" relative="1" as="geometry">
+            <mxPoint x="-49" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-41" value="1.a) Feedback loops" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="465" y="239.75" width="142" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-47" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-42" target="8oq5mgtUacItaRD282cU-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-42" value="1.b) Data processing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="620" y="54.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-48" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-43" target="8oq5mgtUacItaRD282cU-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-43" value="1.c) Data assimilation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="620" y="144.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-57" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-44" target="8oq5mgtUacItaRD282cU-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-44" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;1.d) State + FAIR metadata&amp;nbsp;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;management" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="620" y="239.75" width="148" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-56" target="8oq5mgtUacItaRD282cU-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-62" value="&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#000000&quot;&gt;&lt;b style=&quot;&quot;&gt;Data &lt;br&gt;+ log files&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontColor=#4124FF;labelBackgroundColor=none;labelBorderColor=none;" parent="8oq5mgtUacItaRD282cU-58" vertex="1" connectable="0">
+          <mxGeometry x="0.1479" y="-1" relative="1" as="geometry">
+            <mxPoint x="-16" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-56" value="1.e) Data servicing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="620" y="359.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-76" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Natural &lt;br&gt;systems &lt;br&gt;(biotic and abiotic)&lt;/b&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=-65;image=img/lib/active_directory/internet_globe.svg;fontSize=16;labelBackgroundColor=none;labelBorderColor=none;perimeterSpacing=0;imageBorder=none;spacingLeft=200;spacingBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="260" width="124.75" height="124.75" as="geometry" />
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-79" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;1) DDDAS Workflows (&lt;/b&gt;&lt;span style=&quot;font-size: 16px; font-weight: 700;&quot;&gt;LUMI HPC&lt;/span&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;)&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="449" y="59.75" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lByZxSQ0IdbYSB2oB91h-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontColor=#FFFFFF;strokeColor=#000000;labelBorderColor=none;labelBackgroundColor=#FFFFFF;" parent="1" source="M4Ptm6btsPVG_hcBuYVW-7" target="8oq5mgtUacItaRD282cU-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-7" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 16px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Users/stakeholders&lt;/font&gt;&lt;/b&gt;" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;fontColor=#FFFFFF;spacingTop=-130;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="452" width="98" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-10" value="&lt;h1&gt;&lt;b&gt;Caption: &lt;/b&gt;&lt;/h1&gt;Figure x: An overview of all the individual components of the Invasive Alien Species Digital Twin (IAS-DT). &lt;b&gt;1) Dynamic Data-Driven Application Systems (DDAS) based workflows &lt;/b&gt;that listen for data changes in sources (1.a feedback loops), pull and process the required data into the required format/type (1.b. data processing), merge and reconcile the data with the previous data (1.c. data assimilation), version the datasets in a way that captures the state of the input data and also add metadata to the describe the datasets (&lt;font style=&quot;border-color: var(--border-color); text-align: center; font-size: 16px;&quot;&gt;1.d. State + FAIR metadata&lt;/font&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 14px; font-weight: 700; text-align: center;&quot;&gt;&amp;nbsp;&lt;/font&gt;management), transfer the updated datasets (1.f. data + log files) to the data server (1.e. data servicing). &lt;b&gt;2) OPeNDAP Cloud Server&lt;/b&gt; is where the data is serviced from previous component, the server is an interface to the twin data (input, output, metadata, and log files). The server will also serve as an interface for third-party applications to connect to the IAS-DT to request certain/all information encapsulated by the twin. &lt;b&gt;3) IAS Species Distribution Model&lt;/b&gt; is the model layer of the IASDT and will take the input data to create detailed model outputs (e.g. rasters and projections). &lt;b&gt;4) IAS-DT dashboard&lt;/b&gt; is the end result dashboard for the users and stakeholders of BioDT, where the aggregated results will be shown in an easy and useful manner.&amp;nbsp;&lt;br&gt;.&lt;br&gt;Marina:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Figure x: An overview of the Invasive Alien Species Digital Twin (IAS-DT) components.&amp;nbsp;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;1) Dynamic Data-Driven Application Systems (DDDAS) based workflows&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing).&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;2) OPeNDAP Cloud Server&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;services the datasets from the previous component and provides an interface to all IAS-DT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IAS-DT.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;3) IAS Joint Species Distribution Model&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;is the modelling block of IAS-DT that uses input data to estimate gridded IAS numbers per habitat type.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;4) IAS-DT dashboard&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;presents aggregated results of IAS-DT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="59" y="750" width="1030" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="M4Ptm6btsPVG_hcBuYVW-11" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;4) IAS pDT dashboard &lt;br&gt;(Shiny web application)&lt;/b&gt;&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#BC6C22;shape=mxgraph.mscae.intune.dashboard;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="884.5" y="500" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PMvk7P2mvvcW-RrGrqnw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.168;entryY=-0.058;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8oq5mgtUacItaRD282cU-56" target="8oq5mgtUacItaRD282cU-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PMvk7P2mvvcW-RrGrqnw-4" value="Triggering&lt;div&gt;&amp;nbsp;model fitting&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontStyle=1" parent="PMvk7P2mvvcW-RrGrqnw-3" vertex="1" connectable="0">
+          <mxGeometry x="-0.3466" relative="1" as="geometry">
+            <mxPoint x="-49" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" source="8oq5mgtUacItaRD282cU-6" target="8oq5mgtUacItaRD282cU-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8oq5mgtUacItaRD282cU-67" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" parent="1" target="8oq5mgtUacItaRD282cU-41" edge="1" source="8oq5mgtUacItaRD282cU-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372" y="305.45000000000005" as="targetPoint" />
+            <mxPoint x="340" y="108.02044025157238" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Copy of components" id="PfgA05jLuvcBt0vq9p9Z">
+    <mxGraphModel dx="1426" dy="1193" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-0" />
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-1" parent="xPCtE0VwJ0K0W33s_pL4-0" />
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-12" target="xPCtE0VwJ0K0W33s_pL4-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-3" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Invasive Alien Species Prototype Digital Twin (IAS pDT)&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=center;fillColor=#414F2F;fontColor=#FFFFFF;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="420" y="-10" width="640" height="699.75" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;strokeColor=#000000;entryPerimeter=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-42" target="xPCtE0VwJ0K0W33s_pL4-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1118" y="562.875" as="sourcePoint" />
+            <mxPoint x="1018" y="584.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-5" value="Interaction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontColor=#FFFFFF;fontStyle=1" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-4">
+          <mxGeometry x="-0.3515" y="1" relative="1" as="geometry">
+            <mxPoint x="41" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-6" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;Data sources and Research Infrastructures (RIs)&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;align=left;fillColor=none;fontColor=default;strokeColor=none;labelBackgroundColor=none;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="-20" y="-10" width="440" height="699.75" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#D4E1F5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="448" y="39.75" width="392" height="530.25" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" target="xPCtE0VwJ0K0W33s_pL4-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296" y="79.75" as="sourcePoint" />
+            <mxPoint x="98.5" y="284.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" target="xPCtE0VwJ0K0W33s_pL4-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372" y="305.45000000000005" as="targetPoint" />
+            <mxPoint x="340" y="108.02044025157238" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-10" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;eLTER&lt;/font&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="310" y="40" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" target="xPCtE0VwJ0K0W33s_pL4-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296" y="559.75" as="sourcePoint" />
+            <mxPoint x="98.5" y="354.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-12" value="&lt;b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;GBIF/EASIN&lt;/span&gt;&lt;br&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="310" y="520" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="296" y="439.75" as="sourcePoint" />
+            <mxPoint x="139" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" target="xPCtE0VwJ0K0W33s_pL4-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="358" y="389.75" as="targetPoint" />
+            <mxPoint x="340" y="406.6053459119496" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-15" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CORINE Land Cover&lt;/b&gt;&lt;/span&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="310" y="400" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-17" target="xPCtE0VwJ0K0W33s_pL4-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="344" y="341.45000000000005" as="targetPoint" />
+            <mxPoint x="340" y="307.0770440251572" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-17" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CHELSA&lt;/font&gt;&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="310" y="190" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-18" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;startArrow=none;startFill=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-21" target="xPCtE0VwJ0K0W33s_pL4-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-19" value="Inputs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;labelBackgroundColor=none;fontColor=#000000;" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-18">
+          <mxGeometry x="-0.1632" y="-1" relative="1" as="geometry">
+            <mxPoint x="-110" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-21" target="xPCtE0VwJ0K0W33s_pL4-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="897.04" y="592.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-21" value="2) OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="860" y="340" width="169" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-22" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;exitX=0.75;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;strokeColor=#000000;entryX=0.647;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="500" as="sourcePoint" />
+            <mxPoint x="1015.8430000000003" y="403" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-23" value="Outputs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;labelBackgroundColor=none;" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-22">
+          <mxGeometry x="0.1526" y="1" relative="1" as="geometry">
+            <mxPoint x="-103" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-24" value="3) Joint Species Distribution Model (Singularity)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="490" y="500" width="298" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-39" target="xPCtE0VwJ0K0W33s_pL4-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="196" y="319.8166666666666" as="sourcePoint" />
+            <mxPoint x="300" y="329.75" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="139" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-26" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-28" target="xPCtE0VwJ0K0W33s_pL4-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-27" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Raw data&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;labelBorderColor=none;spacing=2;fontStyle=1;labelBackgroundColor=none;" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-26">
+          <mxGeometry x="-0.0191" relative="1" as="geometry">
+            <mxPoint x="-49" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-28" value="1.a) Feedback loops" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="465" y="239.75" width="142" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-29" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-30" target="xPCtE0VwJ0K0W33s_pL4-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-30" value="1.b) Data processing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="620" y="54.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-31" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-32" target="xPCtE0VwJ0K0W33s_pL4-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-32" value="1.c) Data assimilation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="620" y="144.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-33" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-34" target="xPCtE0VwJ0K0W33s_pL4-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-34" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;1.d) State + FAIR metadata&amp;nbsp;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;management" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="620" y="239.75" width="148" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-35" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-37" target="xPCtE0VwJ0K0W33s_pL4-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-36" value="&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#000000&quot;&gt;&lt;b style=&quot;&quot;&gt;Data &lt;br&gt;+ log files&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontColor=#4124FF;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-35">
+          <mxGeometry x="0.1479" y="-1" relative="1" as="geometry">
+            <mxPoint x="-16" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-37" value="1.e) Data servicing" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="620" y="359.75" width="148" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-38" value="Interface to DT (inputs, outputs, logs, metadata and states)" style="whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;dashed=1;strokeColor=#FFFFFF;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="1310" y="84.75" width="120" height="74.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-39" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Natural &lt;br&gt;systems &lt;br&gt;(biotic and abiotic)&lt;/b&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=-65;image=img/lib/active_directory/internet_globe.svg;fontSize=16;labelBackgroundColor=none;labelBorderColor=none;perimeterSpacing=0;imageBorder=none;spacingLeft=200;spacingBottom=0;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="60" y="260" width="124.75" height="124.75" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-40" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;1) DDDAS Workflows (&lt;/b&gt;&lt;span style=&quot;font-size: 16px; font-weight: 700;&quot;&gt;LUMI HPC&lt;/span&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;)&lt;/b&gt;&lt;/font&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="449" y="59.75" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-41" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontColor=#FFFFFF;strokeColor=#000000;labelBorderColor=none;labelBackgroundColor=#FFFFFF;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-42" target="xPCtE0VwJ0K0W33s_pL4-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-42" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 16px;&quot;&gt;Users/stakeholders&lt;/b&gt;" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;fontColor=#FFFFFF;spacingTop=-130;fillColor=#000000;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="1120" y="384.75" width="98" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-43" value="&lt;h1&gt;&lt;b&gt;Caption: &lt;/b&gt;&lt;/h1&gt;Figure x: An overview of all the individual components of the Invasive Alien Species Digital Twin (IAS-DT). &lt;b&gt;1) Dynamic Data-Driven Application Systems (DDAS) based workflows &lt;/b&gt;that listen for data changes in sources (1.a feedback loops), pull and process the required data into the required format/type (1.b. data processing), merge and reconcile the data with the previous data (1.c. data assimilation), version the datasets in a way that captures the state of the input data and also add metadata to the describe the datasets (&lt;font style=&quot;border-color: var(--border-color); text-align: center; font-size: 16px;&quot;&gt;1.d. State + FAIR metadata&lt;/font&gt;&lt;font style=&quot;border-color: var(--border-color); font-size: 14px; font-weight: 700; text-align: center;&quot;&gt;&amp;nbsp;&lt;/font&gt;management), transfer the updated datasets (1.f. data + log files) to the data server (1.e. data servicing). &lt;b&gt;2) OPeNDAP Cloud Server&lt;/b&gt; is where the data is serviced from previous component, the server is an interface to the twin data (input, output, metadata, and log files). The server will also serve as an interface for third-party applications to connect to the IAS-DT to request certain/all information encapsulated by the twin. &lt;b&gt;3) IAS Species Distribution Model&lt;/b&gt; is the model layer of the IASDT and will take the input data to create detailed model outputs (e.g. rasters and projections). &lt;b&gt;4) IAS-DT dashboard&lt;/b&gt; is the end result dashboard for the users and stakeholders of BioDT, where the aggregated results will be shown in an easy and useful manner.&amp;nbsp;&lt;br&gt;.&lt;br&gt;Marina:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;caret-color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Figure x: An overview of the Invasive Alien Species Digital Twin (IAS-DT) components.&amp;nbsp;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;1) Dynamic Data-Driven Application Systems (DDDAS) based workflows&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing).&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;2) OPeNDAP Cloud Server&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;services the datasets from the previous component and provides an interface to all IAS-DT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IAS-DT.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;3) IAS Joint Species Distribution Model&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;is the modelling block of IAS-DT that uses input data to estimate gridded IAS numbers per habitat type.&amp;nbsp;&lt;/span&gt;&lt;strong style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot;&gt;4) IAS-DT dashboard&lt;/strong&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&amp;nbsp;presents aggregated results of IAS-DT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(14, 16, 26); margin-top: 0pt; margin-bottom: 0pt;&quot; data-preserver-spaces=&quot;true&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="59" y="750" width="1030" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-44" value="&lt;font color=&quot;#ffffff&quot;&gt;&lt;b&gt;4) IAS pDT dashboard &lt;br&gt;(RShiny web application)&lt;/b&gt;&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#BC6C22;shape=mxgraph.mscae.intune.dashboard;fontSize=16;" vertex="1" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="898" y="520" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-45" value="&lt;font color=&quot;#000000&quot;&gt;Developer&lt;br&gt;access&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontColor=#FFFFFF;fontStyle=1" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-1">
+          <mxGeometry x="1230" y="359.75" as="geometry">
+            <mxPoint x="-117" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.168;entryY=-0.058;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="xPCtE0VwJ0K0W33s_pL4-1" source="xPCtE0VwJ0K0W33s_pL4-37" target="xPCtE0VwJ0K0W33s_pL4-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xPCtE0VwJ0K0W33s_pL4-47" value="Model fitting&amp;nbsp;&lt;div&gt;triggered&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBackgroundColor=none;fontStyle=1" vertex="1" connectable="0" parent="xPCtE0VwJ0K0W33s_pL4-46">
+          <mxGeometry x="-0.3466" relative="1" as="geometry">
+            <mxPoint x="-49" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ZRk138DtxssasRneosYn" name="elter">
+    <mxGraphModel dx="778" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-1" target="AUVJkaCTUDx-p7IheRtk-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-1" value="130&lt;br&gt;sites (CSV+Excel) for vegetation data" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="190" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=classic;startFill=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-3" target="AUVJkaCTUDx-p7IheRtk-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-3" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="90" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-4" target="AUVJkaCTUDx-p7IheRtk-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-4" value="Select sites with vegetation data" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="210" y="90" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-10" target="AUVJkaCTUDx-p7IheRtk-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-10" value="HDF5/netCDF" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-11" target="AUVJkaCTUDx-p7IheRtk-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-11" value="eLTER4DT workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="360" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="AUVJkaCTUDx-p7IheRtk-15" target="AUVJkaCTUDx-p7IheRtk-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-15" value="Data available via open data access protocol for remote consumption" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="500" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="AUVJkaCTUDx-p7IheRtk-17" target="AUVJkaCTUDx-p7IheRtk-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-17" value="PyDAP server" style="whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="480" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="AUVJkaCTUDx-p7IheRtk-22" target="AUVJkaCTUDx-p7IheRtk-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-22" value="Query data remotely" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="630" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AUVJkaCTUDx-p7IheRtk-26" value="Models" style="whiteSpace=wrap;html=1;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="610" y="525" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="NFiQeFSLWexwuLTVgIHQ" name="Page-2">
+    <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-2" target="KCTAjjHMykRZl4-xlWjI-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-2" value="130&lt;br&gt;sites (CSV+Excel) for vegetation data" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="190" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=classic;startFill=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-4" target="KCTAjjHMykRZl4-xlWjI-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-4" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="90" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-6" target="KCTAjjHMykRZl4-xlWjI-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-6" value="Select sites with vegetation data" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="210" y="90" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-8" target="KCTAjjHMykRZl4-xlWjI-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-8" value="HDF5/netCDF" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-10" target="KCTAjjHMykRZl4-xlWjI-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-10" value="eLTER4DT workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="360" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="KCTAjjHMykRZl4-xlWjI-12" target="KCTAjjHMykRZl4-xlWjI-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-12" value="Data available via open data access protocol for remote consumption" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="500" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="KCTAjjHMykRZl4-xlWjI-14" target="KCTAjjHMykRZl4-xlWjI-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-14" value="PyDAP server" style="whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="480" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="KCTAjjHMykRZl4-xlWjI-16" target="KCTAjjHMykRZl4-xlWjI-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-16" value="Query data remotely" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="630" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-17" value="Models" style="whiteSpace=wrap;html=1;fontSize=10;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="610" y="525" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-18" value="&lt;b&gt;GBIF Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="220" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-19" value="&lt;b&gt;DISSco Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="350" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-20" value="&lt;b&gt;Coppernicu Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="480" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KCTAjjHMykRZl4-xlWjI-21" value="&lt;b&gt;Coppernicu Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="100" y="610" width="62" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="-64qw8W7oxHSas3Y6whm" name="Data Streams Overview">
+    <mxGraphModel dx="978" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-1" target="YYpvEfWEScxJ-JET8BAD-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-1" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-1" value="&lt;b&gt;eLTER Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="270" y="40" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-2" target="YYpvEfWEScxJ-JET8BAD-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-2" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-2" value="&lt;b&gt;GBIF Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="270" y="520" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-3" target="YYpvEfWEScxJ-JET8BAD-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-3" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-3" value="&lt;b&gt;DISSco Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="270" y="160" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="YYpvEfWEScxJ-JET8BAD-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="YYpvEfWEScxJ-JET8BAD-4" target="aoHnm26b1dISCsLJjkUD-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-4" value="&lt;b&gt;Copernicus Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="270" y="400" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-5" target="YYpvEfWEScxJ-JET8BAD-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-5" value="&lt;b&gt;CHELSA Data Store&lt;/b&gt;" style="shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.3d.datastore;" parent="1" vertex="1">
+          <mxGeometry x="270" y="280" width="62" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-12" target="JGelbmfjzmVQC1DLI2pZ-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-12" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-14" target="JGelbmfjzmVQC1DLI2pZ-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-14" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-15" target="JGelbmfjzmVQC1DLI2pZ-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-15" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-16" target="JGelbmfjzmVQC1DLI2pZ-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-16" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YYpvEfWEScxJ-JET8BAD-17" target="JGelbmfjzmVQC1DLI2pZ-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YYpvEfWEScxJ-JET8BAD-17" value="DDDAS workflow" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="380" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-1" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-1" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="503.5" y="45" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-3" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-3" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="504" y="165" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-4" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-4" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="504" y="285" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-5" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-5" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="504" y="405" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.85;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="JGelbmfjzmVQC1DLI2pZ-6" target="U_e6ALhiY10lTNGlEqco-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JGelbmfjzmVQC1DLI2pZ-6" value="HDF5/netCDF Data Grid" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="504" y="525" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;startArrow=classic;startFill=1;" parent="1" source="U_e6ALhiY10lTNGlEqco-1" target="U_e6ALhiY10lTNGlEqco-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-1" value="OPeNDAP Cloud Server" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="710" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U_e6ALhiY10lTNGlEqco-8" value="Invasive Alien Species DT" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="870" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="aoHnm26b1dISCsLJjkUD-1" target="YYpvEfWEScxJ-JET8BAD-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aoHnm26b1dISCsLJjkUD-1" value="Real-world natural and physical systems (ie., environment, species etc.)" style="whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="40" y="285" width="130" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="nT562FDKqiTtjidiKffC" name="chelsa">
+    <mxGraphModel dx="807" dy="486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-1" value="&lt;h1&gt;CHELSA Workflow&lt;/h1&gt;&lt;div&gt;Climatological datasets for the IAS-DT.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="30" y="10" width="420" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-2" target="Hw1Zt5nPcTcI55b2fxoG-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-2" value="&lt;b&gt;S3 File Storage&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-3" target="Hw1Zt5nPcTcI55b2fxoG-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-3" value="Raw data file dump" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-5" target="Hw1Zt5nPcTcI55b2fxoG-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-5" value="1. Feedbackloop" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-8" target="Hw1Zt5nPcTcI55b2fxoG-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-8" value="2. Process" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-10" target="Hw1Zt5nPcTcI55b2fxoG-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-10" value="Reprojected/Sliced H5 files. (versioned by file name)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-12" target="Hw1Zt5nPcTcI55b2fxoG-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-12" value="3. Assign metadata" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="590" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Hw1Zt5nPcTcI55b2fxoG-14" target="D3Var2XMzwEu2ozzhvI4-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hw1Zt5nPcTcI55b2fxoG-14" value="H5 attributes" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-1" target="D3Var2XMzwEu2ozzhvI4-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-1" value="4. Assimilate" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="790" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-3" target="D3Var2XMzwEu2ozzhvI4-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-3" value="Datasets moved to OPeNDAP server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D3Var2XMzwEu2ozzhvI4-5" target="D3Var2XMzwEu2ozzhvI4-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-5" value="5. Service" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="990" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-7" value="Data available on OPeNDAP" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D3Var2XMzwEu2ozzhvI4-10" value="&lt;ol&gt;&lt;li&gt;Feedback loop:&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="80" width="560" height="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="Lu9JkOqnoJcFQjf2auof-1" value="&lt;span style=&quot;background-color: initial;&quot;&gt;1. Feedback loop: &lt;/span&gt;&lt;br style=&quot;background-color: initial;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the S3 bucket does not offer an API so &quot;listening&quot; to changes need to happen manually.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: I suggest a webscrapper as a basic solution.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: The scrapper can run periodically to check for new datasets.&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. Process:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: the datasets are in geotif format for the entire world in a specific projection.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;TK: slice dataset for europe based on shape file, reproject to ESPG:3530 equal area projection, convert to HDF5 file.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;3. Assign metadata:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: use HDF5 &quot;attributes&quot; to deine metadata,&lt;/li&gt;&lt;li&gt;TK: have to use FAIR stadnards from WP5.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;4. Assimilate:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: The new dataset needs to be assimilated into the PyDAP structure and versioned.&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;5. Service:&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;TK: Docker image needs to be rebuilt with the new datasets for the pydap server needs to service the data.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;labelBorderColor=none;labelBackgroundColor=none;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="80" width="560" height="1070" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
