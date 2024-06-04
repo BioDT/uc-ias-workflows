@@ -1,6 +1,9 @@
-from feedbackloop.chelsa import vSensor, intaker as chelsa_vSensor, chelsa_intaker
-
-from feedbackloop.corine import get_token, vSensor, intaker as get_token, corine_vSensor, corine_intaker
+from feedbackloop.chelsa import vSensor as chelsa_vSensor, intaker as chelsa_intaker
+from feedbackloop.corine import (
+    get_token as clc_get_token,
+    vSensor as clc_vSensor,
+    intaker as clc_intaker,
+)
 
 
 """ 
@@ -14,24 +17,32 @@ def task_setup():
         ],
     }
 """
+
+
 def task_chelsa():
-    """CHELSA Workflow"""
+    """CHELSA Task"""
     return {
         "actions": [
-            chelsa_vSensor("../references/chelsa/test.txt"),
-            chelsa_intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa"),
+            chelsa_vSensor(
+                "../references/chelsa/test.txt",
+                "../logs/feedback/chelsa/",
+                "../logs/diff/chelsa/",
+            ),
+            chelsa_intaker("../references/chelsa/test.txt", "../datasets/raw/chelsa/"),
+            "RScript /users/khantaim/iasdt-workflows/workflows/process/chelsa.R",
         ],
     }
 
 
-# TODO: Add access token to the intaker action
+""" 
 def task_corine():
-    """CLMS CORINE Workflow"""
+    #CLC Task
     return {
         "actions": [
-            get_token("../corine/clc.json"),
-            corine_vSensor(""),
-            corine_intaker("aaccessToken", "../logs/feedback/corine/*.json","../datasets/raw/corine"),
+            clc_get_token("../references/corine/clc.json"),
+            clc_vSensor(""),
+            clc_intaker("aaccessToken", "../logs/feedback/corine/*.json","../datasets/raw/corine"),
         ],
     }
 
+ """

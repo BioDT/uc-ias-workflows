@@ -19,7 +19,7 @@ s3fs
 rasterio
 xarray
 h5py
-netcdf
+netcdf4
 deepdiff
 clusterjob
 python3-wget
@@ -27,3 +27,6 @@ natsort
 pyproj
 xarray
 netCDF4
+wget
+rioxarray
+jwt

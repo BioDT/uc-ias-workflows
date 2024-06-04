@@ -4,3 +4,10 @@ datasets/processed/chelsa/*.tif
 .vscode
 notebooks/clc.json
 references/corine/clc.json
+iasdt-pyenv/
+iasdt-renv/
+.doit.db
+.Renviron
+__pycache__
+feedbackloop/__pycache__
+workflows.egg-info/
