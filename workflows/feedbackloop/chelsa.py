@@ -27,7 +27,12 @@ def vSensor(path_file, logs_feedback, logs_diff):
     """
     logger.info("checking CHELSA metadata...")
 <<<<<<< HEAD
+<<<<<<< HEAD
   
+=======
+    # Check for new CHELSA data
+   
+>>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
     #Read each line of input path
     with open(path_file) as file:
         lines = [line.rstrip() for line in file]
@@ -65,6 +70,7 @@ def vSensor(path_file, logs_feedback, logs_diff):
     with open(f"{compare_file}", "r") as f:
         # TODO: Validate the difference between the previous and new metadata
         data = json.load(f)
+<<<<<<< HEAD
         print(data)
         diff = deepdiff.DeepDiff(data, new_log, view="tree")
         diff_json = json.dumps(diff.to_json(), indent=2)
@@ -114,13 +120,18 @@ def vSensor(path_file, logs_feedback, logs_diff):
     with open(f"{compare_file}", "r") as f:
         # TODO: Validate the difference between the previous and new metadata
         data = json.load(f)
+=======
+>>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
         diff = deepdiff.DeepDiff(data, new_log, view="tree")
         diff_json = json.dumps(diff.to_json(), indent=2)
         with open(f"{logs_diff}{round(time.time())}.json", "w+") as d:
             json.dump(json.loads(diff_json), d)
             logger.info(f"new CHELSA diff saved to {d.name}")
     return True
+<<<<<<< HEAD
 >>>>>>> db7413e (chelsa workflow working)
+=======
+>>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
 
 
 def intaker(path_to_download_list, output_dir):
@@ -140,6 +151,7 @@ def intaker(path_to_download_list, output_dir):
         for line in url_list:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             print(line.strip())
             head, tail = os.path.split(line)
             tail = tail.strip()
@@ -154,6 +166,11 @@ def intaker(path_to_download_list, output_dir):
             response = wget.download(dl_url, out=output_dir)
             logger.info(f"downlaoded CHELSA data from {dl_url}".format(response))
 >>>>>>> db7413e (chelsa workflow working)
+=======
+            dl_url = f"https://os.zhdk.cloud.switch.ch/{line}"
+            response = wget.download(dl_url, out=output_dir)
+            logger.info(f"downlaoded CHELSA data from {dl_url}".format(response))
+>>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
 
 >>>>>>> 30b5873 (chelsa running)
     return True

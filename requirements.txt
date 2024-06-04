@@ -22,11 +22,3 @@ h5py
 netcdf4
 deepdiff
 clusterjob
-python3-wget
-natsort
-pyproj
-xarray
-netCDF4
-wget
-rioxarray
-jwt

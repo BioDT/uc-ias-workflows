@@ -17,3 +17,17 @@ logs/diff/
 logs/feedback/chelsa/
 logs/process/
 logs/workflows.log
+
+iasdt-pyenv/
+iasdt-renv/
+.doit.db
+.Renviron
+__pycache__
+feedbackloop/__pycache__
+workflows.egg-info/
+.env
+/datasets/interim/chelsa/
+logs/diff/
+logs/feedback/chelsa/
+logs/process/
+logs/workflows.log
