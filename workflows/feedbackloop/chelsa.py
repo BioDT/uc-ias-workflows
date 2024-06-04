@@ -26,61 +26,6 @@ def vSensor(path_file, logs_feedback, logs_diff):
 
     """
     logger.info("checking CHELSA metadata...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
-    # Check for new CHELSA data
-   
->>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
-    #Read each line of input path
-    with open(path_file) as file:
-        lines = [line.rstrip() for line in file]
-
-    #TODO: Change URL string to environment variable
-    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
-    new_log = []
-    for i in lines:
-        #file_list = s3.ls(path=f"{i}")
-        logger.info("comparing CHELSA metadata...")
-        metadata = s3.metadata(path=f"{i}", refresh=False)
-        info = s3.info(path=f"{i}")
-        metadata.update(info)
-        metadata["LastModified"] = metadata["LastModified"].strftime(
-                "%Y-%m-%d %H:%M:%S"
-            )
-            # append new metadata to the metadata file
-        new_log.append(metadata)
-    with open(f"{logs_feedback}{round(time.time())}.json", "w+") as f:
-        json.dump(new_log, f)
-    logger.info(f"new CHELSA log saved to {f.name}")
-
-
-    # Compare the new metadata with the previous metadata using DIFF
-    list_of_log_files = glob.glob(
-        f"{logs_feedback}*.json"
-    )
-    list_of_log_files.sort(key=os.path.getmtime)
-    # Get the second oldest file
-    if len(list_of_log_files) > 1:
-        compare_file = list_of_log_files[1]
-    else:
-        compare_file = list_of_log_files[0]
-
-    with open(f"{compare_file}", "r") as f:
-        # TODO: Validate the difference between the previous and new metadata
-        data = json.load(f)
-<<<<<<< HEAD
-        print(data)
-        diff = deepdiff.DeepDiff(data, new_log, view="tree")
-        diff_json = json.dumps(diff.to_json(), indent=2)
-        with open(f"{logs_diff}{round(time.time())}.json", "w+") as d:
-            json.dump(json.loads(diff_json), d)
-            logger.info(f"new CHELSA diff saved to {d.name}")
-    return True
-#logger.error("Error: {}".format(sys.exc_info()[0]))
-
-=======
     # Check for new CHELSA data
    
     #Read each line of input path
@@ -120,18 +65,12 @@ def vSensor(path_file, logs_feedback, logs_diff):
     with open(f"{compare_file}", "r") as f:
         # TODO: Validate the difference between the previous and new metadata
         data = json.load(f)
-=======
->>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
         diff = deepdiff.DeepDiff(data, new_log, view="tree")
         diff_json = json.dumps(diff.to_json(), indent=2)
         with open(f"{logs_diff}{round(time.time())}.json", "w+") as d:
             json.dump(json.loads(diff_json), d)
             logger.info(f"new CHELSA diff saved to {d.name}")
     return True
-<<<<<<< HEAD
->>>>>>> db7413e (chelsa workflow working)
-=======
->>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
 
 
 def intaker(path_to_download_list, output_dir):
@@ -146,33 +85,12 @@ def intaker(path_to_download_list, output_dir):
     # logger = logger.getLogger(__name__)
     logger.info("downloading CHELSA data...")
     # Download the CHELSA data from the C3S S3 server
-    s3 = s3fs.S3FileSystem(anon=True, endpoint_url="https://os.zhdk.cloud.switch.ch/")
     with open(path_to_download_list) as url_list:
         for line in url_list:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            print(line.strip())
-            head, tail = os.path.split(line)
-            tail = tail.strip()
-            s3.get(line.strip(), output_dir)
-=======
-            response = wget.download(line, out=output_dir)
-            logger.info(
-                f"downlaoded CHELSA data from {line}".format(response)
-            )
-=======
             dl_url = f"https://os.zhdk.cloud.switch.ch/{line}"
             response = wget.download(dl_url, out=output_dir)
             logger.info(f"downlaoded CHELSA data from {dl_url}".format(response))
->>>>>>> db7413e (chelsa workflow working)
-=======
-            dl_url = f"https://os.zhdk.cloud.switch.ch/{line}"
-            response = wget.download(dl_url, out=output_dir)
-            logger.info(f"downlaoded CHELSA data from {dl_url}".format(response))
->>>>>>> 542ca253ac9e11df83377f634b70c68a27d8a7c5
 
->>>>>>> 30b5873 (chelsa running)
     return True
 
 
