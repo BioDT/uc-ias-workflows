@@ -1,6 +1,5 @@
 from clusterjob import JobScript
 
-from feedbackloop.chelsa import vSensor, intaker
 
 
 def job_vSensor(input_paths):

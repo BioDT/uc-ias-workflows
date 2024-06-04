@@ -43,7 +43,7 @@ IASDT.R::AssignIfNotExist(.SaveSession, TRUE)
 IASDT.R::AssignIfNotExist(.StartTime, lubridate::now(tzone = "CET"))
 
 # loading renv
-renv::load(quiet = TRUE)
+renv::load(project="/pfs/lustrep3/users/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE)
 
 # Updating IASDT.R
 # This can cause issue, and thus should be updated manually
