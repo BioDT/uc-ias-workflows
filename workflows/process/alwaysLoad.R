@@ -52,6 +52,7 @@ IASDT.R::AssignIfNotExist(.SaveSession, TRUE)
 IASDT.R::AssignIfNotExist(.StartTime, lubridate::now(tzone = "CET"))
 
 # loading renv
+#TODO: TK -- add project = "path/to/project" to avoid loading the wrong renv
 invisible(renv::load(quiet = TRUE))
 
 # # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
