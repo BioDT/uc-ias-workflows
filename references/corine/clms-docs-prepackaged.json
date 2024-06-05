@@ -1,0 +1,3759 @@
+{
+  "@id": "https://land.copernicus.eu/api/@search?portal_type=DataSet&metadata_fields=UID&metadata_fields=downloadable_files",
+  "batching": {
+    "@id": "https://land.copernicus.eu/api/@search?portal_type=DataSet&metadata_fields=UID&metadata_fields=downloadable_files",
+    "first": "https://land.copernicus.eu/api/@search?b_start=0&portal_type=DataSet&metadata_fields=UID&metadata_fields=downloadable_files",
+    "last": "https://land.copernicus.eu/api/@search?b_start=175&portal_type=DataSet&metadata_fields=UID&metadata_fields=downloadable_files",
+    "next": "https://land.copernicus.eu/api/@search?b_start=25&portal_type=DataSet&metadata_fields=UID&metadata_fields=downloadable_files"
+  },
+  "items": [
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/european-ground-motion-service/egms-basic",
+      "@type": "DataSet",
+      "UID": "00f7264e92d54a70b02bce9b315d7b32",
+      "description": "Provides InSAR displacement data provided in the satellite Line-of-Sight, with annotated geo-localisation and quality measures per measurement point. The dataset is generated from the interferometric analysis of Sentinel-1 radar images at full resolution (20x5 m).   EGMS Basic is visualised as a vector map of measurement points colour-coded by average line-of-sight velocity and distributed to users in comma-separated values format. Each point is associated with a time series of displacement, i.e. a plot with values of displacement per acquisition of the satellite. The dataset is generated for both ascending and descending orbits. ",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "71e57b6f-a3f6-4a06-8dcc-5f71d90e235a",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-500-c0153109c87c361d0c36d1a76c9d9e1a.png",
+            "filename": "Basic.png",
+            "height": 257,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-501d08338a4a5c060169845f6e27e5ac.png",
+                "height": 41,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-06b3dc5928632f8012470966e482dd6d.png",
+                "height": 16,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-55510342189fafeed9c7cd5db761b483.png",
+                "height": 30,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-7131c3568c7c1200ac32cca3f60ea270.png",
+                "height": 102,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-9828076aab364af5096156ff0b92f7b3.png",
+                "height": 205,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-83e91fdd5e72e0446db1a28cdc7b9e8c.png",
+                "height": 24,
+                "width": 48
+              },
+              "thumb": {
+                "download": "@@images/image-128-df9b3496e5eda91d403dbed8b1e70959.png",
+                "height": 65,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-cfb1f1b548b12da0fa2a66930dd0cd12.png",
+                "height": 32,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-7729886fc55624e50961cb7a31beb50d.png",
+                "height": 12,
+                "width": 24
+              }
+            },
+            "size": 378172,
+            "width": 500
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "European Ground Motion Service: Basic 2018-2022 (vector), Europe, yearly",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/burnt-area-v3-1-daily-300m",
+      "@type": "DataSet",
+      "UID": "6897d6fbb6a948f2819a836fe2341f48",
+      "description": "The Burnt Area products map burn scars, surfaces which have been sufficiently affected by fire to display significant changes in the vegetation cover (destruction of dry material, reduction or loss of green material) and in the ground surface (temporarily darker because of ash). Daily products are available at global scale in the spatial resolution of 300 m and cover the period from July 2023 to present.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "dab1166d-9cc9-48c2-9f0c-157a65a78f80",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Burnt Area 2023 - present (raster 300 m), global, daily \u2013 version 3.1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/clc-backbone/clc-backbone-2018",
+      "@type": "DataSet",
+      "UID": "1c3f3e078a844661bbe23db99bdc8e2c",
+      "description": "Provides pan-European wall-to-wall spatially detailed land cover inventory for the 2018 reference year, for each pixel showing the dominant land cover among the 11 basic land cover classes. The dataset is available as 10 m raster.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "c3290e93-1463-4bed-93c9-6315b0059048",
+            "area": "Europe",
+            "file": "CLMS_CLCplus_RASTER_2018_010m_eu_03035_V1_1",
+            "format": "Geotiff",
+            "path": "H:\\Corine_Land_Cover_Backbone\\Corine_Land_Cover_Backbone(CLCBB)_2018\\CLC_BB_2018\\Data\\data-details\\raster\\CLMS_CLCplus_RASTER_2018_010m_eu_03035_V1_1.zip",
+            "resolution": "10 m",
+            "size": "9 GB",
+            "source": "EEA",
+            "title": "",
+            "type": "Raster",
+            "version": "V1_1",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "file",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "file",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-400-14e80ef7030ab343d221a9517e3436e3.png",
+            "filename": "CLCplus18_raster.png",
+            "height": 400,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-21961742f8806f2e3e5e5e00012aed65.png",
+                "height": 80,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-398e9e2923b495cd47f234bde4a8d4ec.png",
+                "height": 32,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-48ad9937bc78e886c47fee3ce9f2279f.png",
+                "height": 60,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-098d4d1b865ed4d79e1e668402252562.png",
+                "height": 200,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-308daa3bcbf41abc2f889c08b224c477.png",
+                "height": 400,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-f58381f01cce34f5602322eb807d67ec.png",
+                "height": 48,
+                "width": 48
+              },
+              "thumb": {
+                "download": "@@images/image-128-1cb7501dd7c6e5fd4b8c11488a1a36eb.png",
+                "height": 128,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-25bf4ac2e35f7e96c95402a2dcadcae9.png",
+                "height": 64,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-5bbc21c827ec97273b0ac01bb8d26a7e.png",
+                "height": 24,
+                "width": 24
+              }
+            },
+            "size": 62615,
+            "width": 400
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "CLC+Backbone 2018 (raster 10 m), Europe, 3-yearly",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/season-maximum-value-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "28a93a5edcce4b6a931dc53b1c3f1eab",
+      "description": "Provides the maximum (peak) value that the Plant Phenology Index reaches during the vegetation growing season. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "37d0ff46-9c26-4a63-a2c9-0b48d40aa985",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Season Maximum Value 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/slope_of_green-up-period-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "832db625b44e46af8da33ead4525ae64",
+      "description": "Provides the rate of change in the values of the Plant Phenology Index at the day when the vegetation growing season starts. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "684f1dbd-f6e4-4a58-9075-3d948b560ece",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Slope of the Green-up Period 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/slope_of_green-down-period-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "98d1cbefc0f5491cbc5657263df330b1",
+      "description": "Provides the rate of change in the values of the Plant Phenology Index at the day when the vegetation growing season ends. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "12b321d0-2a8d-4a78-a848-8271176f6547",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Slope of the Green-down Period 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/start-of-season-value-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "7a7d182341294c4ca1c982527ed843f5",
+      "description": "Provides the value of the Plant Phenology Index at the start of the vegetation growing season. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "30219781-36fc-4126-bdbc-f47e390a1539",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Start-of-season Value 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/total-productivity-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "cb40b7b09ce745a2805e0788f99932d2",
+      "description": "Provides the growing season integral computed as the sum of all daily Plant Phenology Index values between the dates of the season start and end. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "bf1c1959-624d-4142-8194-7ae812699a6f",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Total Productivity 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/season-minimum-value-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "43dbbad7ac834152aa59c25032e45144",
+      "description": "Provides the average Plant Phenology Index value of the minima on left and right sides of each season. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "a43369cf-7b52-481b-8606-f62682a4fb47",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Season Minimum Value 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/season-length-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "5da40dac469e44649c36c11e95883ac5",
+      "description": "Provides the number of days between the start and end dates of the vegetation growing season. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "d13bef8e-6193-405c-a051-841294457300",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Season Length 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/season-amplitude-value-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "d75fa8cc26c34d509ef927266e39e308",
+      "description": "Provides the difference between the maximum and minimum Plant Phenology Index values reached during the season. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "c25bfb59-7075-4331-9a0b-eeb3c197e742",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Season Amplitude 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/burnt-area-v3-1-monthly-300m",
+      "@type": "DataSet",
+      "UID": "15353abe103e4be0aa5c9b82cee5a4d5",
+      "description": "The Burnt Area products burn scars, surfaces which have been sufficiently affected by fire to display significant changes in the vegetation cover (destruction of dry material, reduction or loss of green material) and in the ground surface (temporarily darker because of ash). Monthly products are available at global scale in the spatial resolution of 300 m and cover the period from 2019 to present.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "dab1166d-9cc9-48c2-9f0c-157a65a78f80",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Burnt Area 2019 - present (raster 300 m), global, monthly - version 3.1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/european-ground-motion-service/egms-gnssmodel",
+      "@type": "DataSet",
+      "UID": "83454e31c13f401eb954dc6211f2701d",
+      "description": "Satellite interferometry offers detailed, local-scale measurements (up to tens of kilometres) that are relative to specific spatial references, while global navigation satellite system (GNSS) provides absolute spatial data over larger extents. Utilizing the synergistic capabilities of satellite interferometry and GNSS, EGMS provides high-resolution local measurements across a broad spatial scale. The GNSS velocity model is derived from 4716 GNSS stations around Europe using state of the art geodetic methodologies. It is a 50-km gridded model that it is delivered as comma-separated values file. Each grid cell is identified by latitude and longitude coordinates and by the values of the three components of the velocity with their quality parameters.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "a71a7f9c-77f7-437b-b8bb-1d9858340748",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-971-a0e6325a6d1a10bd5c678d8c15c68a8a.png",
+            "filename": "egms-gnss.png",
+            "height": 749,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-38b4d449f39e10187041975a841df6db.png",
+                "height": 61,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-881dc6332e24b6ddf53f5bcd9b086bd0.png",
+                "height": 24,
+                "width": 32
+              },
+              "large": {
+                "download": "@@images/image-800-9aa78cb58400561afe893a67b2a6ff5f.png",
+                "height": 617,
+                "width": 800
+              },
+              "medium": {
+                "download": "@@images/image-60-71fae9c2bf82ba1e52eba6b81e20948f.png",
+                "height": 46,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-0d5ef09b6840a378e5cf32605c8bd2a3.png",
+                "height": 154,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-06aa91acbe4908c87982159b481d6877.png",
+                "height": 308,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-0276608db302542a4af508bfaec902ca.png",
+                "height": 37,
+                "width": 48
+              },
+              "teaser": {
+                "download": "@@images/image-600-c6afa5e175168dc0a96509c9eb0b2e7d.png",
+                "height": 462,
+                "width": 600
+              },
+              "thumb": {
+                "download": "@@images/image-128-e516d8b43d08a74bfa3d03911dafc1a7.png",
+                "height": 98,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-9dc5541abc37f25f440d3e9924f290de.png",
+                "height": 49,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-4ef7d0ee5ee18e10c9766cc7d8761109.png",
+                "height": 18,
+                "width": 24
+              }
+            },
+            "size": 851136,
+            "width": 971
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "European Ground Motion Service: GNSS model (vector), Europe, 2-yearly",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/european-ground-motion-service/egms-ortho",
+      "@type": "DataSet",
+      "UID": "b970371a405e4c9e8d1cae8a72054e0a",
+      "description": "The EGMS Ortho exploits the information provided by ascending and descending orbits of the EGMS Calibrated to derive two further layers; one of purely vertical displacements (EGMS Ortho Vertical), the other of purely east-west displacements (EGMS Ortho East/West). Both layers are resampled to a 100 m grid, so that the final resolution is 100 by 100 m. EGMS Ortho is visualised as a vector map of measurement points colour-coded by average velocity (vertical or east-west components) and distributed to users in comma-separated values format. Each point is associated with a time series of displacement, i.e. a plot with values of displacement per acquisition of the satellite. ",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "36849b24-0b01-433f-bba5-451dd516c8c4",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-500-958899b410930f3393adc52341eac358.png",
+            "filename": "Ortho.png",
+            "height": 257,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-6681a65b6c54fb002316fad808712f96.png",
+                "height": 41,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-d5d36bd01afbcd657e449c5cdac56dfd.png",
+                "height": 16,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-dceabe342e1e9124a3942f106b2d5041.png",
+                "height": 30,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-b64b03c9c37e1571c46f93b70c5b8b19.png",
+                "height": 102,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-1ed364ad32c84228c138aa4b5e923bdf.png",
+                "height": 205,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-da391afb39e0a37fbcb8b52cb18e6ae1.png",
+                "height": 24,
+                "width": 48
+              },
+              "thumb": {
+                "download": "@@images/image-128-84c0de3a41250954d6b1f223e1dfc171.png",
+                "height": 65,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-4a91743f59bb3460f20826f1c97daec0.png",
+                "height": 32,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-4245b9d3e00dac1b25b0b2e322dc0c0b.png",
+                "height": 12,
+                "width": 24
+              }
+            },
+            "size": 349940,
+            "width": 500
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "European Ground Motion Service: Ortho 2018-2022 (vector), Europe, yearly",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/soil-moisture/daily-soil-water-index-temporal-series-global-v3-0-12-5km",
+      "@type": "DataSet",
+      "UID": "53cd952bd30a42cfbbcab0326a6faf64",
+      "description": "The SWI TS product is a reformatting of the SWI 0.1\u00b0 v3 daily product into a time series format which makes it easier to perform local, time series based analysis without having to download and convert data for the whole globe.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "dec69848-73f6-4966-b573-cfecbe9cd36e",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Soil Water Index - Time Series 2007-present (raster 12.5 km), global, daily \u2013 version 3",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/gross-primary-production-v1-0-300m",
+      "@type": "DataSet",
+      "UID": "bdaa99b9878c4eb4a8cf481f4a414ba0",
+      "description": "Provides the total amount of carbon compounds produced by photosynthesis of plants in an ecosystem in a given period of time. 10-daily observations are available at global scale in the spatial resolution of 300 m and with the temporal extent from 2023 to present.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "769febb7-2bc5-4cba-9cb4-2efd3bad16a1",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Gross Primary Production 2023-present (raster 300 m), global, 10-daily \u2013 version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/european-ground-motion-service/egms-calibrated",
+      "@type": "DataSet",
+      "UID": "fea9248133ce46a6b274cae33eed78e6",
+      "description": "Contains the same type of information as the EGMS Basic, but the measurement points are referenced to a model derived from global navigation satellite system data. This dataset is generated from the interferometric analysis of Sentinel-1 radar images at full resolution (20x5 m). EGMS Calibrated is visualised as a vector map of measurement points, colour-coded by average velocity, and distributed to users in comma-separated values format. Each point is associated with a time series of displacement, i.e. a plot with values of displacement per acquisition of the satellite. The dataset is generated for both ascending and descending orbits. ",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "71696de3-7a66-40b4-8aca-95617ebac519",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-500-ff0c2a8ff0fee797afb02d9e6f2baa8b.png",
+            "filename": "Calibrated.png",
+            "height": 257,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-92a7030063a5ac005df20698dc5f254e.png",
+                "height": 41,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-37d00b24e930a47be42e48f90129c672.png",
+                "height": 16,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-cf933acb3a80f2a8f89d4ad10d8904da.png",
+                "height": 30,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-730f11e1c265e944c12403dbab1b6a07.png",
+                "height": 102,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-205904259918ce2c6705b12826751220.png",
+                "height": 205,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-6a861f4ecbcd0b674128b5983ed53439.png",
+                "height": 24,
+                "width": 48
+              },
+              "thumb": {
+                "download": "@@images/image-128-95f68e4dd7981e5c85ada6735d9e9213.png",
+                "height": 65,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-d3754152da9263e9e0cca34cca3cf9d9.png",
+                "height": 32,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-1e2a75445599f48b8bf5a98e8b549dbb.png",
+                "height": 12,
+                "width": 24
+              }
+            },
+            "size": 373842,
+            "width": 500
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "European Ground Motion Service: Calibrated 2018-2022 (vector), Europe, yearly",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/season-maximum-date-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "c0fb68d1286e4954a2e657205dc135e1",
+      "description": "Provides the date in the vegetation growing season when the maximum Plant Phenology Index value is reached. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "6592cfde-ac00-45cd-8de2-f5324d777ef5",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Season Maximum Date 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/start-of-season-date-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "2a1b048c66ab48f79aaa75181284760f",
+      "description": "Provides the date when the vegetation growing season starts in the time profile of the Plant Phenology Index. The start-of-season occurs, by definition, when the Plant Phenology Index value reaches 25% of the season amplitude during the green-up period. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "6db47882-5c9b-4a26-a7f4-cd9585ad8f77",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Start-of-season Date 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/seasonal-productivity-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "9a15b017d84e4d6285f2b653a5df8d1b",
+      "description": "Provides the growing season integral computed as sum of all daily Plant Phenology Index values between the dates of the season start and end, minus their base level value. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "0e70394e-786c-444a-bc5a-5a1a115d27fb",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Seasonal Productivity 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/vpp-parameters-quality-flag-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "0d8cf1d23905430e95975a9893888699",
+      "description": "Indicates the quality of the global Vegetation Phenology and Productivity Parameters, in the form of a confidence level. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "4197ff7d-90d0-4249-b38a-6ef41b36e388",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "Vegetation Phenology and Productivity Parameters Quality Flag 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/normalised-difference-vegetation-short-term-statistics-v3-0-1km",
+      "@type": "DataSet",
+      "UID": "af077469527848f7a0fc8b220589fef1",
+      "description": "Based upon PROBA-V NDVI 1km version 3, short-term statistics include the minimum, median, maximum, mean, standard deviation and the number of observations over the 5-years period 2015-2019.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "c20db9cf-cb81-4b87-be26-7d5bf224d7f8",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-400-25c3c3fca4a53d263916c04750c357c8.png",
+            "filename": "Normalised Difference Vegetation Index (Statistics) 2015-2019 (raster 1 km), global, 10-daily \u2013 version 3.png",
+            "height": 400,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-d36719ec781f3f40c510cca8c7081549.png",
+                "height": 80,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-17680ed81e05154439e7982ae4c3c754.png",
+                "height": 32,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-acdd94a05c63f52cb2e521ba36746372.png",
+                "height": 60,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-161eaccb1d6fa0e4d49674532f001d4e.png",
+                "height": 200,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-f393026de11a21d93f043457944a93af.png",
+                "height": 400,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-a35398c4d82e8f750af65d225a7b7875.png",
+                "height": 48,
+                "width": 48
+              },
+              "thumb": {
+                "download": "@@images/image-128-098630f9071081fdd703c8f7846abcfb.png",
+                "height": 128,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-a85b8bca90731f26d6ab4b8c9e1ae00e.png",
+                "height": 64,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-cbe5371d5bebb716ecb201b820fc28a5.png",
+                "height": 24,
+                "width": 24
+              }
+            },
+            "size": 234662,
+            "width": 400
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "Normalised Difference Vegetation Index (Short Term Statistics) 2015-2019 (raster 1 km), global, 10-daily \u2013 version 3",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/vegetation/end-of-season-date-2023-raster-300m-global-yearly-version-1",
+      "@type": "DataSet",
+      "UID": "7caf242841a34d44a2818f683b111ea9",
+      "description": "Provides the date when the vegetation growing season ends in the time profile of the Plant Phenology Index. The end-of-season occurs, by definition, when the Plant Phenology Index value reaches 15% of the season amplitude during the green-down period. The data at global level are updated in the first quarter of each year. The data are available from 2023 to the present at about 300 m spatial resolution.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "a4e41ea5-5aec-4f8c-b134-c4be017377b1",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "file",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "choices": [
+                ["EEA", "EEA"],
+                ["HOTSPOTS", "HOTSPOTS"]
+              ],
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": { "title": "Area of interest", "type": "string" }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "file",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "",
+      "image_scales": null,
+      "review_state": "published",
+      "title": "End-of-season Date 2023-present (raster 300 m), global, yearly, version 1",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/global-dynamic-land-cover/copernicus-global-land-service-land-cover-100m-collection-3-epoch-2019-globe",
+      "@type": "DataSet",
+      "UID": "a8d945f0edd143a0a5240c28bafa23da",
+      "description": "Provides at global level spatial information on different types (classes) of physical coverage of the Earth's surface, e.g. forests, grasslands, croplands, lakes, wetlands for the 2019 base year. The data are updated annually and are available for the 2015-2019 years.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "27e4e333-149c-49c4-a11e-96a1d0d1b6ff",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-643-0690e29f89d3f44618109caf27a114bd.png",
+            "filename": "Global Dynamic Land Cover_2019_Africa.png",
+            "height": 378,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-56ac3f859cba836e1d9f49246ccc1447.png",
+                "height": 47,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-ac8e8736a7fc0d7720c37b5ed54bbc42.png",
+                "height": 18,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-6f5543753a1236f2043a0fd3ac1378b3.png",
+                "height": 35,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-f0da3395d516b465c41c4dec3dc3ccdb.png",
+                "height": 117,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-d567075b35861e0529db33980bbba9eb.png",
+                "height": 235,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-03cdffd92efab007479c67fca88c79ee.png",
+                "height": 28,
+                "width": 48
+              },
+              "teaser": {
+                "download": "@@images/image-600-40e6e0c2e25c7aea71689a82225da0bc.png",
+                "height": 352,
+                "width": 600
+              },
+              "thumb": {
+                "download": "@@images/image-128-d7e9111bc874dde475393a02bc73781c.png",
+                "height": 75,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-6351cc0a05f19c69cc21b06fe90c06ba.png",
+                "height": 37,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-752a003333ba62383d6421c16b94add5.png",
+                "height": 14,
+                "width": 24
+              }
+            },
+            "size": 104473,
+            "width": 643
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "Land Cover 2019 (raster 100 m), global, yearly \u2013 version 3",
+      "type_title": "DataSet"
+    },
+    {
+      "@id": "https://land.copernicus.eu/api/en/products/global-dynamic-land-cover/copernicus-global-land-service-land-cover-100m-collection-3-epoch-2018-globe",
+      "@type": "DataSet",
+      "UID": "a08da3f50c8d4b38bec35b831382162b",
+      "description": "Provides at global level spatial information on different types (classes) of physical coverage of the Earth's surface, e.g. forests, grasslands, croplands, lakes, wetlands for the 2018 base year. The data are updated annually and are available for the 2015-2019 years.",
+      "downloadable_files": {
+        "items": [
+          {
+            "@id": "add8b7e7-14c0-4b63-98e5-b04e2cab099f",
+            "area": "",
+            "file": "",
+            "format": "",
+            "path": "",
+            "resolution": "",
+            "size": "",
+            "source": "",
+            "title": "",
+            "type": "",
+            "version": "",
+            "year": ""
+          }
+        ],
+        "schema": {
+          "dependencies": {},
+          "fieldsets": [
+            {
+              "fields": [
+                "title",
+                "file",
+                "area",
+                "year",
+                "version",
+                "resolution",
+                "type",
+                "format",
+                "size",
+                "path",
+                "source"
+              ],
+              "id": "default",
+              "title": "File"
+            }
+          ],
+          "properties": {
+            "area": {
+              "description": "Enter the area of this file.",
+              "title": "Area of interest",
+              "type": "string"
+            },
+            "file": {
+              "description": "Enter the file name.",
+              "title": "File",
+              "type": "string"
+            },
+            "format": {
+              "description": "Enter the format of this file.",
+              "title": "Format",
+              "type": "string"
+            },
+            "path": {
+              "description": "Enter the absolute path of this file in the storage",
+              "title": "Path",
+              "type": "string"
+            },
+            "resolution": {
+              "description": "Enter the resolution of this file. Ex: 100m",
+              "title": "Resolution",
+              "type": "string"
+            },
+            "size": {
+              "description": "Enter the size of this file. Ex: 3.5GB",
+              "title": "Size",
+              "type": "string"
+            },
+            "source": {
+              "enum": ["EEA", "HOTSPOTS"],
+              "title": "Source",
+              "type": "string"
+            },
+            "title": {
+              "description": "Enter the title of this file.",
+              "title": "Title",
+              "type": "string"
+            },
+            "type": {
+              "choices": [
+                ["Raster", "Raster"],
+                ["Vector", "Vector"]
+              ],
+              "enum": ["Raster", "Vector"],
+              "title": "Type",
+              "type": "string"
+            },
+            "version": {
+              "description": "Enter the version of this file.",
+              "title": "Version",
+              "type": "string"
+            },
+            "year": {
+              "description": "Enter the year of this file.",
+              "exclusiveMinimum": null,
+              "minimum": 1900,
+              "title": "Year",
+              "type": "number"
+            }
+          },
+          "required": [],
+          "title": "Downloadable File",
+          "type": "object"
+        },
+        "uiSchema": {
+          "ui:order": [
+            "title",
+            "file",
+            "area",
+            "year",
+            "version",
+            "resolution",
+            "type",
+            "format",
+            "size",
+            "path",
+            "source"
+          ]
+        }
+      },
+      "getRemoteUrl": null,
+      "image_field": "image",
+      "image_scales": {
+        "image": [
+          {
+            "content-type": "image/png",
+            "download": "@@images/image-643-30a7e50cc192c1c6257a71c69b2ab513.png",
+            "filename": "Land Cover 100m_collection3_Globe_2018_Africa.png",
+            "height": 378,
+            "scales": {
+              "big": {
+                "download": "@@images/image-80-76a639be34dcf408648e3588f268f60e.png",
+                "height": 47,
+                "width": 80
+              },
+              "icon": {
+                "download": "@@images/image-32-8427e1784aea6182cb3f7acc90279125.png",
+                "height": 18,
+                "width": 32
+              },
+              "medium": {
+                "download": "@@images/image-60-b099f0290097fc320a1c36b54c749d53.png",
+                "height": 35,
+                "width": 60
+              },
+              "mini": {
+                "download": "@@images/image-200-78054e8e6e84b0cea0d33c026982e956.png",
+                "height": 117,
+                "width": 200
+              },
+              "preview": {
+                "download": "@@images/image-400-79664dccd9b64c1d76d0346856848be4.png",
+                "height": 235,
+                "width": 400
+              },
+              "small": {
+                "download": "@@images/image-48-0918dc74d0b169a1e77d9692158a5a86.png",
+                "height": 28,
+                "width": 48
+              },
+              "teaser": {
+                "download": "@@images/image-600-0ee524928649c3f23debdc4c4161749f.png",
+                "height": 352,
+                "width": 600
+              },
+              "thumb": {
+                "download": "@@images/image-128-17d92dc10683489f6880a019895fdd39.png",
+                "height": 75,
+                "width": 128
+              },
+              "tile": {
+                "download": "@@images/image-64-7665d48601edab2c0e010ab2aa796898.png",
+                "height": 37,
+                "width": 64
+              },
+              "tiny": {
+                "download": "@@images/image-24-7d2c018d8e74e9db6c8519a0932fd255.png",
+                "height": 14,
+                "width": 24
+              }
+            },
+            "size": 102898,
+            "width": 643
+          }
+        ]
+      },
+      "review_state": "published",
+      "title": "Land Cover 2018 (raster 100 m), global, yearly \u2013 version 3",
+      "type_title": "DataSet"
+    }
+  ],
+  "items_total": 184
+}
