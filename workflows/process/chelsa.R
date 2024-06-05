@@ -143,7 +143,7 @@
 # This script is expected to be run at the beginning of any R script
 # See the file content for more details. The main task here is to load essential packages, record starting time, the number of cores to be used, read environment variables, etc.
 # source("workflows/process/alwaysLoad.R")
-source("_Scripts/0_1_AlwaysLoad.R")
+source("alwaysLoad.R")
 
 # ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪
 # Environment variables -----

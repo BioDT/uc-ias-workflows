@@ -53,7 +53,7 @@ IASDT.R::AssignIfNotExist(.StartTime, lubridate::now(tzone = "CET"))
 
 # loading renv
 #TODO: TK -- add project = "path/to/project" to avoid loading the wrong renv
-invisible(renv::load(quiet = TRUE))
+invisible(renv::load(project= "/pfs/lustrep3/users/khantaim/iasdt-workflows/iasdt-renv/",  quiet = TRUE))
 
 # # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
