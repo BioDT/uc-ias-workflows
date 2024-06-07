@@ -4,6 +4,7 @@ from feedbackloop.corine import (
     vSensor as clc_vSensor,
     intaker as clc_intaker,
 )
+from state.rocrates import action_one
 
 
 """ 
@@ -22,6 +23,7 @@ def task_setup():
 def task_chelsa():
     """CHELSA Task"""
     return {
+        "depen"
         "actions": [
             (chelsa_vSensor, [], {
                 'path_file': '/users/khantaim/iasdt-workflows/references/chelsa/test.txt',
@@ -33,7 +35,6 @@ def task_chelsa():
             "Rscript /pfs/lustrep3/users/khantaim/iasdt-workflows/workflows/process/chelsa.R"
         ],
     }
-
 
 """ 
 def task_corine():
@@ -47,3 +48,15 @@ def task_corine():
     }
 
  """
+
+
+def task_service():
+    """Service Task"""
+    return {
+        "actions": [
+            (action_one, [], {
+                "input": "input",
+                "output": "output",
+                }),
+        ],
+    }

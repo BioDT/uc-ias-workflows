@@ -93,8 +93,9 @@ def vSensor(logs_folder):
         ):
             # Append the metadata to an object and the object to a list
             obj["title"] = data["title"]
-            obj["dataset_full_format"] = data["dataset_full_format"]
-            obj["dataset_download_information"] = data["dataset_download_information"]
+            #obj["dataset_full_format"] = data["dataset_full_format"]
+            #obj["dataset_download_information"] = data["dataset_download_information"]
+            obj['downloadable_files'] = data['downloadable_files']
             obj["UID"] = data["UID"]
             obj["@id"] = data["@id"]
             current.append(obj)
@@ -143,8 +144,8 @@ def intaker(access_token, logs_folder, output_dir):
         DatasetID = i["UID"]
         DatasetDownloadInformationID = ""
 
-        for x in i["dataset_download_information"]["items"]:
-            if x["full_format"] == "Geotiff":
+        for x in i["downloadable_files"]["items"]:
+            if x["type"] == "Raster":
                 DatasetDownloadInformationID = x["@id"]
                 print(DatasetID)
                 print(DatasetDownloadInformationID)
@@ -159,7 +160,7 @@ def intaker(access_token, logs_folder, output_dir):
                         "Datasets": [
                             {
                                 "DatasetID": DatasetID,
-                                "DatasetDownloadInformationID": DatasetDownloadInformationID,
+                                "FileID": DatasetDownloadInformationID,
                                 "OutputFormat": "Geotiff",
                                 "OutputGCS": "EPSG:4326",
                             }
