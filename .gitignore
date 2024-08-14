@@ -1,6 +1,8 @@
 .DS_Store
 datasets/raw/chelsa/*.tif
 datasets/processed/chelsa/*.tif
+datasets/processed/
+datasets/raw/
 .vscode
 notebooks/clc.json
 references/corine/clc.json
@@ -31,3 +33,11 @@ logs/diff/
 logs/feedback/chelsa/
 logs/process/
 logs/workflows.log
+
+
+references/CrossWalk.txt
+references/Species_List_ID.txt
+references/TaxaList.RData
+*.RData
+*.RDS
+2.env
