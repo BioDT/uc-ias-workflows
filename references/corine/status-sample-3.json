@@ -17,8 +17,10 @@
       }
     ],
     "FMETaskId": 25480,
+    "FinalizationDateTime": "2023-12-04T05:46:33.242442",
+    "Message": "Try again later and if the error persists please contact the administrator (copernicus@eea.europa.eu)",
     "RegistrationDateTime": "2023-11-13T14:14:01.323884",
-    "Status": "In_progress",
+    "Status": "Rejected",
     "UserID": "n00eckgi"
   },
   "6040838668": {
@@ -39,8 +41,10 @@
       }
     ],
     "FMETaskId": 25483,
+    "FinalizationDateTime": "2023-12-04T05:46:22.010868",
+    "Message": "Try again later and if the error persists please contact the administrator (copernicus@eea.europa.eu)",
     "RegistrationDateTime": "2023-11-13T14:14:02.647697",
-    "Status": "In_progress",
+    "Status": "Rejected",
     "UserID": "n00eckgi"
   },
   "77840732945": {
@@ -61,8 +65,62 @@
       }
     ],
     "FMETaskId": 25481,
+    "FinalizationDateTime": "2023-12-04T05:46:12.115949",
+    "Message": "Try again later and if the error persists please contact the administrator (copernicus@eea.europa.eu)",
     "RegistrationDateTime": "2023-11-13T14:14:01.770440",
-    "Status": "In_progress",
+    "Status": "Rejected",
+    "UserID": "n00eckgi"
+  },
+  "83949085000": {
+    "Datasets": [
+      {
+        "DatasetID": "0407d497d3c44bcd93ce8fd5bf78596a",
+        "DatasetPath": "",
+        "DatasetSource": "EEA",
+        "DatasetTitle": "CORINE Land Cover 2018 (vector/raster 100 m), Europe, 6-yearly",
+        "FileID": "3d9e2413-46ca-4f6e-abf8-b6eb429a4e48",
+        "FilePath": "SDpcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXIoQ0xDKV8yMDE4XENMQzIwMThfVmVyc2lvbl8yMFxEYXRhXGRhdGEtZGV0YWlsc1xyYXN0ZXJcdTIwMThfY2xjMjAxOF92MjAyMF8yMHUxX3Jhc3RlcjEwMG0uemlw"
+      },
+      {
+        "DatasetID": "a5ee71470be04d66bcff498f94ceb5dc",
+        "DatasetPath": "",
+        "DatasetSource": "EEA",
+        "DatasetTitle": "CORINE Land Cover 2012 (vector/raster 100 m), Europe, 6-yearly",
+        "FileID": "9f992dad-d129-408e-be66-821adbd52a46",
+        "FilePath": "SDpcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXIoQ0xDKV8yMDEyXENMQzIwMTJfVmVyc2lvbl8yMFxEYXRhXGRhdGEtZGV0YWlsc1xyYXN0ZXJcdTIwMThfY2xjMjAxMl92MjAyMF8yMHUxX3Jhc3RlcjEwMG0uemlw"
+      },
+      {
+        "DatasetID": "d443c86fec2f49e08ff12c7decdbf2af",
+        "DatasetPath": "",
+        "DatasetSource": "EEA",
+        "DatasetTitle": "CORINE Land Cover 2006 (vector/raster 100 m), Europe, 6-yearly",
+        "FileID": "56810bc2-a62d-46a4-a47e-e8e1de8df1b2",
+        "FilePath": "SDpcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXIoQ0xDKV8yMDA2XENMQzIwMDZfVmVyc2lvbl8yMFxEYXRhXGRhdGEtZGV0YWlsc1xyYXN0ZXJcdTIwMTJfY2xjMjAwNl92MjAyMF8yMHUxX3Jhc3RlcjEwMG0uemlw"
+      },
+      {
+        "DatasetID": "6704f90ca82e4f228a46111519f8978e",
+        "DatasetPath": "",
+        "DatasetSource": "EEA",
+        "DatasetTitle": "CORINE Land Cover 2000 (vector/raster 100 m), Europe, 6-yearly",
+        "FileID": "3ce937ab-9178-42b7-8000-60458100c38f",
+        "FilePath": "SDpcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXIoQ0xDKV8yMDAwXENMQzIwMDBfVmVyc2lvbl8yMFxEYXRhXGRhdGEtZGV0YWlsc1xyYXN0ZXJcdTIwMDZfY2xjMjAwMF92MjAyMF8yMHUxX3Jhc3RlcjEwMG0uemlw"
+      },
+      {
+        "DatasetID": "8b393c8e474642d5acb4ed70fc2dc024",
+        "DatasetPath": "",
+        "DatasetSource": "EEA",
+        "DatasetTitle": "CORINE Land Cover 1990 (vector/raster 100 m), Europe, 6-yearly",
+        "FileID": "95232d29-1273-4336-89b0-bddf75a059bf",
+        "FilePath": "SDpcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXJcQ29yaW5lX0xhbmRfQ292ZXIoQ0xDKV8xOTkwXENMQzE5OTBfVmVyc2lvbl8yMFxEYXRhXGRhdGEtZGV0YWlsc1xyYXN0ZXJcdTIwMDBfY2xjMTk5MF92MjAyMF8yMHUxX3Jhc3RlcjEwMG0uemlw"
+      }
+    ],
+    "DownloadURL": "https://copernicus-fme.eea.europa.eu/clmsdatadownload/results/78359.zip",
+    "FMETaskId": 78359,
+    "FileSize": 607758590,
+    "FinalizationDateTime": "2024-06-07T07:49:13.786247",
+    "Message": "Download process finished successfully",
+    "RegistrationDateTime": "2024-06-07T07:48:48.660648",
+    "Status": "Finished_ok",
     "UserID": "n00eckgi"
   },
   "87825280935": {
@@ -83,8 +141,11 @@
       }
     ],
     "FMETaskId": 25484,
+    "FinalizationDateTime": "2023-12-04T05:46:57.634139",
+    "Message": "Try again later and if the error persists please contact the administrator (copernicus@eea.europa.eu)",
     "RegistrationDateTime": "2023-11-13T14:14:03.107812",
-    "Status": "In_progress",
+    "Status": "Rejected",
+    "TaskId": "87825280935",
     "UserID": "n00eckgi"
   },
   "90187946113": {
@@ -105,8 +166,10 @@
       }
     ],
     "FMETaskId": 25482,
+    "FinalizationDateTime": "2023-12-04T05:46:44.717570",
+    "Message": "Try again later and if the error persists please contact the administrator (copernicus@eea.europa.eu)",
     "RegistrationDateTime": "2023-11-13T14:14:02.203896",
-    "Status": "In_progress",
+    "Status": "Rejected",
     "TaskId": "90187946113",
     "UserID": "n00eckgi"
   }

@@ -72,17 +72,22 @@ def convert2nc(input_paths, output_dir):
 
     # Iterate over the datasets dictionary and merge the datasets
     for key, ds in datasets_m.items():
-    # Combine all datasets into a single dataset
+        # Combine all datasets into a single dataset
         merged_ds = xr.merge(ds)
-        #merged_ds.attrs.pop("Var", None)
-        #merged_ds.attrs.pop("Long_name", None)
-        #merged_ds.attrs.pop("unit", None)
-        #merged_ds.attrs.pop("explanation", None)
-        del merged_ds.attrs["nchar"]
+        # Delete unnecessary attributes
+        del merged_ds.attrs["Var"]
+        del merged_ds.attrs["Long_name"]
+        del merged_ds.attrs["unit"]
+        del merged_ds.attrs["explanation"]
+        del merged_ds.attrs["created_by"]
+        del merged_ds.attrs["date"]
+        # Add metadata to the merged dataset
         merged_ds.attrs["Organization"] = "Helmholtz Centre for Environmental Research (UFZ)"
         merged_ds.attrs["Project"] = "Biodiversity Digital Twin (BioDT)"
-        merged_ds.attrs["CreatedOn"] = str(datetime.datetime.now())
+        merged_ds.attrs["Date"] = str(datetime.datetime.now())
         merged_ds.attrs["EPSG"] = "3035"
+        # Save the merged dataset to a netCDF file
+        merged_ds.encoding.update({'zlib': True, 'complevel': 9})
         merged_ds.to_netcdf(f'{output_dir}/{key}.nc')
     return True
 
@@ -126,8 +131,4 @@ def job_intaker(download_list, output_dir):
         nodes=2,
         threads=4,
         mem=16000,
-        queue="ju-standard",
     )
-
-
-def storage

@@ -1,5 +1,7 @@
-require(IASDT.R)
+require(renv)
+renv::load(project = "/pfs/lustrep4/scratch/project_465000915/khantaim/iasdt-workflows/iasdt-renv", quiet = FALSE, prompt = FALSE)
 
+require(IASDT.R)
 
 IASDT.R::InfoChunk(
   Message = "++++ PROCESSING CORINE LAND COVER DATA",
