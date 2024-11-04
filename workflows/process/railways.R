@@ -1,20 +1,21 @@
 options(nwarnings = 200)
 
+# source("renv/activate.R")
 suppressWarnings(renv::load(project = ".", quiet = TRUE))
 
 purrr::walk(
   c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
   ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
 
-## CLC ------
+## Railways ------
 
-IASDT.R::InfoChunk("Processing CLC data", Date = TRUE, Extra2 = 1)
+IASDT.R::InfoChunk("Processing railway intensity", Date = TRUE, Extra2 = 1)
 
-IASDT.R::CLC_Process(
-	#EnvFile = ".env", 
+IASDT.R::Railway_Intensity(
 	#FromHPC = TRUE, 
-	#MinLandPerc = 15,
-	#PlotCLC = TRUE
+	#EnvFile = ".env", 
+	NCores = 15, 
+	#DeleteProcessed = TRUE
 )
 
 warnings()
