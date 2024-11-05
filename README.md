@@ -20,11 +20,11 @@
   - [Create Documentation](#create-documentation)
   - [Logging](#logging)
   - [Environment Variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
-- [Data Storage and Availability](#data-storage-and-availability)
-- [Metadata and RO-Crates](#metadata-and-ro-crates)
-- [Containerization](#containerization)
-- [License](#license)
-- [Contributors](#contributors)
+  - [Data Storage and Availability](#data-storage-and-availability)
+  - [Metadata and RO-Crates](#metadata-and-ro-crates)
+  - [Containerization](#containerization)
+  - [License](#license)
+  - [Contributors](#contributors)
 
 ## Overview
 
@@ -32,9 +32,9 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 ### Architectural overview
 
-<center>
+<centre>
 <img src="assets/IASDT-dataflow-components.png"  width="50%" style="align:center"/>
-</center>
+</centre>
 <br/>
 <br/>
 
@@ -42,9 +42,9 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 ### Study area & geospatial projection
 
-<center>
+<centre>
 <img src="assets/CHELSA-studyarea.jpeg" width="50%"/>
-</center>
+</centre>
 <br/>
 
 **Figure 2:** Study area is defined as the area of the [EEA Reference Grid](https://www.eea.europa.eu/en/datahub/datahubitem-view/3c362237-daa4-45e2-8c16-aaadfb1a003b). The study area is divided into 10x10 km grid cells. The grid cells are projected in the [ETRS89-LAEA projection](https://epsg.io/3035) (EPSG:3035).
@@ -127,7 +127,7 @@ DP_R_CHELSA_Gridsize=10
 
 All the required environment variables can be found in the [`references/env-var-list.csv`](references/env-var-list.csv) file.
 
-# Data Storage and Availability
+## Data Storage and Availability
 
 The IASDT will use the Open-source Project for a Network Data Access Protocol (OPeNDAP) server to serve data to any application. The OPeNDAP server will be hosted on a virtual machine (VM) and will serve data from the HPC data storage systems. The OPeNDAP server will be used to serve data to third-party applications, such as the IAS Joint Species Distribution Model, and will provide an interface for users to access data stored in the IASDT.
 
@@ -137,7 +137,7 @@ The OPenDAP server will clone some defined data from the HPC into a VM using Doc
 - **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
 - **Template (under development):** https://git.ufz.de/khant/opendap
 
-# Metadata and RO-Crates
+## Metadata and RO-Crates
 
 The IASpDT uses the Research Object Crate (RO-Crate) metadata standard to describe the data and workflows. The RO-Crate metadata standard is a community-driven specification for packaging research data with associated metadata. The RO-Crate metadata standard is designed to be machine-readable and human-readable, and it is designed to be used with a wide range of research data types, including datasets, software, and workflows.
 
@@ -146,7 +146,7 @@ We will use the [PyDidIt software](https://github.com/BioDT/pydidit) (developed 
 - **RO-Crate documentation:** https://www.researchobject.org/ro-crate/
 - **RO-Crate Python library:** https://pypi.org/project/ro-crate/
 
-# Containerization 
+## Containerization 
 
 Parts of the IASDT (specifically modelling) are containerized using Singularity containers. The containers are built using the Singularity containerization software and are used to package the IASDT modelling code and dependencies. The containers are used to run the IASDT modelling code on the HPC system, and they are used to ensure that the code runs in a consistent environment across different systems.
 
@@ -154,10 +154,10 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 - **Container template (HMSC-HPC)**: https://github.com/BioDT/hmsc-container
 - **Container template (R)**: https://git.ufz.de/biodt/iasdt-modelling-containers
 
-# License
+## License
 
 
-# Contributors
+## Contributors
 
 - [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ
 - [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ
