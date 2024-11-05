@@ -20,6 +20,7 @@
   - [Create Documentation](#create-documentation)
   - [Logging](#logging)
   - [Environment Variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
+  - [Model and Data processing](#model-and-data-processing)
   - [Data Storage and Availability](#data-storage-and-availability)
   - [Metadata and RO-Crates](#metadata-and-ro-crates)
   - [Containerization](#containerization)
@@ -126,6 +127,10 @@ The IASDT workflows use environment variables to pass parameters to the workflow
 DP_R_CHELSA_Gridsize=10
 
 All the required environment variables can be found in the [`references/env-var-list.csv`](references/env-var-list.csv) file.
+
+## Model and Data processing
+
+The model and data processing code is developed separately in a R package caled `IASDT.R` by Ahmed el-Gabbas. The R package can be found in the [IASDT.R](https://github.com/BioDT/IASDT.R) Github repository. 
 
 ## Data Storage and Availability
 
