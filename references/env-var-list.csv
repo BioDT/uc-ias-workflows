@@ -1,0 +1,11 @@
+name,description,default_value
+Root
+ProjNum
+LUMI_Scratch
+DP_R_Grid
+DP_R_Grid_Ref
+DP_R_GridLandCrop
+DP_R_EUBound
+DP_R_Roads
+DP_R_Railway
+DP_R_Bias

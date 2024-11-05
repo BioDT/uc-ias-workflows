@@ -4,22 +4,27 @@
   <b>Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Horizon Europe project tiled <a href="https://biodt.eu">Biodiversity Digital Twin</a>.</b>  
 </div>
 
-> This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and model communication.
+> This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration.
 
 #
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-  - [Architectural overview](#architectural-overview)
-  - [Study area & geospatial projection](#study-area--geospatial-projection)
-- [Folder Descriptions](#folder-descriptions)
-- [Usage](#usage)
-- [Create Documentation](#create-documentation)
-- [Logging](#logging)
-- [`environment` variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
+- [](#)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Architectural overview](#architectural-overview)
+    - [Study area \& geospatial projection](#study-area--geospatial-projection)
+  - [Folder Descriptions](#folder-descriptions)
+  - [Usage](#usage)
+  - [Create Documentation](#create-documentation)
+  - [Logging](#logging)
+  - [Environment Variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
 - [Data Storage and Availability](#data-storage-and-availability)
+- [Metadata and RO-Crates](#metadata-and-ro-crates)
+- [Containerization](#containerization)
+- [License](#license)
+- [Contributors](#contributors)
 
 ## Overview
 
@@ -27,17 +32,19 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 ### Architectural overview
 
+<center>
 <img src="assets/IASDT-dataflow-components.png"  width="50%" style="align:center"/>
-
+</center>
 <br/>
 <br/>
 
-**Figure 1:** An overview of the Invasive Alien Species Digital Twin (IAS-DT) components. 1) Dynamic Data-Driven Application Systems (DDDAS) based workflows listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing). 2) OPeNDAP Cloud Server services the datasets from the previous component and provides an interface to all IAS-DT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IAS-DT. 3) IAS Joint Species Distribution Model is the modelling block of IAS-DT that uses input data to estimate gridded IAS numbers per habitat type. 4) IAS-DT dashboard presents aggregated results of IAS-DT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.
+**Figure 1:** An overview of the Invasive Alien Species Digital Twin (IASDT) components. 1) Dynamic Data-Driven Application Systems (DDDAS) based workflows listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing). 2) OPeNDAP Cloud Server services the datasets from the previous component and provides an interface to all IASDT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IASDT. 3) IAS Joint Species Distribution Model is the modelling block of IASDT that uses input data to estimate gridded IAS numbers per habitat type. 4) IASDT dashboard presents aggregated results of IASDT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.
 
 ### Study area & geospatial projection
 
+<center>
 <img src="assets/CHELSA-studyarea.jpeg" width="50%"/>
-
+</center>
 <br/>
 
 **Figure 2:** Study area is defined as the area of the [EEA Reference Grid](https://www.eea.europa.eu/en/datahub/datahubitem-view/3c362237-daa4-45e2-8c16-aaadfb1a003b). The study area is divided into 10x10 km grid cells. The grid cells are projected in the [ETRS89-LAEA projection](https://epsg.io/3035) (EPSG:3035).
@@ -48,7 +55,6 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 - datasets/ --> datasets divided into `raw`, `interim`, and `processed` sub-folders
 - docs/ --> software documentation
 - logs/ --> logs for workflow runs
-- models/ --> modeling code
 - notebooks/ --> jupyter notebooks as playground and testing environment
 - references/ --> reference files
 - workflows/ --> Pydoit workflows
@@ -88,11 +94,7 @@ IASDT Workflows use Unix styled logging with the following logging levels:
 - Error: Errors
 - Critical: Critical errors
 
-Logging is mostly done using the `logging` module in Python. However, some tasks use the `logging` module in R. The logging module in R is a wrapper for the Python logging module. The logging module in R is used in the following tasks:
-
-- `process/chelsa.R`
-- `process/corine.R`
-- `process/gbif.R`
+Logging is mostly done using the `logging` module in Python. However, some tasks use `R` where scripts are submitted to the HPC slurm queue. In such cases, the logs will be stored to `.out` and `.err` files in the `logs` directory.
 
 ## Environment Variables: workflow parameter naming convention
 
@@ -123,21 +125,46 @@ The IASDT workflows use environment variables to pass parameters to the workflow
 
 DP_R_CHELSA_Gridsize=10
 
+All the required environment variables can be found in the [`references/env-var-list.csv`](references/env-var-list.csv) file.
+
 # Data Storage and Availability
 
-IASDT will be using LUMI’s Object Storage ([LUMI-O](https://docs.lumi-supercomputer.eu/storage/lumio/)) for model input/output data at each workflow run in this pDT because it offers “permanent” storage. A clone of select data will be available via a data server built using the [OPeNDAP Catalog](https://git.ufz.de/khant/pydap_template) software.
+The IASDT will use the Open-source Project for a Network Data Access Protocol (OPeNDAP) server to serve data to any application. The OPeNDAP server will be hosted on a virtual machine (VM) and will serve data from the HPC data storage systems. The OPeNDAP server will be used to serve data to third-party applications, such as the IAS Joint Species Distribution Model, and will provide an interface for users to access data stored in the IASDT.
 
-LUMI-O gives a public web interface for each individual file in their “buckets”. You can find some sample data files for certain file formats below.
+The OPenDAP server will clone some defined data from the HPC into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://opendap.biodt.eu/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)).
 
-- CSV: https://465000357.lumidata.eu/iasdt-pub/bzf-catalogue-survey.csv
-- HDF5: https://465000357.lumidata.eu/iasdt-pub/elter-vegetation.hdf5
-- RData: https://465000357.lumidata.eu/iasdt-pub/Grid_10_Raster.RData
-- NetCDF4: https://465000357.lumidata.eu/iasdt-pub/coads_climatology.nc
-
-However the problem is that the entire files need to be downloaded to work within third-party systems. The OPenDAP server will clone some defined data from LUMI-O (and MinIO at UFZ for internal usage) into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://134.94.199.14/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)).
-
-- **Example installation:** http://134.94.199.14/
+- **Example installation:** http://opendap.biodt.eu/
 - **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
 - **Template (under development):** https://git.ufz.de/khant/opendap
 
-The IASDT will mainly work with CSV, HDF5, RData, JSON, and NetCDF file formats for data storage and availability.
+# Metadata and RO-Crates
+
+The IASpDT uses the Research Object Crate (RO-Crate) metadata standard to describe the data and workflows. The RO-Crate metadata standard is a community-driven specification for packaging research data with associated metadata. The RO-Crate metadata standard is designed to be machine-readable and human-readable, and it is designed to be used with a wide range of research data types, including datasets, software, and workflows.
+
+We will use the [PyDidIt software](https://github.com/BioDT/pydidit) (developed in-house) for generating workflow crates and the RO-Crate Python library for generating RO-Crate metadata for the data. The RO-Crate metadata will be stored in the same directory as the data, and it will be used to describe the data and the workflows that generated the data.
+
+- **RO-Crate documentation:** https://www.researchobject.org/ro-crate/
+- **RO-Crate Python library:** https://pypi.org/project/ro-crate/
+
+# Containerization 
+
+Parts of the IASDT (specifically modelling) are containerized using Singularity containers. The containers are built using the Singularity containerization software and are used to package the IASDT modelling code and dependencies. The containers are used to run the IASDT modelling code on the HPC system, and they are used to ensure that the code runs in a consistent environment across different systems.
+
+- **Singularity documentation:** https://sylabs.io/guides/3.7/user-guide/
+- **Container template (HMSC-HPC)**: https://github.com/BioDT/hmsc-container
+- **Container template (R)**: https://git.ufz.de/biodt/iasdt-modelling-containers
+
+# License
+
+
+# Contributors
+
+- [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ
+- [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ
+- [Dylan Kierans]()
+- [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center
+- [Oliver Wooland](mailto:oliver.woolland@manchester.ac.uk), University of Manchester
+
+
+
+
