@@ -130,7 +130,7 @@ All the required environment variables can be found in the [`references/env-var-
 
 ## Model and Data processing
 
-The model and data processing code is developed separately in a R package caled `IASDT.R` by Ahmed el-Gabbas. The R package can be found in the [IASDT.R](https://github.com/BioDT/IASDT.R) Github repository. 
+The model and data processing code is developed separately in a R package called `IASDT.R`. The R package can be found in the [IASDT.R](https://github.com/BioDT/IASDT.R) Github repository. 
 
 ## Data Storage and Availability
 
