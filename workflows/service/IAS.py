@@ -4,15 +4,12 @@ import os
 account = "project_465000915"
 
 
-def job_processor(script_path, logs_dir):
+# Function to create and submit a SLURM job directly using clusterjob
+def job_process(script_path, logs_dir):
     """
-    Create and submit a SLURM job directly using clusterjob.
-    Args:
-        script_path (str): Path to the R script to run.
-        logs_dir (str): Path to the directory to store job logs.
+    Create and submit a SLURM job directly using clusterjob for the IAS task.
     """
-
-    # Define a script
+    # Define script
     script = f"""
     echo "Start time = $(date)"
     echo "Submitting directory = "$SLURM_SUBMIT_DIR
@@ -28,19 +25,25 @@ def job_processor(script_path, logs_dir):
     echo "Number of tasks requested by the job = "$SLURM_NTASKS
     echo "Number of cpus per task = "$SLURM_CPUS_PER_TASK
 
+    module load LUMI/23.09 partition/L GDAL fontconfig FriBidi HarfBuzz git UDUNITS libsodium GSL libarchive/3.6.2-cpeGNU-23.09 R
+
+    export CRAYBLAS_WARN=0
+
     Rscript --vanilla {script_path}
 
     echo "End of program at `date`"
     """
-    # Define the SLURM job
+
+    # Define the SLURM job using Job
     job = Job(
-        backend="slurm",
-        jobname="CLC",
-        root_dir=os.environ["ROOT_DIR"],
+        scheduler="slurm",  # Specify SLURM as the scheduler
         account=account,
-        time="00:30:00",
+        jobname="IAS",
+        account=account,
+        root_dir=os.environ["ROOT_DIR"],
+        time="1:00:00",  # Set the time for the job
         partition="standard",
-        mem="100G",
+        mem="200G",
         nodes=1,
         ntasks=1,
         output=f"{logs_dir}/%x-%A-%a.out",
@@ -59,18 +62,15 @@ def job_processor(script_path, logs_dir):
             "libarchive/3.6.2-cpeGNU-23.09",
             "R",
         ],
-        exports=["CRAYBLAS_WARN=0"],
+        exports={"CRAYBLAS_WARN": "0"},
         script=script,
     )
+
     # Submit the job to SLURM
-    job.submit()
-
-    print("Corine processing job submitted successfully!")
-
     # Submit the job to SLURM
     ar = job.submit()
 
-    print("Corine processing job submitted successfully!")
+    print("IAS data merging job submitted successfully!")
 
     ar.wait()  # Wait for the job to complete
 
@@ -78,9 +78,9 @@ def job_processor(script_path, logs_dir):
 
     # Check the state of the job and return the appropriate message
     if job_state == False:
-        print("Corine processing job failed!")
+        print("IAS data merging job failed!")
         return False
 
     if job_state == True:
-        print("Corine processing job done!")
+        print("IAS data merging job done!")
         return True
