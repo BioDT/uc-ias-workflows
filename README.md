@@ -6,10 +6,10 @@
 
 > This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration in the IASDT.
 
->[!WARNING]
+>[!CAUTION]
 >This repository is under active development and is not yet ready for public use. Please contact the author for more information.
 
->[!CAUTION]
+>[!TIP]
 > The branching in this repository is named after each HPC system where the workflows are executed. For example, the `lumi` branch contains the workflows for the LUMI supercomputer, which is the main branch.
 
 ## Table of Contents
