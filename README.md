@@ -184,11 +184,13 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 
 ## Contributors
 
-- [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ
-- [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ
-- [Dylan Kierans]()
-- [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center
-- [Oliver Wooland](mailto:oliver.woolland@manchester.ac.uk), University of Manchester
+- [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ | **Workflows, Architecture, HPC, Data Processing, Containerization, Opendap server**
+- [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ | **IASDT.R, Modelling, Data Processing**
+- [Dylan Kierans](), Containerization
+- [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center | **Metadata and RO-Crates**
+- [Oliver Wooland](mailto:oliver.woolland@manchester.ac.uk), University of Manchester | **RO-Crates(Pydidit)**
+- [Allan Souza](mailto:allan.souza@helsinki.fi) | **Dashboard**
+- [Tuomas Rossi](mailto:tuomas.rossi@csc.fi) | **HPC, Containerization**
 
 
 
