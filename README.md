@@ -136,6 +136,8 @@ All the required environment variables can be found in the [`references/env-var-
 
 The model and data processing code is developed separately in a R package called `IASDT.R`. The R package can be found in the [IASDT.R](https://github.com/BioDT/IASDT.R) Github repository. 
 
+** IASDT.R package:** https://github.com/BioDT/IASDT.R
+
 ## Data Storage and Availability
 
 The IASDT will use the Open-source Project for a Network Data Access Protocol (OPeNDAP) server to serve data to any application. The OPeNDAP server will be hosted on a virtual machine (VM) and will serve data from the HPC data storage systems. The OPeNDAP server will be used to serve data to third-party applications, such as the IAS Joint Species Distribution Model, and will provide an interface for users to access data stored in the IASDT.
