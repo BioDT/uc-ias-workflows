@@ -6,7 +6,8 @@
 
 > This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration in the IASDT.
 
-**Overview Paper:** [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.3897/rio.10.e124579) | **Workflow DOI:** 
+**Overview Paper:** [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.3897/rio.10.e124579) | **Code DOI:** [![DOI](https://zenodo.org/badge/883171168.svg)](https://doi.org/10.5281/zenodo.14756882)
+
 
 >[!CAUTION]
 >This repository is under active development and is not yet ready for public use. Please contact the author for more information.
