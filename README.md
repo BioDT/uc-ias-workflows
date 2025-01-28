@@ -27,6 +27,7 @@
   - [Metadata and RO-Crates](#metadata-and-ro-crates)
   - [Containerization](#containerization)
   - [License](#license)
+  - [Cite as](#cite-as)
   - [Contributors](#contributors)
 
 ## Overview
@@ -75,6 +76,12 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 - Run the following command in the CLI for listing available tasks: `pydoit list`
 - Run all tasks and actions with pydoit command or individual - tasks using `pydoit <task-name>` command in a shell.
 - Parallel task execution can be enabled by running the command `doit -n 4` (n defines the number of cores to attach to pydoit runtime).
+
+Alternatively, simply run the following command from the root fodler to run all tasks:
+
+```bash
+bash entry.sh
+```
 
 ## Create Documentation
 
@@ -181,6 +188,18 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 
 ## License
 
+## Cite as
+
+```bibtex
+@misc{biodt_iasdt_2025,
+  author       = {Khan, Taimur and El-Gabbas, Ahmed and Kierans, Dylan and Lopez Gordillo, Julian and Wooland, Oliver and Souza, Allan and Rossi, Tuomas and Konvicka, Jakub},
+  title        = {BioDT: Invasive Alien Species Digital Twin (IASDT) Workflows},
+  year         = {2025},
+  month        = {02},
+  note         = {Biodiveristy Digital Twin (BioDT), Funded by the European Union }
+}
+```
+
 
 ## Contributors
 
@@ -190,7 +209,8 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 - [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center | **Metadata and RO-Crates**
 - [Oliver Wooland](mailto:oliver.woolland@manchester.ac.uk), University of Manchester | **RO-Crates(Pydidit)**
 - [Allan Souza](mailto:allan.souza@helsinki.fi) | **Dashboard**
-- [Tuomas Rossi](mailto:tuomas.rossi@csc.fi) | **HPC, Containerization**
+- [Tuomas Rossi](mailto:tuomas.rossi@csc.fi) , CSC – IT Center for Science Ltd. | **HPC, Containerization**
+- [Jakub Konvicka](mailto:jakub.konvicka@vsb.cz), IT4Innovations | **HPC (LEXIS)**
 
 
 

@@ -4,6 +4,22 @@ authors:
     - family-names: Khan
       given-names: Taimur
       orcid: https://orcid.org/0000-0001-7833-5474
+    - family-names: El-Gabbas
+      given-names: Ahmed
+    - family-names: Kierans
+      given-names: Dylan
+    - family-names: Lopez Gordillo
+      given-names: Julian
+    - family-names: Wooland
+      given-names: Oliver
+    - family-names: Souza
+      given-names: Allan
+    - family-names: Rossi
+      given-names: Tuomas
+    - family-names: Konvicka
+      given-names: Jakub
+    
+      
   title: "BioDT: Invasive Alien Species Digital Twin (IASDT) Workflows"
   doi: 
-  date-released: 2023-10-24
+  date-released: 2025-02-28
