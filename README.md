@@ -162,7 +162,7 @@ The IASDT dashbaord is created using RShiny, and is linked to the DT OpenDAP ser
 
 ## Metadata and RO-Crates
 
-The IASpDT uses the Research Object Crate (RO-Crate) metadata standard to describe the data and workflows. The RO-Crate metadata standard is a community-driven specification for packaging research data with associated metadata. The RO-Crate metadata standard is designed to be machine-readable and human-readable, and it is designed to be used with a wide range of research data types, including datasets, software, and workflows.
+The IASDT uses the Research Object Crate (RO-Crate) metadata standard to describe the data and workflows. The RO-Crate metadata standard is a community-driven specification for packaging research data with associated metadata. The RO-Crate metadata standard is designed to be machine-readable and human-readable, and it is designed to be used with a wide range of research data types, including datasets, software, and workflows.
 
 We will use the [PyDidIt software](https://github.com/BioDT/pydidit) (developed in-house) for generating workflow crates and the RO-Crate Python library for generating RO-Crate metadata for the data. The RO-Crate metadata will be stored in the same directory as the data, and it will be used to describe the data and the workflows that generated the data.
 
