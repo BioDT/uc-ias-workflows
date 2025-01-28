@@ -19,9 +19,11 @@
   - [Usage](#usage)
   - [Create Documentation](#create-documentation)
   - [Logging](#logging)
-  - [Environment Variables: workflow parameter naming convention](#environment-variables-workflow-parameter-naming-convention)
+  - [Environment Variables](#environment-variables)
+    - [Workflow parameter naming convention](#workflow-parameter-naming-convention)
   - [Model and Data processing](#model-and-data-processing)
   - [Data Storage and Availability](#data-storage-and-availability)
+  - [Dashboard](#dashboard)
   - [Metadata and RO-Crates](#metadata-and-ro-crates)
   - [Containerization](#containerization)
   - [License](#license)
@@ -97,7 +99,9 @@ IASDT Workflows use Unix styled logging with the following logging levels:
 
 Logging is mostly done using the `logging` module in Python. However, some tasks use `R` where scripts are submitted to the HPC slurm queue. In such cases, the logs will be stored to `.out` and `.err` files in the `logs` directory.
 
-## Environment Variables: workflow parameter naming convention
+## Environment Variables
+
+### Workflow parameter naming convention
 
 The IASDT workflows use environment variables to pass parameters to the workflows. This convention is defined in the `references/parameter_naming_conventions.txt`file. The naming convention for the environment variables is as follows:
 
@@ -141,6 +145,20 @@ The OPenDAP server will clone some defined data from the HPC into a VM using Doc
 - **Example installation:** http://opendap.biodt.eu/
 - **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
 - **Template (under development):** https://git.ufz.de/khant/opendap
+
+## Dashboard
+
+The IASDT dashbaord is created using RShiny, and is linked to the DT OpenDAP server. The dashboard will be used to present the results of the IASDT to users and stakeholders in a simplified and intuitive manner. 
+
+- **Dashboard code:** https://github.com/allantsouza/IAS-pDT-BioDT-web-app
+- **Dashboard link:** https://allantsouza.shinyapps.io/IAS-pDT-BioDT-web-app/
+
+**Sample screenshot:**
+
+<centre>
+<img src="assets/dashboard.png" width="70%"/>
+</centre>
+
 
 ## Metadata and RO-Crates
 
