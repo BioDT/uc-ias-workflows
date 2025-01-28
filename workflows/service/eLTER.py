@@ -1,7 +1,7 @@
 from clusterjob import Job
 import os
 
-account = "project_465000915"
+account = "project_465001588"
 
 
 # Function to create and submit a SLURM job directly using clusterjob

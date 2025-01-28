@@ -23,7 +23,7 @@ Before you start, please
 
 
 2. After finishing with previous step, you need to fit the model(s) from the prepared SLURM file(s). The bash commands in the SLURM file read lines (each fitting a single model chain) from the following file /IAS_Workflow_Test/Model/Commands_All.txt as a batch job (parallel). Please use the following command
-# sbatch "/pfs/lustrep4/scratch/project_465000915/IAS_Workflow_Test/Model/Bash_Fit.slurm"
+# sbatch "/pfs/lustrep4/scratch/project_465001588/IAS_Workflow_Test/Model/Bash_Fit.slurm"
 
 3. After the previous step, you need to check if all models were finished. For this, you need to run
 Model_DE_4Workflow_2.slurm / Model_DE_4Workflow_2.R [not necessary for this exercise] 

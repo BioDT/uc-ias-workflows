@@ -119,4 +119,4 @@ IASDT.R::Mod_Prep4HPC(
 # FIT THE MODELS -------
 # # |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-# sbatch "/pfs/lustrep4/scratch/project_465000915/IAS_Workflow_Test/Model/Bash_Fit.slurm"
+# sbatch "/pfs/lustrep4/scratch/project_465001588/IAS_Workflow_Test/Model/Bash_Fit.slurm"
