@@ -28,7 +28,7 @@
   - [Containerization](#containerization)
   - [License](#license)
   - [Cite as](#cite-as)
-  - [Contributing Author](#contributing-author)
+  - [Authors](#authors)
   - [Contributors](#contributors)
 
 ## Overview
@@ -201,7 +201,7 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 }
 ```
 
-## Contributing Author
+## Authors
 
 - [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ | **Workflows, Architecture, HPC, Data Processing, Containerization, Opendap server**
 
