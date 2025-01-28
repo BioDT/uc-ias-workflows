@@ -52,11 +52,12 @@ The IASDT follows the **TwinEco framework for building DTs in ecology.
 
 >Khan, T., de Koning, K., Endresen, D., Chala, D. and Kusch, E., 2024. TwinEco: A Unified Framework for Dynamic Data-Driven Digital Twins in Ecology. bioRxiv, pp.2024-07. [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.1101/2024.07.23.604592)
 
+<br/>
 <centre>
 <img src="assets/IASDT-dataflow-components.png"  width="50%" style="align:center"/>
 </centre>
 <br/>
-<br/>
+
 
 **Figure 1:** An overview of the Invasive Alien Species Digital Twin (IASDT) components. 1) Dynamic Data-Driven Application Systems (DDDAS) based workflows listen for changes in data sources (1.a. feedback loops), pull and process required data (1.b. data processing), merge and reconcile new and old data (1.c. data assimilation), version datasets and add metadata (1.d. state + FAIR metadata management), and transfer updated datasets (data + log files) to a data server (1.e. data servicing). 2) OPeNDAP Cloud Server services the datasets from the previous component and provides an interface to all IASDT data (input, output, metadata, and log files). The server also serves as an interface for third-party applications to access information contained in the IASDT. 3) IAS Joint Species Distribution Model is the modelling block of IASDT that uses input data to estimate gridded IAS numbers per habitat type. 4) IASDT dashboard presents aggregated results of IASDT in a simplified and intuitive manner to BioDT users and stakeholders and serves as a communication tool.
 
