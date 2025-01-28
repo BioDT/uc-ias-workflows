@@ -51,7 +51,7 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
 
 ### Architectural overview
 
-The IASDT follows the **TwinEco framework for building DTs in ecology.
+The IASDT follows the **TwinEco** framework for building DTs in ecology. The pre-print:
 
 >Khan, T., de Koning, K., Endresen, D., Chala, D. and Kusch, E., 2024. TwinEco: A Unified Framework for Dynamic Data-Driven Digital Twins in Ecology. bioRxiv, pp.2024-07. [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.1101/2024.07.23.604592)
 
