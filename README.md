@@ -4,32 +4,37 @@
   <b>Workflows for the Invasive Alien Species Digital Twin (IASDT), as part of the Horizon Europe project tiled <a href="https://biodt.eu">Biodiversity Digital Twin</a>.</b>  
 </div>
 
-> This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration.
+> This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration in the IASDT.
 
-#
+:::danger
+This repository is under active development and is not yet ready for public use. Please contact the author for more information.
+:::
+
+:::info
+The branching in this repository is named after each HPC system where the workflows are executed. For example, the `lumi` branch contains the workflows for the LUMI supercomputer, which is the main branch.
+:::
 
 ## Table of Contents
 
-- [](#)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-    - [Architectural overview](#architectural-overview)
-    - [Study area \& geospatial projection](#study-area--geospatial-projection)
-  - [Folder Descriptions](#folder-descriptions)
-  - [Usage](#usage)
-  - [Create Documentation](#create-documentation)
-  - [Logging](#logging)
-  - [Environment Variables](#environment-variables)
-    - [Workflow parameter naming convention](#workflow-parameter-naming-convention)
-  - [Model and Data processing](#model-and-data-processing)
-  - [Data Storage and Availability](#data-storage-and-availability)
-  - [Dashboard](#dashboard)
-  - [Metadata and RO-Crates](#metadata-and-ro-crates)
-  - [Containerization](#containerization)
-  - [License](#license)
-  - [Cite as](#cite-as)
-  - [Authors](#authors)
-  - [Contributors](#contributors)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+  - [Architectural overview](#architectural-overview)
+  - [Study area \& geospatial projection](#study-area--geospatial-projection)
+- [Folder Descriptions](#folder-descriptions)
+- [Usage](#usage)
+- [Create Documentation](#create-documentation)
+- [Logging](#logging)
+- [Environment Variables](#environment-variables)
+  - [Workflow parameter naming convention](#workflow-parameter-naming-convention)
+- [Model and Data processing](#model-and-data-processing)
+- [Data Storage and Availability](#data-storage-and-availability)
+- [Dashboard](#dashboard)
+- [Metadata and RO-Crates](#metadata-and-ro-crates)
+- [Containerization](#containerization)
+- [License](#license)
+- [Cite as](#cite-as)
+- [Authors](#authors)
+- [Contributors](#contributors)
 
 ## Overview
 
