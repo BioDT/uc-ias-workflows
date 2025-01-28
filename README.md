@@ -208,10 +208,10 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 ## Contributors
 
 - [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ | **IASDT.R, Modelling, Data Processing**
-- [Dylan Kierans]() | **Containerization**
+- [Dylan Kierans](), German Climate Computing Center (DKRZ)  | **Containerization**
 - [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center | **Metadata and RO-Crates**
 - [Oliver Wooland](mailto:oliver.woolland@manchester.ac.uk), University of Manchester | **RO-Crates(Pydidit)**
-- [Allan Souza](mailto:allan.souza@helsinki.fi) | **Dashboard**
+- [Allan Souza](mailto:allan.souza@helsinki.fi), Institute for Atmospheric and Earth System Research INAR | **Dashboard**
 - [Tuomas Rossi](mailto:tuomas.rossi@csc.fi) , CSC – IT Center for Science Ltd. | **HPC, Containerization**
 - [Jakub Konvicka](mailto:jakub.konvicka@vsb.cz), IT4Innovations | **HPC (LEXIS)**
 
