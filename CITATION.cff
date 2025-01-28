@@ -3,9 +3,6 @@ message: "Biodiveristy Digital Twin (BioDT), Funded by the European Union ðŸ‡ªðŸ
 authors:
     - family-names: Khan
       given-names: Taimur
-      orcid: https://orcid.org/0000-0001-7833-5474
-    
-      
-  title: "BioDT: Invasive Alien Species Digital Twin (IASDT) Workflows"
-  doi: 
-  date-released: 2025-02-28
+orcid: https://orcid.org/0000-0001-7833-5474   
+title: "BioDT: Invasive Alien Species Digital Twin (IASDT) Workflows"
+date-released: 2025-02-28

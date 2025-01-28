@@ -6,6 +6,8 @@
 
 > This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration in the IASDT.
 
+**Overview Paper:** [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.3897/rio.10.e124579) | **Workflow DOI:** 
+
 >[!CAUTION]
 >This repository is under active development and is not yet ready for public use. Please contact the author for more information.
 
@@ -31,7 +33,7 @@
 - [Containerization](#containerization)
 - [License](#license)
 - [Cite as](#cite-as)
-- [Authors](#authors)
+- [Author](#author)
 - [Contributors](#contributors)
 
 ## Overview
@@ -39,6 +41,10 @@
 A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
 ### Architectural overview
+
+The IASDT follows the TwinEco framework for building DTs in ecology.
+
+Paper: Khan, T., de Koning, K., Endresen, D., Chala, D. and Kusch, E., 2024. TwinEco: A Unified Framework for Dynamic Data-Driven Digital Twins in Ecology. bioRxiv, pp.2024-07. [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.1101/2024.07.23.604592)
 
 <centre>
 <img src="assets/IASDT-dataflow-components.png"  width="50%" style="align:center"/>
@@ -70,6 +76,7 @@ A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Y
   - process --> data processing tasks
   - state --> state management tasks
   - service --> downstream data servicing and HPC management tasks
+  - dodo.py --> Main entry point for Pydoit workflows
 
 ## Usage
 
@@ -204,7 +211,7 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 }
 ```
 
-## Authors
+## Author
 
 - [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ | **Workflows, Architecture, HPC, Data Processing, Containerization, Opendap server**
 
