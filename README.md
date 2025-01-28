@@ -6,7 +6,7 @@
 
 > This is a collection of PyDoit workflows for data processing, data assimilation, state management, metadata management, data and HPC servicing, and job orchestration in the IASDT.
 
-**Overview Paper:** [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.3897/rio.10.e124579) | **Code DOI:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14756907.svg)](https://doi.org/10.5281/zenodo.14756907)
+**Overview Paper:** [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.3897/rio.10.e124579) **| Code DOI:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14756907.svg)](https://doi.org/10.5281/zenodo.14756907)
 
 
 
@@ -40,11 +40,15 @@
 
 ## Overview
 
+The Invasive Alien Species Digital Twin (IASDT) is a digital twin that uses dynamic data-driven workflows for joint species distribution modelling of invasive alien species (IAS) in continental Europe with Hierarchical Modelling of Species Communities ([HMSC](https://www.helsinki.fi/en/researchgroups/statistical-ecology/software/hmsc)) models. The IASDT uses biotic and abiotic to estimate the current and forecast the future distribution of IAS in Europe under various climate scenarios. The IASDT is part of the [Biodiversity Digital Twin (BioDT)](https://biodt.eu) project, which is funded by the European Union.
+
+The workflows are written in [PyDoit](https://pydoit.org) and are designed to be executed on HPC systems, mainly [LUMI](https://lumi-supercomputer.eu). The workflows are designed to be modular and scalable based on the [TwinEco](#architectural-overview) framework. These workflows are designed to be used with the [OPeNDAP Cloud Server](#data-storage-and-availability) to serve data to third-party applications.
+
 A detailed overview can be found on the project wiki: https://wiki.eduuni.fi/x/Yg2cEw
 
 ### Architectural overview
 
-The IASDT follows the TwinEco framework for building DTs in ecology.
+The IASDT follows the **TwinEco framework for building DTs in ecology.
 
 Paper: Khan, T., de Koning, K., Endresen, D., Chala, D. and Kusch, E., 2024. TwinEco: A Unified Framework for Dynamic Data-Driven Digital Twins in Ecology. bioRxiv, pp.2024-07. [![DOI:10.1101/2024.07.23.604592](http://img.shields.io/badge/DOI-10.1101/2024.07.23.604592-323F23.svg)](https://doi.org/10.1101/2024.07.23.604592)
 
@@ -160,13 +164,13 @@ The model and data processing code is developed separately in a R package called
 
 ## Data Storage and Availability
 
-The IASDT will use the Open-source Project for a Network Data Access Protocol (OPeNDAP) server to serve data to any application. The OPeNDAP server will be hosted on a virtual machine (VM) and will serve data from the HPC data storage systems. The OPeNDAP server will be used to serve data to third-party applications, such as the IAS Joint Species Distribution Model, and will provide an interface for users to access data stored in the IASDT.
+The IASDT uses a custom built and hosted Open-source Project for a Network Data Access Protocol (OPeNDAP) Catalog to serve data to any application. The OPeNDAP Catalog is hosted on a virtual machine (VM). The OPeNDAP Catalog is used to serve data to third-party applications, such as the IASDT [dashboard](#dashboard), and provides an interface for users to access input/output data stored in the IASDT.
 
-The OPenDAP server will clone some defined data from the HPC into a VM using Docker and will serve it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://opendap.biodt.eu/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/nc/coads_climatology.nc.das)).
+The OPenDAP Catalog clones some defined data from the HPC into a VM using Docker and serves it using the Data Access Protocol (DAP), which is a defined data model for accessing remote scientific datasets. The magic here is that DAP allows users to query subsets of the data files, while automatically giving variable-level access ([see example](http://opendap.biodt.eu/sample/nc/coads_climatology.nc.html)), and automatically assigning metadata to the contents of each file ([see example](http://134.94.199.14/sample/nc/coads_climatology.nc.das)).
 
-- **Example installation:** http://opendap.biodt.eu/
-- **Under-construction documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
-- **Template (under development):** https://git.ufz.de/khant/opendap
+- **Opendap Catalog Link:** http://opendap.biodt.eu/
+- **Opendap Catalog documentation:** https://khant.pages.ufz.de/opendap/chapters/concept/opendap.html
+- **Opendap Catalog code:** https://git.ufz.de/khant/opendap
 
 ## Dashboard
 
