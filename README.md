@@ -28,6 +28,7 @@
   - [Containerization](#containerization)
   - [License](#license)
   - [Cite as](#cite-as)
+  - [Contributing Author](#contributing-author)
   - [Contributors](#contributors)
 
 ## Overview
@@ -192,7 +193,7 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 
 ```bibtex
 @misc{biodt_iasdt_2025,
-  author       = {Khan, Taimur and El-Gabbas, Ahmed and Kierans, Dylan and Lopez Gordillo, Julian and Wooland, Oliver and Souza, Allan and Rossi, Tuomas and Konvicka, Jakub},
+  author       = {Khan, Taimur},
   title        = {BioDT: Invasive Alien Species Digital Twin (IASDT) Workflows},
   year         = {2025},
   month        = {02},
@@ -200,10 +201,12 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
 }
 ```
 
+## Contributing Author
+
+- [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ | **Workflows, Architecture, HPC, Data Processing, Containerization, Opendap server**
 
 ## Contributors
 
-- [Taimur Khan](mailto:taimur.khan@ufz.de), Helmholtz centre for environmental research - UFZ | **Workflows, Architecture, HPC, Data Processing, Containerization, Opendap server**
 - [Ahmed El-Gabbas](mailto:ahmed.el-gabbas@ufz.de), Helmholtz centre for environmental research - UFZ | **IASDT.R, Modelling, Data Processing**
 - [Dylan Kierans](), Containerization
 - [Julian Lopez Gordillo](mailto:julian.lopezgordillo@naturalis.nl), Naturalis Biodiversity Center | **Metadata and RO-Crates**
