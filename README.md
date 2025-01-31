@@ -232,6 +232,7 @@ Parts of the IASDT (specifically modelling) are containerized using Singularity 
   year         = {2025},
   month        = {02},
   note         = {Biodiveristy Digital Twin (BioDT), Funded by the European Union }
+  doi          = {10.5281/zenodo.14756907},
 }
 ```
 

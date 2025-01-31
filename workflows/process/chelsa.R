@@ -1,8 +1,8 @@
-source("/pfs/lustrep4/users/elgabbas/BioDT_IAS/.Rprofile")
+source("/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/.Rprofile")
 options(nwarnings = 200)
 
 # source("renv/activate.R")
-suppressWarnings(renv::load(project = ".", quiet = TRUE))
+suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
 
 purrr::walk(
   c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "ncdf4"),

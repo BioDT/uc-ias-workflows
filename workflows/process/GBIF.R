@@ -1,7 +1,7 @@
 options(nwarnings = 200)
 
 # source("renv/activate.R")
-suppressWarnings(renv::load(project = ".", quiet = TRUE))
+suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
 
 purrr::walk(
   c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "writexl", "rgbif"),
@@ -14,7 +14,7 @@ IASDT.R::InfoChunk("Processing GBIF data", Date = TRUE, Extra2 = 1)
 IASDT.R::GBIF_Process(
 	#FromHPC = TRUE,
 	#EnvFile = ".env",
-    Renviron = "/pfs/lustrep4/users/elgabbas/.Renviron",
+    Renviron = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron",
     NCores = 40, 
     RequestData = TRUE,
     #DownloadData = TRUE,
