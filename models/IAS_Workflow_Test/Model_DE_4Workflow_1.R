@@ -96,8 +96,6 @@ IASDT.R::Mod_Prep4HPC(
   MinPresPerCountry = 50, 
   # Show progress of this function
   VerboseProgress = FALSE,
-  # working from LUMI 
-  FromHPC = TRUE,
   # prepare slurm file
   PrepSLURM = TRUE,
   # Memory needed for each chain (i.e. for each submitted job)

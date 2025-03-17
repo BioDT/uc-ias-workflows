@@ -12,18 +12,17 @@ purrr::walk(
 IASDT.R::InfoChunk("Processing GBIF data", Date = TRUE, Extra2 = 1)
 
 IASDT.R::GBIF_Process(
-	#FromHPC = TRUE,
-	#EnvFile = ".env",
-    Renviron = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron",
-    NCores = 40, 
-    RequestData = TRUE,
-    #DownloadData = TRUE,
-    #SplitChunks = TRUE,
-    #Overwrite = FALSE, 
-    DeleteChunks = TRUE,
-    #ChunkSize = 50000,
-    #Boundaries = c(-30, 50, 25, 75),
-    #StartYear = 1981
+	# EnvFile = ".env",
+  Renviron = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron", # Need to read from .env file or set manually
+  NCores = 40L, 
+  # Request = TRUE,
+  # Download = TRUE,
+  # SplitChunks = TRUE,
+  # Overwrite = FALSE, 
+  # DeleteChunks = TRUE,
+  # ChunkSize = 50000L,
+  # Boundaries = c(-30, 50, 25, 75),
+  # StartYear = 1981L
 )
 
 warnings()

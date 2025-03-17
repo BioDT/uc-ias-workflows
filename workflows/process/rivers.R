@@ -7,12 +7,13 @@ purrr::walk(
   c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "archive"),
   ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
 
-## Roads ------
+## river length ------
 
-IASDT.R::InfoChunk("Processing road intensity", Date = TRUE, Extra2 = 1)
+IASDT.R::InfoChunk("Processing river length", Date = TRUE, Extra2 = 1)
 
-IASDT.R::Road_Intensity(
-	# EnvFile = ".env"
+IASDT.R::River_Length(
+  # EnvFile = ".env",
+  # Cleanup = FALSE
 )
 
 warnings()
