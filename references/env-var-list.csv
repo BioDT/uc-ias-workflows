@@ -1,11 +1,53 @@
 name,description,default_value
-Root
-ProjNum
-LUMI_Scratch
-DP_R_Grid
-DP_R_Grid_Ref
-DP_R_GridLandCrop
-DP_R_EUBound
-DP_R_Roads
-DP_R_Railway
-DP_R_Bias
+DP_R_BioReg_interim,Directory path to biogeographical regions interim data,datasets/interim/biogeoregions
+DP_R_BioReg_processed,Directory path to biogeographical regions processed data,datasets/processed/biogeoregions
+DP_R_BioReg_raw,Directory path to biogeographical regions raw data,datasets/raw/biogeoregions
+DP_R_BioReg_url,URL for downloading biogeographical regions data,https://www.eea.europa.eu/en/datahub/datahubitem-view/11db8d14-f167-4cd5-9205-95638dfd9618
+DP_R_CHELSA_links,Directory path containing CHELSA download links,references/chelsa/DwnLinks
+DP_R_CHELSA_processed,Directory path to processed CHELSA data,datasets/processed/chelsa
+DP_R_CHELSA_raw,Directory path to raw CHELSA data,datasets/raw/chelsa
+DP_R_CHELSA_url,Base URL for CHELSA data,https://os.zhdk.cloud.switch.ch/chelsav2/GLOBAL
+DP_R_CLC_crosswalk,"Path to the crossWalk.txt file containing custom cross-walk between CLC values and their corresponding values for three levels of CLC, EUNIS_19, and SynHab habitat types",references/CrossWalk.txt
+DP_R_CLC_processed,Directory path to processing CLC processed CLC data,datasets/processed/corine
+DP_R_CLC_tif,Path to the input CLC tif file,datasets/raw/corine/u2018_clc2018_v2020_20u1_raster100m/DATA/U2018_CLC2018_V2020_20u1.tif
+DP_R_Hmsc_ve_win,Directory path to the Hmsc-HPC Python virtual environment under Windows operating system,D:/Hmsc-HPC
+DP_R_LUMI_cpu,LUMI project number for CPU computations,project_465000915
+DP_R_LUMI_gpu,LUMI project number for GPU computations,project_465001588
+DP_R_LUMI_gpu_check,File path to the LUMI_Check_GPU.py python script for reporting if the GPU was used in the running SLURM job,references/LUMI_Check_GPU.py
+DP_R_Countrycodes,Path to CountryCodes.csv file containing countries ISO codes,references/CountryCodes.csv
+DP_R_EUBound,Path to Rdata file containing country boundaries: Bound_sf_Eur.Rdata,references/Bound_sf_Eur.RData
+DP_R_Model_path,Directory path containing model fitting directories ,datasets/processed/model_fitting
+DP_R_Railways_interim,Directory path to railways interim data,datasets/interim/railways
+DP_R_Railways_processed,Directory path to railways processed data,datasets/processed/railways
+DP_R_Railways_raw,Directory path to railways raw data,datasets/raw/railways
+DP_R_Railways_url,URL for railways data,https://download.geofabrik.de/
+DP_R_Grid_processed,Directory path for reference grid: processed CLC,datasets/processed/grid
+DP_R_Grid_raw,Directory path for reference grid: raw grid data,references/grid
+DP_R_Rivers_interim,Directory path to rivers interim data,datasets/interim/rivers
+DP_R_Rivers_processed,Directory path to rivers processed data,datasets/processed/rivers
+DP_R_Rivers_raw,Directory path to rivers raw data,datasets/raw/rivers
+DP_R_Rivers_zip,Path to zip file containing river data,datasets/raw/rivers/EU_hydro_gpkg_eu.zip
+DP_R_Roads_interim,Directory path to roads interim data,datasets/interim/roads
+DP_R_Roads_processed,Directory path to roads processed data,datasets/processed/roads
+DP_R_Roads_raw,Directory path to roads raw data,datasets/raw/roads
+DP_R_Roads_url,URL for the Global Roads Inventory Project (GRIP) data,https://dataportaal.pbl.nl/downloads/GRIP4/GRIP4_Region4_vector_fgdb.zip
+DP_R_Efforts_interim,Directory path to sampling efforts interim data,datasets/interim/SamplingEfforts
+DP_R_Efforts_processed,Directory path to sampling efforts processed data,datasets/processed/SamplingEfforts
+DP_R_Efforts_raw,Directory path to sampling efforts raw data,datasets/raw/SamplingEfforts
+DP_R_EASIN_interim,Directory path to interim EASIN data,datasets/interim/EASIN
+DP_R_EASIN_processed,Directory path to processed EASIN data,datasets/processed/EASIN
+DP_R_EASIN_summary,Directory path to summary of processed EASIN data,datasets/processed/EASIN/Summary
+DP_R_EASIN_taxa_url,URL for EASIN API for downloading taxa list,https://easin.jrc.ec.europa.eu/apixg/catxg
+DP_R_EASIN_data_url,URL for EASIN API for downloading species data,https://easin.jrc.ec.europa.eu/apixg/geoxg
+DP_R_eLTER_processed,Path to eLTER_IAS.RData containing processed eLTER presence-absence data,datasets/processed/IAS_PA/eLTER_IAS.RData
+DP_R_eLTER_raw,Path to elter_data_gbif_XXXX.rds file containing processed and standardized eLTER data,references/elter_data_gbif_2024-02-07.rds
+DP_R_GBIF_interim,Directory path to interim GBIF data,datasets/interim/GBIF
+DP_R_GBIF_processed,Directory path to processed GBIF data,datasets/processed/GBIF
+DP_R_GBIF_raw,Directory path to raw GBIF data,datasets/raw/GBIF
+DP_R_PA,Directory path to species-specific presence-absence data,datasets/processed/IAS_PA
+DP_R_HabAff,Path to rds file containing species affinity to habitat types,references/taxon-habitat-combined_2024-02-07.rds
+DP_R_Taxa_country,Path to excel file containing the number of grid cells per species and country,references/cell_count_per_species_and_country_2024-01-30-IA-VK-MG.xlsx
+DP_R_Taxa_easin,Path to EASIN standardized taxonomy,references/easin_taxon-list-gbif_2024-02-07.rds
+DP_R_Taxa_info,Path to the location of the Species_List_ID.txt file containing species information,references/Species_List_ID.txt
+DP_R_Taxa_info_rdata,Path to TaxaList.RData file containing species information,references/TaxaList.RData
+DP_R_Taxa_stand,Path to rds file containing standardized taxonomy,references/taxon-list-for-download_2024-02-07.rds
