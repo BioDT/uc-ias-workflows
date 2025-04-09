@@ -1,59 +1,70 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 # This script processes IAS data for the IASDT project.
 # Author: Ahmed El-Gabbas
-# Last update: 2025-03-17
+# Last update: 2025-04-09
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-# Path of the .Renviron file
-Renviron = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron"
+# needed changes:
+# - change path of the renv project
+# - change path to `.env` file, if needed
 
-options(nwarnings = 200) # increase the number of warnings to be reported
 
-Ch1 <- function(Text) {
-  IASDT.R::InfoChunk(
-    paste0("\t", Text), Rep = 2, Char = "=", CharReps = 60, Red = TRUE,
-    Bold = TRUE, Time = FALSE)
-}
+tryCatch(
+  {
 
-on.exit(
-  add = TRUE,
-  expr = {
-    IASDT.R::InfoChunk(
-      "Session packages", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
-    print(sessioninfo::session_info()$packages)
-    IASDT.R::InfoChunk(
-      "Session info", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
+    # increase the number of warnings to be reported
+    options(nwarnings = 200)
+
+    # activate renv
+    suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
+
+    # load packages
+    purrr::walk(
+      c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
+      ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
+
+    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    # Processing IAS data
+    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    IASDT.R::info_chunk(
+      "\tProcessing IAS data",
+      date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+
+    IASDT.R::IAS_process(
+      # env_file = ".env",
+      n_cores = 40L,
+      # overwrite = TRUE
+    )
+
+  },
+
+  error = function(e) {
+
+    # Error message if the script fails
+    IASDT.R::info_chunk(
+      "Error message", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    print(paste("Error:", e$message))
+
+  },
+
+  finally = {
+
+    # Session information
+    IASDT.R::info_chunk(
+      "Session packages", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    print(sessioninfo::session_info()$packages, n = Inf) n = Inf)
+
+    IASDT.R::info_chunk(
+      "Session info", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
     print(sessioninfo::session_info()$platform)
 
-    IASDT.R::InfoChunk(
-      "Warnings", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
+    # warnings
+    Warnings <- warnings()
+    if (length(Warnings) > 0) {
+      IASDT.R::info_chunk(
+        "Warnings", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      print(Warnings)
+    }
 
-    warnings()
   })
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# activate renv
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-# source("renv/activate.R")
-suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# load packages
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-purrr::walk(
-  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
-  ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# Processing IAS data
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-Ch1("Processing IAS data")
-
-IASDT.R::IAS_Process(
-  # EnvFile = ".env",
-  NCores = 40L,
-  # Overwrite = TRUE
-)

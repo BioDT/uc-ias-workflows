@@ -10,9 +10,8 @@ DP_R_CHELSA_url,Base URL for CHELSA data,https://os.zhdk.cloud.switch.ch/chelsav
 DP_R_CLC_crosswalk,"Path to the crossWalk.txt file containing custom cross-walk between CLC values and their corresponding values for three levels of CLC, EUNIS_19, and SynHab habitat types",references/CrossWalk.txt
 DP_R_CLC_processed,Directory path to processing CLC processed CLC data,datasets/processed/corine
 DP_R_CLC_tif,Path to the input CLC tif file,datasets/raw/corine/u2018_clc2018_v2020_20u1_raster100m/DATA/U2018_CLC2018_V2020_20u1.tif
-DP_R_Hmsc_ve_win,Directory path to the Hmsc-HPC Python virtual environment under Windows operating system,D:/Hmsc-HPC
-DP_R_LUMI_cpu,LUMI project number for CPU computations,project_465000915
-DP_R_LUMI_gpu,LUMI project number for GPU computations,project_465001588
+DP_R_LUMI_cpu,LUMI project number for CPU computations,project_465001857
+DP_R_LUMI_gpu,LUMI project number for GPU computations,project_465001857
 DP_R_LUMI_gpu_check,File path to the LUMI_Check_GPU.py python script for reporting if the GPU was used in the running SLURM job,references/LUMI_Check_GPU.py
 DP_R_Countrycodes,Path to CountryCodes.csv file containing countries ISO codes,references/CountryCodes.csv
 DP_R_EUBound,Path to Rdata file containing country boundaries: Bound_sf_Eur.Rdata,references/Bound_sf_Eur.RData

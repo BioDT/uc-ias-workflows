@@ -1,66 +1,81 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 # This script processes GBIF data for the IASDT project.
 # Author: Ahmed El-Gabbas
-# Last update: 2025-03-17
+# Last update: 2025-04-09
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-# Path of the .Renviron file
-Renviron = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron"
+# needed changes:
+# - change path of the renv project
+# - change path to `.env` file, if needed
+# - change path to a valid .Renviron file containing GBIF credentials
 
-options(nwarnings = 200) # increase the number of warnings to be reported
+tryCatch(
+  {
 
-Ch1 <- function(Text) {
-  IASDT.R::InfoChunk(
-    paste0("\t", Text), Rep = 2, Char = "=", CharReps = 60, Red = TRUE,
-    Bold = TRUE, Time = FALSE)
-}
+    # Path of the .Renviron file
+    r_environ = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron"
 
-on.exit(
-  add = TRUE,
-  expr = {
-    IASDT.R::InfoChunk(
-      "Session packages", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
-    print(sessioninfo::session_info()$packages)
-    IASDT.R::InfoChunk(
-      "Session info", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
+    # increase the number of warnings to be reported
+    options(nwarnings = 200)
+
+    # activate renv
+    suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
+
+    # load packages
+    purrr::walk(
+      c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
+      ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
+
+    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    # Processing sampling efforts
+    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    IASDT.R::info_chunk(
+      "\tProcessing sampling efforts",
+      date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+
+    IASDT.R::efforts_process(
+      # env_file = ".env",
+      r_environ = r_environ,
+      # request = TRUE, # If this is true, the function took 9 hours using 30 cores
+      # download = TRUE,
+      n_cores = 20L,
+      # start_year = 1981L,
+      # boundaries = c(-30, 50, 25, 75),
+      # chunk_size = 100000L,
+      # delete_chunks = TRUE,
+      # delete_processed = TRUE
+    )
+
+
+  },
+
+  error = function(e) {
+
+    # Error message if the script fails
+    IASDT.R::info_chunk(
+      "Error message", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    print(paste("Error:", e$message))
+
+  },
+
+  finally = {
+
+    # Session information
+    IASDT.R::info_chunk(
+      "Session packages", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    print(sessioninfo::session_info()$packages, n = Inf)
+
+    IASDT.R::info_chunk(
+      "Session info", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
     print(sessioninfo::session_info()$platform)
 
-    IASDT.R::InfoChunk(
-      "Warnings", Date = TRUE, Extra2 = 1, Bold = TRUE, Red = TRUE)
+    # warnings
+    Warnings <- warnings()
+    if (length(Warnings) > 0) {
+      IASDT.R::info_chunk(
+        "Warnings", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      print(Warnings)
+    }
 
-    warnings()
   })
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# activate renv
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-# source("renv/activate.R")
-suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# load packages
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-purrr::walk(
-  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
-  ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
-
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# Processing sampling efforts
-# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-Ch1("Processing sampling efforts")
-
-IASDT.R::Efforts_Process(
-  # EnvFile = ".env",
-  Renviron = Renviron,
-  # Request = TRUE, # If this is true, the function took 9 hours using 30 cores
-  # Download = TRUE,
-  NCores = 20L,
-  # StartYear = 1981L,
-  # Boundaries = c(-30, 50, 25, 75),
-  # ChunkSize = 100000L,
-  # DeleteChunks = TRUE,
-  # DeleteProcessed = TRUE
-)
