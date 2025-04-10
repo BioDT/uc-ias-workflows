@@ -35,7 +35,7 @@ tryCatch(
 
     IASDT.R::info_chunk(
       "\tPrepare model fitting data and commands",
-      date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      date = TRUE, bold = TRUE, red = TRUE)
 
     # _______________________________________________________________ ##
     # THE FOLLOWING ARGUMENTS ARE MORE LIKELY TO BE CHANGED IN EACH RUN
@@ -89,8 +89,9 @@ tryCatch(
       .f = ~{
 
         job_name <- paste0(Model_Prefix, .x)
-        Ch1(job_name)
-
+        
+        IASDT.R::info_chunk(job_name, date = TRUE, bold = TRUE, red = TRUE)
+        
         IASDT.R::mod_prepare_HPC(
           hab_abb = .x,
           directory_name = job_name,
@@ -152,8 +153,7 @@ tryCatch(
   error = function(e) {
 
     # Error message if the script fails
-    IASDT.R::info_chunk(
-      "Error message", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    IASDT.R::info_chunk("Error message", date = TRUE, bold = TRUE, red = TRUE)
     print(paste("Error:", e$message))
 
   },
@@ -162,18 +162,16 @@ tryCatch(
 
     # Session information
     IASDT.R::info_chunk(
-      "Session packages", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      "Session packages", date = TRUE, bold = TRUE, red = TRUE)
     print(sessioninfo::session_info()$packages, n = Inf)
 
-    IASDT.R::info_chunk(
-      "Session info", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    IASDT.R::info_chunk("Session info", date = TRUE, bold = TRUE, red = TRUE)
     print(sessioninfo::session_info()$platform)
 
     # warnings
     Warnings <- warnings()
     if (length(Warnings) > 0) {
-      IASDT.R::info_chunk(
-        "Warnings", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      IASDT.R::info_chunk("Warnings", date = TRUE, bold = TRUE, red = TRUE)
       print(Warnings)
     }
 

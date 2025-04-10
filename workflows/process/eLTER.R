@@ -27,8 +27,7 @@ tryCatch(
     # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
     IASDT.R::info_chunk(
-      "\tProcessing eLTER data",
-      date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      "\tProcessing eLTER data", date = TRUE, bold = TRUE, red = TRUE)
 
     IASDT.R::eLTER_process(
       # env_file = ".env",
@@ -41,8 +40,7 @@ tryCatch(
   error = function(e) {
 
     # Error message if the script fails
-    IASDT.R::info_chunk(
-      "Error message", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    IASDT.R::info_chunk("Error message", date = TRUE, bold = TRUE, red = TRUE)
     print(paste("Error:", e$message))
 
   },
@@ -51,18 +49,16 @@ tryCatch(
 
     # Session information
     IASDT.R::info_chunk(
-      "Session packages", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$packages, n = Inf) n = Inf) n = Inf)
+      "Session packages", date = TRUE, bold = TRUE, red = TRUE)
+    print(sessioninfo::session_info()$packages, n = Inf)
 
-    IASDT.R::info_chunk(
-      "Session info", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+    IASDT.R::info_chunk("Session info", date = TRUE, bold = TRUE, red = TRUE)
     print(sessioninfo::session_info()$platform)
 
     # warnings
     Warnings <- warnings()
     if (length(Warnings) > 0) {
-      IASDT.R::info_chunk(
-        "Warnings", date = TRUE, lines_after = 1, bold = TRUE, red = TRUE)
+      IASDT.R::info_chunk("Warnings", date = TRUE, bold = TRUE, red = TRUE)
       print(Warnings)
     }
 
