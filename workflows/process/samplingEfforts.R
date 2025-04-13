@@ -1,7 +1,8 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# This script processes GBIF data for the IASDT project.
+# This script processes GBIF data for the invasive alien species digital 
+# twin (BioDT project).
 # Author: Ahmed El-Gabbas
-# Last update: 2025-04-09
+# Last update: 2025-04-13
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 # needed changes:
@@ -9,29 +10,31 @@
 # - change path to `.env` file, if needed
 # - change path to a valid .Renviron file containing GBIF credentials
 
-tryCatch(
+
+# increase the number of warnings to be reported
+options(nwarnings = 200)
+
+# activate renv
+renv_path <- "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/"
+suppressWarnings(renv::load(project = renv_path, quiet = FALSE))
+
+# Path of the .Renviron file
+r_environ = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron"
+
+# load packages
+purrr::walk(
+  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "rlang"),
+  ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
+
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# Processing sampling efforts
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+result <- rlang::try_fetch(
   {
 
-    # Path of the .Renviron file
-    r_environ = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/.Renviron"
-
-    # increase the number of warnings to be reported
-    options(nwarnings = 200)
-
-    # activate renv
-    suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
-
-    # load packages
-    purrr::walk(
-      c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R"),
-      ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
-
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    # Processing sampling efforts
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
     IASDT.R::info_chunk(
-      "\tProcessing sampling efforts", date = TRUE, bold = TRUE, red = TRUE)
+      "Processing sampling efforts", cat_date = TRUE, level = 1)
 
     IASDT.R::efforts_process(
       # env_file = ".env",
@@ -46,32 +49,36 @@ tryCatch(
       # delete_processed = TRUE
     )
 
+  },
+
+  warning = {
+
+    Warnings <- warnings()
+    if (length(Warnings) > 0) {
+      IASDT.R::info_chunk("Warnings", cat_date = TRUE)
+      print(Warnings)
+    }
 
   },
 
   error = function(e) {
 
-    # Error message if the script fails
-    IASDT.R::info_chunk("Error message", date = TRUE, bold = TRUE, red = TRUE)
-    print(paste("Error:", e$message))
+    # Handle errors and ensure proper output order
+    IASDT.R::info_chunk("Error message", cat_date = TRUE)
+    cat("Error:", conditionMessage(e), "\n\n")
 
-  },
+    # Capture the traceback
+    traceback <- rlang::trace_back()
+    IASDT.R::info_chunk("Traceback", cat_date = TRUE)
+    print(traceback)
 
-  finally = {
-
-    # Session information
-    IASDT.R::info_chunk(
-      "Session packages", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$packages, n = Inf)
-
-    IASDT.R::info_chunk("Session info", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$platform)
-
-    # warnings
-    Warnings <- warnings()
-    if (length(Warnings) > 0) {
-      IASDT.R::info_chunk("Warnings", date = TRUE, bold = TRUE, red = TRUE)
-      print(Warnings)
-    }
-
+    IASDT.R::info_chunk("Error", cat_date = TRUE)
+    print(e)
   })
+
+# Session information
+IASDT.R::info_chunk("Session packages", cat_date = TRUE)
+print(sessioninfo::session_info()$packages, n = Inf)
+
+IASDT.R::info_chunk("Session info", cat_date = TRUE)
+print(sessioninfo::session_info()$platform)

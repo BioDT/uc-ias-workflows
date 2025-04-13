@@ -1,33 +1,37 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# This script processes the CHELSA data for the IASDT project.
+# This script processes the CHELSA data for the invasive alien species digital 
+# twin (BioDT project).
 # Author: Ahmed El-Gabbas
-# Last update: 2025-04-09
+# Last update: 2025-04-13
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 # needed changes:
 # - change path of the renv project
 # - change path to `.env` file, if needed
+# - CHELSA tif files are already available on disk
 
-tryCatch(
+
+# increase the number of warnings to be reported
+options(nwarnings = 200)
+
+# activate renv
+renv_path <- "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/"
+suppressWarnings(renv::load(project = renv_path, quiet = FALSE))
+
+# load packages
+purrr::walk(
+  c("dplyr", "terra", "ggplot2", "furrr", "purrr",
+    "sf", "IASDT.R", "ncdf4", "rlang"),
+  ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
+
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# processing CHELSA data
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+result <- rlang::try_fetch(
   {
 
-    # increase the number of warnings to be reported
-    options(nwarnings = 200)
-
-    # activate renv
-    suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
-
-    # load packages
-    purrr::walk(
-      c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "ncdf4"),
-      ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
-
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    # processing CHELSA data
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-    IASDT.R::info_chunk(
-      "\tProcessing CHELSA data", date = TRUE, bold = TRUE, red = TRUE)
+    IASDT.R::info_chunk("Processing CHELSA data", cat_date = TRUE, level = 1)
 
     IASDT.R::CHELSA_process(
       # env_file = ".env",
@@ -44,29 +48,34 @@ tryCatch(
 
   },
 
-  error = function(e) {
+  warning = {
 
-    # Error message if the script fails
-    IASDT.R::info_chunk("Error message", date = TRUE, bold = TRUE, red = TRUE)
-    print(paste("Error:", e$message))
-
-  },
-
-  finally = {
-
-    # Session information
-    IASDT.R::info_chunk(
-      "Session packages", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$packages, n = Inf)
-
-    IASDT.R::info_chunk("Session info", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$platform)
-
-    # warnings
     Warnings <- warnings()
     if (length(Warnings) > 0) {
-      IASDT.R::info_chunk("Warnings", date = TRUE, bold = TRUE, red = TRUE)
+      IASDT.R::info_chunk("Warnings", cat_date = TRUE)
       print(Warnings)
     }
 
+  },
+
+  error = function(e) {
+
+    # Handle errors and ensure proper output order
+    IASDT.R::info_chunk("Error message", cat_date = TRUE)
+    cat("Error:", conditionMessage(e), "\n\n")
+
+    # Capture the traceback
+    traceback <- rlang::trace_back()
+    IASDT.R::info_chunk("Traceback", cat_date = TRUE)
+    print(traceback)
+
+    IASDT.R::info_chunk("Error", cat_date = TRUE)
+    print(e)
   })
+
+# Session information
+IASDT.R::info_chunk("Session packages", cat_date = TRUE)
+print(sessioninfo::session_info()$packages, n = Inf)
+
+IASDT.R::info_chunk("Session info", cat_date = TRUE)
+print(sessioninfo::session_info()$platform)

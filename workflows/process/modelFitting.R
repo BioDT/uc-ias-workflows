@@ -1,7 +1,8 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# This script prepares model fitting data and commands for the IASDT project.
+# This script prepares model fitting data and commands for the  invasive alien
+# species digital twin (BioDT project).
 # Author: Ahmed El-Gabbas
-# Last update: 2025-04-08
+# Last update: 2025-04-13
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 # needed changes:
@@ -9,38 +10,41 @@
 # - change path to `.env` file, if needed
 # - change the path to Hmsc installation
 # - change model prefix along with other needed model parameters
+# - change path of Hmsc installation
 
-tryCatch(
+
+# increase the number of warnings to be reported
+options(nwarnings = 200)
+
+# activate renv
+renv_path <- "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/"
+suppressWarnings(renv::load(project = renv_path, quiet = FALSE))
+
+# load packages
+purrr::walk(
+  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R",
+    "Hmsc", "blockCV", "coda", "stringr", "qs2", "rlang"),
+  ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
+
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# Prepare model fitting data and commands
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+result <- rlang::try_fetch(
   {
 
     # starting time
     .StartTime <- lubridate::now(tzone = "CET")
 
-    # increase the number of warnings to be reported
-    options(nwarnings = 500)
-
-    # activate renv
-    suppressWarnings(renv::load(project = "/pfs/lustrep1/scratch/project_465001588/khantaim/iasdt-workflows/iasdt-renv/", quiet = TRUE))
-
-    # load packages
-    purrr::walk(
-      c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R",
-        "Hmsc", "blockCV", "coda", "stringr", "qs2"),
-      ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
-
-
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    # Prepare model fitting data and commands
-    # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
     IASDT.R::info_chunk(
-      "\tPrepare model fitting data and commands",
-      date = TRUE, bold = TRUE, red = TRUE)
+      "Prepare model fitting data and commands", cat_date = TRUE, level = 1)
 
     # _______________________________________________________________ ##
     # THE FOLLOWING ARGUMENTS ARE MORE LIKELY TO BE CHANGED IN EACH RUN
     # _______________________________________________________________ ##
 
+    # Path for Hmsc installation
+    path_Hmsc = "/pfs/lustrep2/scratch/project_465001857/elgabbas/Hmsc_simplify_io"
     # Model prefix - for directory name of the fitted models
     Model_Prefix <- "IAS_M22"
     # Distance between GPP knots - multiple values are allowed
@@ -48,7 +52,7 @@ tryCatch(
     # thinning value - multiple values are allowed
     thin = 200
     # Prior info for alphapw - 101 values between 40 and 1400 km
-    alphapw <- list(Prior = NULL, Min = 150, Max = 1500, Samples = 101) # XXXX
+    alphapw <- list(Prior = NULL, Min = 150, Max = 1500, Samples = 101)
 
     # _______________________________________________________________ ##
     # THE FOLLOWING ARGUMENTS ARE LESS LIKELY TO BE CHANGED IN EACH RUN
@@ -71,9 +75,6 @@ tryCatch(
     # Number of MCMC chains
     NChains <- 4
 
-    # Path for Hmsc installation
-    path_Hmsc = "/pfs/lustrep2/scratch/project_465001857/elgabbas/Hmsc_simplify_io"
-
     # Memory per CPU for fitting models
     memory_per_cpu <- "64G"
 
@@ -89,9 +90,8 @@ tryCatch(
       .f = ~{
 
         job_name <- paste0(Model_Prefix, .x)
-        
-        IASDT.R::info_chunk(job_name, date = TRUE, bold = TRUE, red = TRUE)
-        
+        IASDT.R::info_chunk(job_name, cat_date = TRUE)
+
         IASDT.R::mod_prepare_HPC(
           hab_abb = .x,
           directory_name = job_name,
@@ -150,29 +150,34 @@ tryCatch(
       prefix = "Processing all modelling data took ", ... = "\n\n")
   },
 
-  error = function(e) {
+  warning = {
 
-    # Error message if the script fails
-    IASDT.R::info_chunk("Error message", date = TRUE, bold = TRUE, red = TRUE)
-    print(paste("Error:", e$message))
-
-  },
-
-  finally = {
-
-    # Session information
-    IASDT.R::info_chunk(
-      "Session packages", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$packages, n = Inf)
-
-    IASDT.R::info_chunk("Session info", date = TRUE, bold = TRUE, red = TRUE)
-    print(sessioninfo::session_info()$platform)
-
-    # warnings
     Warnings <- warnings()
     if (length(Warnings) > 0) {
-      IASDT.R::info_chunk("Warnings", date = TRUE, bold = TRUE, red = TRUE)
+      IASDT.R::info_chunk("Warnings", cat_date = TRUE)
       print(Warnings)
     }
 
+  },
+
+  error = function(e) {
+
+    # Handle errors and ensure proper output order
+    IASDT.R::info_chunk("Error message", cat_date = TRUE)
+    cat("Error:", conditionMessage(e), "\n\n")
+
+    # Capture the traceback
+    traceback <- rlang::trace_back()
+    IASDT.R::info_chunk("Traceback", cat_date = TRUE)
+    print(traceback)
+
+    IASDT.R::info_chunk("Error", cat_date = TRUE)
+    print(e)
   })
+
+# Session information
+IASDT.R::info_chunk("Session packages", cat_date = TRUE)
+print(sessioninfo::session_info()$packages, n = Inf)
+
+IASDT.R::info_chunk("Session info", cat_date = TRUE)
+print(sessioninfo::session_info()$platform)
