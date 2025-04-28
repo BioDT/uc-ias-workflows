@@ -1,6 +1,6 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# This script processes railway intensity data for the  invasive alien species
-# digital twin (BioDT project).
+# This script processes river length for the  invasive alien species digital
+# twin (BioDT project).
 # Author: Ahmed El-Gabbas
 # Last update: 2025-04-13
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -8,6 +8,7 @@
 # needed changes:
 # - change path of the renv project
 # - change path to `.env` file, if needed
+# - raw river data needs to be downloaded and copied to the respective directory
 
 
 # increase the number of warnings to be reported
@@ -19,25 +20,23 @@ suppressWarnings(renv::load(project = renv_path, quiet = FALSE))
 
 # load packages
 purrr::walk(
-  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "rlang"),
+  c("dplyr", "terra", "ggplot2", "furrr",
+    "purrr", "sf", "IASDT.R", "archive", "rlang"),
   ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
 
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# Processing railway intensity
+# Processing river length
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 result <- rlang::try_fetch(
   {
 
-    IASDT.R::info_chunk(
-      "Processing railway intensity", cat_date = TRUE, level = 1)
+    IASDT.R::info_chunk("Processing river length", cat_date = TRUE, level = 1)
 
-    IASDT.R::railway_intensity(
+    IASDT.R::river_length(
       # env_file = ".env",
-      n_cores = 10L,
-      # delete_processed = TRUE
+      # cleanup = FALSE
     )
-
   },
 
   warning = {

@@ -1,6 +1,6 @@
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# This script processes railway intensity data for the  invasive alien species
-# digital twin (BioDT project).
+# This script processes the biogeographical regions data for the invasive alien
+# species digital twin (BioDT project).
 # Author: Ahmed El-Gabbas
 # Last update: 2025-04-13
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -8,7 +8,6 @@
 # needed changes:
 # - change path of the renv project
 # - change path to `.env` file, if needed
-
 
 # increase the number of warnings to be reported
 options(nwarnings = 200)
@@ -19,23 +18,22 @@ suppressWarnings(renv::load(project = renv_path, quiet = FALSE))
 
 # load packages
 purrr::walk(
-  c("dplyr", "terra", "ggplot2", "furrr", "purrr", "sf", "IASDT.R", "rlang"),
+  c("dplyr", "terra", "purrr", "sf", "IASDT.R", "tibble", "fs", "rvest",
+    "httr", "stringr", "tidyselect", "foreign", "rlang"),
   ~ suppressWarnings(suppressMessages(require(.x, character.only = TRUE))))
 
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-# Processing railway intensity
+# processing biogeographical regions data
 # ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 result <- rlang::try_fetch(
   {
 
     IASDT.R::info_chunk(
-      "Processing railway intensity", cat_date = TRUE, level = 1)
+      "Processing Biogeographical regions", cat_date = TRUE, level = 1)
 
-    IASDT.R::railway_intensity(
-      # env_file = ".env",
-      n_cores = 10L,
-      # delete_processed = TRUE
+    IASDT.R::bioreg_process(
+      # env_file = ".env"
     )
 
   },
